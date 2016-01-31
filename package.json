@@ -1,0 +1,64 @@
+{
+  "name": "carbon",
+  "version": "0.0.1",
+  "description": "An easy to use and spritely CSS framework.",
+  "homepage": "http://carboncss.github.io",
+  "repository": "Carboncss/carbon",
+  "license": "MIT",
+  "author": "Marc Boisvert <bladetecltd@gmail.com>",
+  "main": "dist/carbon.css",
+  "keywords": [
+    "bootstrap",
+    "carbon",
+    "css",
+    "css3",
+    "flexbox",
+    "front-end",
+    "framework",
+    "html",
+    "html5",
+    "kickstarter",
+    "less",
+    "responsive",
+    "mobile",
+    "mobile-first",
+    "postcss",
+    "responsive",
+    "sass",
+    "scss",
+    "stylus",
+  ],
+  "ignore": [
+    ".editorconfig",
+    ".gitignore",
+    ".npmignore",
+    ".travis.yml",
+    "bower.json",
+    "component.json",
+    "composer.json",
+    "contributing.md",
+    "gulpfile.js",
+    "package.js",
+    "package.json",
+    "src",
+    "test"
+  ],
+  "dependencies": {
+    "normalize.css": "latest"
+  },
+  "devDependencies": {
+    "bower": "^1.6.8",
+    "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "scripts": {
+    "start": "gulp",
+    "watch": "gulp watch"
+  }
+}
