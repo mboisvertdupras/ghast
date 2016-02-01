@@ -1,0 +1,65 @@
+
+// Navigation
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.navigation
+	left: 0
+	max-width: 100%
+	position: fixed
+	right: 0
+	top: 0
+	max-width: 100vw
+	z-index: 99
+
+.navigation .container
+	padding-top: 0
+	padding-bottom: 0
+
+.navigation
+	background: $color-tertiary
+	border-bottom: .1rem solid $color-quaternary
+	display: block
+	height: 5.2rem
+	width: 100%
+
+.navigation-list
+	list-style: none
+	margin-bottom: 0
+	margin-right: 5.0rem
+
+@media (min-width: 80.0rem)
+	.navigation-list
+		margin-right: 0
+
+
+.navigation-item
+	float: left
+	margin-bottom: 0
+	margin-left: 2.5rem
+	position: relative
+
+.navigation .img
+	position: relative
+	top: .3rem
+	height: 2.0rem
+
+.navigation .title,
+.navigation-title
+	color: $color-secondary
+	display: inline
+	font-family: $body-font-family
+	line-height: 5.2rem
+	font-size: 1.6rem
+	padding: 0
+	position: relative
+	text-decoration: none
+
+.navigation-link
+	display: inline
+	line-height: 5.2rem
+	font-size: 1.6rem
+	padding: 0
+	text-decoration: none
+
+.navigation-link.active
+	color: $color-secondary

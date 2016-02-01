@@ -2,7 +2,6 @@
 
 | An easy to use and spritely CSS framework.
 
-----
 
 
 ## Why Ghast?
@@ -24,8 +23,6 @@ $ npm install ghast
 
 ```sh
 $ git clone git@github.com:voident/ghast.git
-```
-```sh
 $ npm install
 ```
 
