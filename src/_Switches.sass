@@ -1,0 +1,110 @@
+
+// Switches
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.switch
+    margin: 0.25rem
+    position: relative
+    display: inline-block
+    vertical-align: top
+    width: 6.4rem
+    height: 2.4rem
+    padding: 0.3rem
+    background-color: transparent
+    border-radius: 1.2rem
+    cursor: pointer
+
+.switch-input
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+
+.switch-group
+    display: inline-block
+    width: 100%
+
+
+//  No label
+
+.switch.no-label
+    width: 4rem
+
+.switch.no-label > .switch-input:checked ~ .switch-handle
+    left: 2rem
+
+.switch.no-label > .switch-trough
+    font-size: 0
+
+
+// Switch through
+
+.switch-trough
+    font-family: $body-font-family
+    font-weight: 700
+    position: relative
+    display: block
+    height: inherit
+    font-size: 1.1rem
+    text-transform: uppercase
+    background: $color-quaternary
+    border-radius: inherit
+    transition: 150ms ease-out
+    transition-property: opacity background
+
+.switch-trough:before, .switch-trough:after
+    position: absolute
+    top: 50%
+    margin-top: -0.5rem
+    line-height: 1
+    transition: inherit
+
+.switch-trough:before
+    content: attr(data-off)
+    right: 1.1rem
+    color: $color-secondary
+
+.switch-trough:after
+    content: attr(data-on)
+    left: 1.1rem
+    color: white
+    opacity: 0
+
+
+// Switch handle
+
+.switch-handle
+    position: absolute
+    top: 0.4rem
+    left: 0.4rem
+    width: 2.2rem
+    height: 2.2rem
+    background: $color-initial
+    border-radius: 50%
+    transition: left 150ms ease-out
+
+.switch-handle:before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    margin: -0.6rem 0 0 -0.6rem
+    width: 1.2rem
+    height: 1.2rem
+    border-radius: 0.6rem
+
+
+
+// Checked switch
+
+.switch-input:checked ~ .switch-trough
+    background: $color-primary
+
+.switch-input:checked ~ .switch-trough:before
+    opacity: 0
+
+.switch-input:checked ~ .switch-trough:after
+    opacity: 1
+
+.switch-input:checked ~ .switch-handle
+    left: 4.4rem
