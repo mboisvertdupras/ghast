@@ -30,8 +30,8 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-  background-color: #9b4dca;
-  border: 0.1rem solid #9b4dca;
+  background-color: #000;
+  border: 0.1rem solid #000;
   border-radius: 0.3rem;
   color: #fff;
   cursor: pointer;
@@ -87,14 +87,14 @@ input[type='submit'] {
     input[type='submit'].button-disabled:focus,
     input[type='submit'][disabled]:hover,
     input[type='submit'][disabled]:focus {
-      background-color: #9b4dca;
-      border-color: #9b4dca; }
+      background-color: #000;
+      border-color: #000; }
   .button.button-outline,
   button.button-outline,
   input[type='button'].button-outline,
   input[type='reset'].button-outline,
   input[type='submit'].button-outline {
-    color: #9b4dca;
+    color: #000;
     background-color: transparent; }
     .button.button-outline:hover, .button.button-outline:focus,
     button.button-outline:hover,
@@ -125,14 +125,14 @@ input[type='submit'] {
     input[type='submit'].button-outline.button-disabled:focus,
     input[type='submit'].button-outline[disabled]:hover,
     input[type='submit'].button-outline[disabled]:focus {
-      color: #9b4dca;
+      color: #000;
       border-color: inherit; }
   .button.button-clear,
   button.button-clear,
   input[type='button'].button-clear,
   input[type='reset'].button-clear,
   input[type='submit'].button-clear {
-    color: #9b4dca;
+    color: #000;
     background-color: transparent;
     border-color: transparent; }
     .button.button-clear:hover, .button.button-clear:focus,
@@ -164,7 +164,7 @@ input[type='submit'] {
     input[type='submit'].button-clear.button-disabled:focus,
     input[type='submit'].button-clear[disabled]:hover,
     input[type='submit'].button-clear[disabled]:focus {
-      color: #9b4dca; }
+      color: #000; }
 
 code {
   background: #f4f5f6;
@@ -176,7 +176,7 @@ code {
 
 pre {
   background: #f4f5f6;
-  border-left: 0.3rem solid #9b4dca;
+  border-left: 0.3rem solid #000;
   font-family: "Menlo", "Consolas", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Monaco", monospace; }
   pre > code {
     background: transparent;
@@ -217,7 +217,7 @@ select {
   input[type='url']:focus,
   textarea:focus,
   select:focus {
-    border: 0.1rem solid #9b4dca;
+    border: 0.1rem solid #000;
     outline: 0; }
 
 select {
@@ -353,7 +353,7 @@ input[type='radio'] {
       padding: 0 1.0rem; } }
 
 a {
-  color: #9b4dca;
+  color: #000;
   text-decoration: none; }
   a:hover {
     color: #606c76; }
