@@ -1,15 +1,14 @@
 {
-  "name": "carbon",
+  "name": "ghast",
   "version": "0.0.1",
   "description": "An easy to use and spritely CSS framework.",
-  "homepage": "http://carboncss.github.io",
-  "repository": "Carboncss/carbon",
+  "homepage": "http://voident.github.io",
+  "repository": "voident/ghast",
   "license": "MIT",
   "author": "Marc Boisvert <bladetecltd@gmail.com>",
-  "main": "dist/carbon.css",
+  "main": "dist/ghast.css",
   "keywords": [
     "bootstrap",
-    "carbon",
     "css",
     "css3",
     "flexbox",
@@ -26,7 +25,7 @@
     "responsive",
     "sass",
     "scss",
-    "stylus",
+    "stylus"
   ],
   "ignore": [
     ".editorconfig",

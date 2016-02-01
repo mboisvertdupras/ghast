@@ -3,7 +3,7 @@
 1. Install dependencies
 
  * Git (<http://git-scm.com>)
- * Grunt (<http://gruntjs.com>)
+ * Gulp (<http://gulpjs.com>)
  * Node.js (<http://nodejs.org>)
  * NPM (<http://npmjs.org>)
  * Sass (<http://sass-lang.com>)
@@ -11,7 +11,7 @@
 1. Clone repository
 
    ```bash
-   $ git clone git@github.com:carbon/carbon.git
+   $ git clone git@github.com:voident/ghast.git
    $ cd carbon
    ```
 
@@ -21,18 +21,18 @@
    $ npm install
    ```
 
-1. Run 
+1. Build
 
    ```bash
-   $ npm start
+   $ gulp
    ```
 
 ## Contributing
 
-Help improve these docs. Open an [issue](https://github.com/carbon/carbon/issues/new) or submit a pull request.
+Help improve these docs. Open an [issue](https://github.com/voident/ghast/issues/new) or submit a pull request.
 
 - Navigate to the main page of the repository
-- [Fork it!](https://github.com/carbon/carbon#fork-destination-box)
+- [Fork it!](https://github.com/voident/ghast#fork-destination-box)
 - Create your feature branch: git checkout -b my-new-feature
 - Commit your changes: git commit -m 'Add some feature'
 - Push to the branch: git push origin my-new-feature

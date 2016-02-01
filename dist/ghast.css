@@ -183,6 +183,12 @@ pre {
     padding: 1rem 1.5rem;
     white-space: pre; }
 
+hr {
+  border: 0;
+  border-top: 0.1rem solid #f4f5f6;
+  margin-bottom: 3.5rem;
+  margin-top: 3rem; }
+
 input[type='email'],
 input[type='number'],
 input[type='password'],
@@ -377,12 +383,6 @@ dt,
 dd,
 li {
   margin-bottom: 1.0rem; }
-
-hr {
-  border-top: 0.1rem solid #f4f5f6;
-  border-width: 0;
-  margin-bottom: 3.5rem;
-  margin-top: 3rem; }
 
 .button,
 button {

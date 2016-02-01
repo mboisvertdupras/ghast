@@ -20,7 +20,7 @@ gulp.task('clean', function() {
 gulp.task('sass', function () {
   gulp.src('./src/*.sass')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(rename("carbon.min.css"))
+    .pipe(rename("ghast.min.css"))
     .pipe(gulp.dest('./dist'));
 });
 
@@ -29,6 +29,6 @@ gulp.task('sourcemap', function () {
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(sourcemaps.write())
-    .pipe(rename("carbon.min.css.map"))
+    .pipe(rename("ghast.min.css.map"))
     .pipe(gulp.dest('dist'));
 });
