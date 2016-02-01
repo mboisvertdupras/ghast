@@ -2,6 +2,7 @@
 
 | An easy to use and spritely CSS framework.
 
+[![npm version](https://badge.fury.io/js/ghast.svg)](https://badge.fury.io/js/ghast)
 
 
 ## Why Ghast?
