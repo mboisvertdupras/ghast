@@ -35,4 +35,5 @@ Want to contribute? Follow these [recommendations](https://github.com/voident/gh
 
 ## License
 
-Originally designed with ♥ by [CJ Patoilo](http://cjpatoilo.com). Licensed under the [MIT License](https://opensource.org/licenses/MIT).
+Made with ♥ in Montreal, Canada by some cool peeps. Licensed under the [MIT License](https://opensource.org/licenses/MIT).
+Originally designed by [CJ Patoilo](http://cjpatoilo.com).

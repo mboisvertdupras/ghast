@@ -1,6 +1,6 @@
 Package.describe({
 	name: 'voident:ghast',
-	version: '0.0.1',
+	version: '0.0.2',
 	summary: 'An easy to use and spritely CSS framework.',
 	git: 'https://github.com/voident/ghast.git',
 	documentation: 'README.md'

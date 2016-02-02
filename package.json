@@ -1,6 +1,6 @@
 {
   "name": "ghast",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An easy to use and spritely CSS framework.",
   "homepage": "http://voident.github.io",
   "repository": "voident/ghast",
@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "bower": "^1.6.8",
+    "browser-sync": "^2.11.1",
     "gulp": "^3.9.0",
     "gulp-clean": "^0.3.1",
     "gulp-rename": "^1.2.2",
