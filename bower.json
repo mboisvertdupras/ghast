@@ -6,7 +6,7 @@
 	"repository": "voident/ghast",
 	"license": "MIT",
 	"author": "Marc Boisvert<bladetecltd@gmail.com>",
-	"main": "dist/ghast.css",
+	"main": "app/ghast.css",
 	"keywords": [
 		"bootstrap",
 		"css",
