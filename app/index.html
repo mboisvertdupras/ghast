@@ -730,7 +730,7 @@
 
 			<section class="container" id="switches">
 				<h5 class="title">Switches</h5>
-				<p>Good old checkboxes are just plain ugly and outdated in the mobile first world of today. Ghast provides beautifully crafted switches that convey a more familliar experience to mobile users and overall, they're just pretty :)</p>
+				<p>Good old checkboxes are just plain ugly and outdated in the mobile first world of today. Ghast provides beautifully crafted switches that convey a more familliar experience to mobile users and overall, they're just pretty!</p>
 				<div class="example">
 					<label class="switch">
 				    <input type="checkbox" class="switch-input" checked>
@@ -742,22 +742,29 @@
 				    <span class="switch-trough" data-on="✔" data-off="✘"></span>
 				    <span class="switch-handle"></span>
 					</label>
+					<label class="switch no-label">
+					  <input type="checkbox" class="switch-input" checked>
+					  <span class="switch-trough" data-on="On" data-off="Off"></span>
+					  <span class="switch-handle"></span>
+					</label>
 				</div>
-				<pre class="code prettyprint"><code class="code-content"><form>
-	<fieldset>
-		<label for="nameField">Name</label>
-		<input type="text" placeholder="CJ Patoilo" id="nameField">
-		<label for="commentField">Comment</label>
-		<textarea placeholder="Hi CJ &hellip;" id="commentField"></textarea>
-		<div class="example-send-yourself-copy">
-			<input type="checkbox" id="confirmField">
-			<label class="label-inline" for="confirmField">Send a copy to yourself</label>
-		</div>
-		<input class="button-primary" type="submit" value="Send">
-	</fieldset>
-</form>
+				<pre class="code prettyprint"><code class="code-content"><label class="switch">
+  <input type="checkbox" class="switch-input" checked>
+  <span class="switch-trough" data-on="On" data-off="Off"></span>
+  <span class="switch-handle"></span>
+</label>
 
-<!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-inline"> inside of it --></code></pre>
+<label class="switch">
+  <input type="checkbox" class="switch-input" checked>
+  <span class="switch-trough" data-on="✔" data-off="✘"></span>
+  <span class="switch-handle"></span>
+</label>
+
+<label class="switch no-label">
+  <input type="checkbox" class="switch-input" checked>
+  <span class="switch-trough" data-on="On" data-off="Off"></span>
+  <span class="switch-handle"></span>
+</label></code></pre>
 			</section>
 
 			<section class="container" id="tables">
