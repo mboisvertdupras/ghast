@@ -452,7 +452,8 @@ li {
 
 .dropdown {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer; }
 
 .dropdown-content {
   display: none;
