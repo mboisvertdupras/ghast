@@ -63,3 +63,33 @@
 
 .navigation-link.active
 	color: $color-secondary
+
+.dropdown
+	position: relative
+	display: inline-block
+
+.dropdown-content
+	display: none
+	position: absolute
+	background-color: $color-initial
+	min-width: 16rem
+	border: 0.1rem solid $color-quaternary
+	border-top: none
+	border-radius:  0 0 $global-radius $global-radius
+	box-shadow: 0 0.4rem 1rem 0 rgba(0,0,0,0.2)
+
+.dropdown-content a
+	color: $color-secondary
+	padding: 1rem 1.6rem
+	font-size: 1.2rem
+	text-decoration: none
+	display: block
+	&:last-child
+		border-radius:  0 0 $global-radius $global-radius
+
+.dropdown-content a:hover
+	background-color: $color-primary
+	color: $color-initial
+
+.dropdown:hover .dropdown-content
+	display: block

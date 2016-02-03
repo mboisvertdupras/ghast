@@ -312,86 +312,6 @@
 			}
 
 
-			/* Popover
-			// –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-			.popover.popover-open {
-			display: block;
-			}
-			.popover {
-			background: #fff;
-			border: .1rem solid #d1d1d1;
-			border-radius: .4rem;
-			display: none;
-			left: 50%;
-			min-width: 13.4rem;
-			position: absolute;
-			top: 94%;
-			-webkit-filter: drop-shadow(0 0 .6rem rgba(0,0,0,.1));
-			-moz-filter: drop-shadow(0 0 .6rem rgba(0,0,0,.1));
-			filter: drop-shadow(0 0 .6rem rgba(0,0,0,.1));
-			-webkit-transform: translateX(-50%);
-			-moz-transform: translateX(-50%);
-			-ms-transform: translateX(-50%);
-			transform: translateX(-50%);
-			}
-			.popover-item:first-child .popover-link:after, .popover-item:first-child .popover-link:before {
-			bottom: 100%;
-			left: 50%;
-			border: solid transparent;
-			content: ' ';
-			height: 0;
-			width: 0;
-			position: absolute;
-			pointer-events: none;
-			}
-			.popover-item:first-child .popover-link:after {
-			border-color: transparent;
-			border-bottom-color: #fff;
-			border-width: 1.0rem;
-			margin-left: -1.0rem;
-			}
-			.popover-item:first-child .popover-link:before {
-			border-color: rgba(238, 238, 238, 0);
-			border-bottom-color: #d1d1d1;
-			border-width: 1.1rem;
-			margin-left: -1.1rem;
-			}
-			.popover-list {
-			padding: 0;
-			margin: 0;
-			list-style: none;
-			}
-			.popover-item {
-			padding: 0;
-			margin: 0;
-			}
-			.popover-link {
-			position: relative;
-			color: #606c76;
-			display: block;
-			padding: .8rem 2.0rem;
-			border-bottom: .1rem solid #d1d1d1;
-			text-decoration: none;
-			font-size: 1.2rem;
-			text-align: center;
-			}
-			.popover-item:first-child .popover-link {
-			border-radius: .4rem .4rem 0 0;
-			}
-			.popover-item:last-child .popover-link {
-			border-radius: 0 0 .4rem .4rem;
-			border-bottom-width: 0;
-			}
-			.popover-link:hover {
-			color: #ffffff;
-			background: #000;
-			}
-			.popover-link:hover, .popover-item:first-child .popover-link:hover:after {
-			border-bottom-color: #000;
-			}
-
-
 			/* Share */
 			.share,
 			.share-list,
@@ -476,41 +396,38 @@
 						<img class="img" src="https://voident.github.io/img/logo.svg" height="30" alt="Ghast" title="Ghast">
 						<h1 class="title">Ghast</h1>
 					</a>
-
 					<ul class="navigation-list float-right">
-						<li class="navigation-item">
-							<a class="navigation-link" href="#popover-grid" data-popover>Docs</a>
-							<div class="popover" id="popover-grid">
-								<ul class="popover-list">
-									<li class="popover-item"><a class="popover-link" href="https://voident.github.io/#getting-started" title="Getting Started">Getting Started</a></li>
-									<li class="popover-item"><a class="popover-link" href="https://voident.github.io/#typography" title="Typography">Typography</a></li>
-									<li class="popover-item"><a class="popover-link" href="https://voident.github.io/#blockquotes" title="Blockquotes">Blockquotes</a></li>
-									<li class="popover-item"><a class="popover-link" href="https://voident.github.io/#buttons" title="Buttons">Buttons</a></li>
-									<li class="popover-item"><a class="popover-link" href="https://voident.github.io/#lists" title="Lists">Lists</a></li>
-									<li class="popover-item"><a class="popover-link" href="https://voident.github.io/#forms" title="Forms">Forms</a></li>
-									<li class="popover-item"><a class="popover-link" href="https://voident.github.io/#switches" title="Switches">Switches</a></li>
-									<li class="popover-item"><a class="popover-link" href="https://voident.github.io/#tables" title="Tables">Tables</a></li>
-									<li class="popover-item"><a class="popover-link" href="https://voident.github.io/#grids" title="Grids">Grids</a></li>
-									<li class="popover-item"><a class="popover-link" href="https://voident.github.io/#codes" title="Codes">Codes</a></li>
-									<li class="popover-item"><a class="popover-link" href="https://voident.github.io/#utilities" title="Utilities">Utilities</a></li>
-									<li class="popover-item"><a class="popover-link" href="https://voident.github.io/#tips" title="Tips">Tips</a></li>
-									<li class="popover-item"><a class="popover-link" href="https://voident.github.io/#browser-support" title="Browser Support">Browser Support</a></li>
-									<li class="popover-item"><a class="popover-link" href="https://voident.github.io/#examples" title="Examples">Examples</a></li>
-									<li class="popover-item"><a class="popover-link" href="https://voident.github.io/#contributing" title="Contributing">Contributing</a></li>
-								</ul>
-							</div>
-						</li>
-						<li class="navigation-item">
-							<a class="navigation-link" href="#popover-support" data-popover>Support</a>
-							<div class="popover" id="popover-support">
-								<ul class="popover-list">
-									<li class="popover-item"><a class="popover-link" target="blank" href="https://github.com/voident/ghast" title="On Github">On Github</a></li>
-									<li class="popover-item"><a class="popover-link" target="blank" href="https://github.com/voident/ghast/issues/new" title="Need help?">Need help?</a></li>
-									<li class="popover-item"><a class="popover-link" target="blank" href="https://github.com/voident/ghast#license" title="License">License</a></li>
-									<li class="popover-item"><a class="popover-link" target="blank" href="https://github.com/voident/ghast/releases" title="Versions">Versions</a></li>
-								</ul>
-							</div>
-						</li>
+						<div class="dropdown">
+							<li class="navigation-item">
+								<a class="navigation-link">Docs</a>
+								<div class="dropdown-content">
+									<a href="https://voident.github.io/index.html#getting-started" title="Getting Started">Getting Started</a>
+									<a href="https://voident.github.io/index.html#typography" title="Typography">Typography</a>
+									<a href="https://voident.github.io/index.html#blockquotes" title="Blockquotes">Blockquotes</a>
+									<a href="https://voident.github.io/index.html#buttons" title="Buttons">Buttons</a>
+									<a href="https://voident.github.io/index.html#lists" title="Lists">Lists</a>
+									<a href="https://voident.github.io/index.html#forms" title="Forms">Forms</a>
+									<a href="https://voident.github.io/index.html#switches" title="Switches">Switches</a>
+									<a href="https://voident.github.io/index.html#tables" title="Tables">Tables</a>
+									<a href="https://voident.github.io/index.html#grids" title="Grids">Grids</a>
+									<a href="https://voident.github.io/index.html#codes" title="Codes">Codes</a>
+									<a href="https://voident.github.io/index.html#utilities" title="Utilities">Utilities</a>
+									<a href="https://voident.github.io/index.html#tips" title="Tips">Tips</a>
+									<a href="https://voident.github.io/index.html#browser-support" title="Browser Support">Browser Support</a>
+							  </div>
+							</li>
+						</div>
+						<div class="dropdown">
+							<li class="navigation-item">
+								<a class="navigation-link">Support</a>
+								<div class="dropdown-content">
+									<a target="blank" href="https://github.com/voident/ghast" title="On Github">On Github</a>
+									<a target="blank" href="https://github.com/voident/ghast/issues/new" title="Need help?">Need help?</a>
+									<a target="blank" href="https://github.com/voident/ghast#license" title="License">License</a>
+									<a target="blank" href="https://github.com/voident/ghast/releases" title="Versions">Versions</a>
+								</div>
+							</li>
+						</div>
 					</ul>
 					<a class="hidden-xs github-corner" href="https://github.com/voident/ghast" title="Ghast on Github" target="blank">
 						<svg width="80" height="80" viewBox="0 0 250 250" class="github-corner">
