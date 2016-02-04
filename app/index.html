@@ -403,6 +403,7 @@
 								<div class="dropdown-content">
 									<a href="https://voident.github.io/index.html#getting-started" title="Getting Started">Getting Started</a>
 									<a href="https://voident.github.io/index.html#typography" title="Typography">Typography</a>
+									<a href="https://voident.github.io/index.html#navigation" title="Navigation">Navigation</a>
 									<a href="https://voident.github.io/index.html#blockquotes" title="Blockquotes">Blockquotes</a>
 									<a href="https://voident.github.io/index.html#buttons" title="Buttons">Buttons</a>
 									<a href="https://voident.github.io/index.html#lists" title="Lists">Lists</a>
@@ -533,6 +534,61 @@
 <h6>Heading</h6>
 
 <!-- The base font-size is set at 62.5% for having the convenience of sizing rems in a way that is similar to using px. So basically 1.6rem = 16px. --></code></pre>
+			</section>
+
+			<section class="container" id="navigation">
+				<h5 class="title">Navigation</h5>
+				<p>The navigation bar is the main component with which your users are going to interact with. We've made it very simple to add on or extend the base navigation to suit your needs!</p>
+				<div class="example">
+					<div class="row">
+						<div class="column">
+							<nav class="navigation" style="position:static;">
+								<div class="container">
+									<a class="navigation-title" href="#!">
+										<h1 class="title">Brand</h1>
+									</a>
+									<ul class="navigation-list float-right">
+										<li class="navigation-item">
+											<a class="navigation-link" href="#!">Link</a>
+										</li>
+										<div class="dropdown">
+											<li class="navigation-item">
+												<a class="navigation-link">Dropdown</a>
+												<div class="dropdown-content">
+													<a href="#!" title="Hey">Hey</a>
+													<a href="#!" title="Look at me">Look at me</a>
+													<a href="#!" title="I'm in a dropdown">I'm a in dropdown</a>
+											  </div>
+											</li>
+										</div>
+									</ul>
+								</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<pre class="code prettyprint"><code class="code-content"><nav class="navigation">
+  <div class="container">
+    <a class="navigation-title" href="#!">
+      <h1 class="title">Brand</h1>
+    </a>
+    <ul class="navigation-list float-right">
+      <li class="navigation-item">
+        <a class="navigation-link" href="#!">Link</a>
+      </li>
+      <div class="dropdown">
+        <li class="navigation-item">
+          <a class="navigation-link">Dropdown</a>
+          <div class="dropdown-content">
+            <a href="#!" title="Hey">Hey</a>
+            <a href="#!" title="Look at me">Look at me</a>
+            <a href="#!" title="I'm in a dropdown">I'm a in dropdown</a>
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+</nav></code></pre>
 			</section>
 
 			<section class="container" id="blockquotes">
