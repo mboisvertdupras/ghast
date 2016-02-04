@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var rename = require("gulp-rename");
 var clean = require('gulp-clean');
+var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 
 gulp.task('watch', ['default'], function() {
@@ -23,6 +24,10 @@ gulp.task('sourcemap', function () {
   gulp.src('./src/*.sass')
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
     .pipe(sourcemaps.write())
     .pipe(rename("ghast.min.css.map"))
     .pipe(gulp.dest('css'));
@@ -31,6 +36,10 @@ gulp.task('sourcemap', function () {
 gulp.task('sass', function () {
   gulp.src('./src/*.sass')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
     .pipe(rename("ghast.min.css"))
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream());
@@ -44,5 +53,9 @@ gulp.task('clean', function() {
 gulp.task('default', ['clean', 'sass', 'sourcemap'], function() {
   gulp.src('./src/*.sass')
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
     .pipe(gulp.dest('./css'));
 });
