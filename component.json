@@ -1,7 +1,7 @@
 {
 	"name": "ghast",
-	"version": "0.0.4",
-  "description": "An easy to use and spritely CSS framework.",
+	"version": "0.0.5",
+  "description": "A terrifyingly simple CSS framework.",
   "homepage": "http://voident.github.io",
   "repository": "voident/ghast",
   "license": "MIT",

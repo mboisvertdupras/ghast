@@ -1,0 +1,48 @@
+
+// Titles
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.is-title,
+.subtitle
+  &:not(:last-child)
+    margin-bottom: 2rem
+
+.is-title
+  color: $secondary
+  font-size: 1.6rem
+  line-height: 1
+  strong
+    color: inherit
+  code
+    display: inline-block
+    font-size: inherit
+  & + .subtitle
+    margin-top: -1rem
+  & + .highlight
+    margin-top: -1rem
+  &.is-normal
+    font-weight: 400
+    strong
+      font-weight: 700
+    @include media(tablet)
+      & + .subtitle
+        margin-top: -1.5rem
+
+.subtitle
+  font-size: 1.8rem
+  line-height: 1.125
+  strong
+    color: $secondary
+    font-weight: 400
+  code
+    border-radius: $global-radius
+    display: inline-block
+    font-size: 1rem
+    padding: 0.2rem 0.3rem
+    vertical-align: top
+  & + .text
+    margin-top: 2rem
+  &.is-normal
+    font-weight: 400
+    strong
+      font-weight: 700

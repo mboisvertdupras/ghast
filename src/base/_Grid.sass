@@ -6,9 +6,11 @@
 .container
 	margin: 0 auto
 	max-width: $global-width
-	padding: 0 2.0rem
+	padding: 0
 	position: relative
 	width: 100%
+	+media(mobile)
+		padding: 0 2rem
 
 // Using flexbox for the grid, inspired by Philip Walton:
 // http://philipwalton.github.io/solved-by-flexbox/demos/grids/

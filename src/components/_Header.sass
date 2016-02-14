@@ -1,0 +1,181 @@
+.header
+  +clearfix
+  background: $white
+  box-shadow: 0 1px 2px rgba(black, 0.1)
+  display: flex
+  height: 50px
+  font-size: 1.4rem
+  line-height: 1.6rem
+  position: relative
+  text-align: center
+  z-index: 2
+  .container
+    align-items: stretch
+    display: flex
+    width: 100%
+  .button
+    height: 3.2rem
+    margin-bottom: 0
+    line-height: 3.2rem
+  +media(tablet)
+    height: $header-height
+
+.hamburger
+  cursor: pointer
+  display: block
+  height: 50px
+  position: relative
+  width: 50px
+  span
+    background: $secondary
+    display: block
+    height: 1px
+    left: 50%
+    margin-left: -7px
+    position: absolute
+    top: 50%
+    transition: none 200ms ease
+    transition-property: background, left, opacity, transform
+    width: 15px
+    &:nth-child(1)
+      margin-top: -6px
+    &:nth-child(2)
+      margin-top: -1px
+    &:nth-child(3)
+      margin-top: 4px
+  &:hover
+    background: $quaternary
+  &.is-active
+    span
+      background: $secondary
+      &:nth-child(1)
+        margin-left: -5px
+        transform: rotate(45deg)
+        transform-origin: left top
+      &:nth-child(2)
+        opacity: 0
+      &:nth-child(3)
+        margin-left: -5px
+        transform: rotate(-45deg)
+        transform-origin: left bottom
+  +media(tablet)
+    height: $header-height
+    width: $header-height
+
+.header-toggle
+  @extend .hamburger
+  +media(tablet)
+    display: none
+
+// Elements
+
+.header-item
+  align-items: center
+  display: flex
+  padding: 1rem
+  img
+    height: 2rem
+    margin-top: -0.1rem
+    vertical-align: middle
+  a:not(.button)
+    color: $secondary
+    &:hover
+      color: $gray-darker
+    &.is-active
+      color: $primary
+
+.header-tab
+  align-items: center
+  border-bottom: 1px solid transparent
+  color: $secondary
+  display: block
+  height: $header-height
+  line-height: 24px
+  padding: 13px 15px
+  &:hover
+    border-bottom: 1px solid $primary
+  &.is-active
+    border-bottom: 3px solid $primary
+    color: $primary
+
+// Containers
+
+.header-left
+  align-items: stretch
+  display: flex
+  flex: 1
+  overflow: hidden
+  overflow-x: auto
+  white-space: nowrap
+  @include media(desktop)
+
+.header-center
+  align-items: stretch
+  display: flex
+  left: 50%
+  position: absolute
+  transform: translateX(-50%)
+
+.header-right
+  align-items: stretch
+  @include media(tablet)
+    display: flex
+  @include media(desktop)
+
+.header-full
+  align-items: stretch
+  display: flex
+  justify-content: center
+  text-align: center
+  width: 100%
+  & > .header-item
+    align-items: stretch
+    display: flex
+    flex: 1
+    justify-content: center
+    padding: 0
+    & > a
+      align-items: center
+      display: flex
+      justify-content: center
+      width: 100%
+
+.header-menu
+  @include media(mobile)
+    background: white
+    box-shadow: 0 4px 7px rgba($black, 0.1)
+    display: none
+    min-width: 120px
+    position: absolute
+    right: 0
+    top: 50px
+    z-index: 100
+    .header-item
+      border-top: 1px solid rgba($black, 0.2)
+      padding: 10px
+    &.is-active
+      display: block
+
+// States
+
+.header.is-centered
+  justify-content: center
+  .header-left,
+  .header-center,
+  .header-right
+    justify-content: center
+
+.header.is-small
+  background: $white
+  box-shadow: none
+  height: 40px
+  z-index: 1
+  .container
+    height: 40px
+  .header-tab
+    font-size: 13px
+    height: 40px
+    padding: 8px 10px
+    &:hover,
+    &.is-active
+      border-bottom-width: 2px

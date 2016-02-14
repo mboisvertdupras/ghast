@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="2734px" height="843px" viewBox="0 0 2734 843" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>logo_text</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M20,362.25535 C20,-93.80179 648.57143,-93.45893 648.57143,362.25535 L648.571411,786.541068 L525.581726,682.255362 L428.829152,786.54107 L332.076578,682.255362 L235.324004,786.54107 L138.57143,682.25536 L20,786.541068 L20,362.25535 Z" id="path4156" stroke="#000000" stroke-width="40" sketch:type="MSShapeGroup"></path>
+        <ellipse id="Oval-1" stroke="#000000" stroke-width="40" sketch:type="MSShapeGroup" cx="213" cy="326" rx="56" ry="56"></ellipse>
+        <ellipse id="Oval-1-Copy" stroke="#000000" stroke-width="40" sketch:type="MSShapeGroup" cx="455" cy="326" rx="56" ry="56"></ellipse>
+        <path d="M171,552.28572 L225.28572,498 L279.57145,552.28572 L333.85717,498 L388.14289,552.28572 L442.42861,498 L496.71433,552.28572" id="path4192" stroke="#000000" stroke-width="40" sketch:type="MSShapeGroup"></path>
+        <text id="GHAST" sketch:type="MSTextLayer" font-family="Overpass" font-size="527" font-weight="260" fill="#000000">
+            <tspan x="862" y="635">GHAST</tspan>
+        </text>
+    </g>
+</svg>

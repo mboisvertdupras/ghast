@@ -1,6 +1,6 @@
 # [Ghast](https://voident.github.io)
 
-| An easy to use and spritely CSS framework.
+| A terrifyingly simple CSS framework.
 
 [![npm version](https://badge.fury.io/js/ghast.svg)](https://badge.fury.io/js/ghast)
 

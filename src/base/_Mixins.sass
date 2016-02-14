@@ -1,0 +1,33 @@
+
+// Mixins
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$tablet: 80rem
+$desktop: 120rem
+
+@mixin clearfix
+  &:after
+    clear: both
+    content: " "
+    display: table
+
+@mixin overlay($offset: 0)
+  bottom: $offset
+  left: $offset
+  position: absolute
+  right: $offset
+  top: $offset
+
+@mixin media($media-size)
+  @if ($media-size == mobile)
+    @media screen and (max-width: $tablet - 0.01rem)
+      @content
+  @if ($media-size == tablet)
+    @media screen and (min-width: $tablet)
+      @content
+  @if ($media-size == touch)
+    @media screen and (max-width: $desktop - 0.01rem)
+      @content
+  @if ($media-size == desktop)
+    @media screen and (min-width: $desktop)
+      @content
