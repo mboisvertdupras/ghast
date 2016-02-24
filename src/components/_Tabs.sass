@@ -1,0 +1,97 @@
+.tabs
+  @extend .block
+  line-height: 2.4rem
+  overflow: hidden
+  overflow-x: auto
+  white-space: nowrap
+  a
+    border-bottom: 0.1rem solid $quaternary
+    color: $secondary
+    display: block
+    margin-bottom: -1px
+    padding: 5px 0
+    font-size: 1.4rem
+    vertical-align: top
+    &:hover
+      border-bottom-color: $secondary
+      color: $primary
+  li
+    display: block
+    margin-bottom: 0
+    vertical-align: top
+    & + li
+      margin-left: 2rem
+    &.is-active
+      a
+        border-bottom-color: $primary
+        color: $primary
+  ul
+    border-bottom: 1px solid $quaternary
+    display: flex
+  &.is-centered
+    a
+      padding: 0.5rem 1rem
+    li
+      & + li
+        margin-left: 0
+    ul
+      justify-content: center
+      text-align: center
+  &.is-right
+    ul
+      justify-content: flex-end
+  &.is-boxed
+    a
+      border: 0.1rem solid transparent
+      border-radius: $global-radius $global-radius 0 0
+      padding: 0.5rem 1.5rem
+      &:hover
+        background: $quaternary
+        border-bottom-color: $quaternary
+    li
+      & + li
+        margin-left: 0.5rem
+      &.is-active
+        a
+          background: $white
+          border-color: $quaternary
+          border-bottom-color: transparent
+    &.is-centered
+      li
+        &,
+        & + li
+          margin: 0 0.2rem
+  &.is-toggle
+    a
+      border: 0.1rem solid $quaternary
+      margin-bottom: 0
+      padding: 0.5rem 1rem
+      position: relative
+      &:hover
+        background: $quaternary
+        border-color: $primary
+        z-index: 2
+    li
+      & + li
+        margin-left: -0.1rem
+      &:first-child a
+        border-radius: $global-radius 0 0 $global-radius
+      &:last-child a
+        border-radius: 0 $global-radius $global-radius 0
+      &.is-active
+        a
+          background: $primary
+          border-color: $primary
+          color: $primary-invert
+          z-index: 1
+    ul
+      border-bottom: none
+  &.is-fullwidth
+    +media(tablet)
+      li
+        flex: 1
+        & + li
+          margin-left: 0
+      ul
+        justify-content: center
+        text-align: center

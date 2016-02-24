@@ -42,10 +42,10 @@ gulp.task('watch', ['clean', 'default'], function() {
         server: {
             baseDir: ["app", "css"]
         },
-        notify: false
+        notify: true
     });
 
-    gulp.watch(['src/*/*.sass', 'src/**/*.sass'], ['sass']).on('change', browserSync.reload);
+    gulp.watch(['src/*/*.sass', 'src/**/*.sass'], ['default']).on('change', browserSync.reload);
     gulp.watch("app/*.{html,php}").on('change', browserSync.reload);
 });
 
@@ -56,5 +56,6 @@ gulp.task('default', ['sass', 'sourcemap'], function() {
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./css'))
+    .pipe(browserSync.stream())
 });

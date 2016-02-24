@@ -24,7 +24,7 @@ body {
   padding: 0;
   position: relative;
   width: 100%; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 79.99rem) {
     .container {
       padding: 0 2rem; } }
 
@@ -258,8 +258,11 @@ blockquote {
   margin-left: -2.25rem;
   margin-right: 0;
   padding: 1rem 0 1rem 1.75rem; }
-  blockquote *:last-child {
-    margin: 0; }
+  @media screen and (max-width: 79.99rem) {
+    blockquote {
+      border-left: 0.3rem solid #d1d1d1;
+      margin-left: 0;
+      padding: 1rem 1.5rem; } }
 
 .button,
 button,
@@ -948,7 +951,7 @@ input[type='radio'] {
     height: 3.2rem;
     margin-bottom: 0;
     line-height: 3.2rem; }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 80rem) {
     .header {
       height: 5rem; } }
 
@@ -995,12 +998,12 @@ input[type='radio'] {
       transform: rotate(-45deg);
       -webkit-transform-origin: left bottom;
       transform-origin: left bottom; }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 80rem) {
     .hamburger, .header-toggle {
       height: 5rem;
       width: 5rem; } }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 80rem) {
   .header-toggle {
     display: none; } }
 
@@ -1071,7 +1074,7 @@ input[type='radio'] {
   -ms-flex-align: stretch;
   -ms-grid-row-align: stretch;
   align-items: stretch; }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 80rem) {
     .header-right {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1115,7 +1118,7 @@ input[type='radio'] {
       justify-content: center;
       width: 100%; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 79.99rem) {
   .header-menu {
     background: white;
     box-shadow: 0 4px 7px rgba(10, 10, 10, 0.1);
@@ -1126,7 +1129,7 @@ input[type='radio'] {
     top: 50px;
     z-index: 100; }
     .header-menu .header-item {
-      border-top: 1px solid rgba(10, 10, 10, 0.5);
+      border-top: 1px solid rgba(10, 10, 10, 0.2);
       padding: 10px; }
     .header-menu.is-active {
       display: block; } }
@@ -1173,7 +1176,7 @@ input[type='radio'] {
     top: 50%;
     -webkit-transform: translate3d(-50%, -50%, 0);
     transform: translate3d(-50%, -50%, 0); }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 79.99rem) {
     .hero-video {
       display: none; } }
 
@@ -1182,18 +1185,18 @@ input[type='radio'] {
   .hero-content img {
     height: 15rem;
     margin-bottom: 2rem; }
-  @media screen and (min-width: 980px) {
+  @media screen and (min-width: 120rem) {
     .hero-content {
       padding: 40px 0; } }
 
 .hero-buttons {
   margin-top: 20px; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 79.99rem) {
     .hero-buttons .button {
       display: block; }
       .hero-buttons .button:not(:last-child) {
         margin-bottom: 10px; } }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 80rem) {
     .hero-buttons {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1212,16 +1215,18 @@ input[type='radio'] {
     box-shadow: none; }
     .hero .header img {
       height: 2rem; }
-    .hero .header .header-left .header-item:first-child {
-      padding-left: 0; }
-    .hero .header .header-right .header-item:last-child {
-      padding-right: 0; }
+    @media screen and (min-width: 120rem) {
+      .hero .header .header-left .header-item:first-child {
+        padding-left: 0; }
+      .hero .header .header-right .header-item:last-child {
+        padding-right: 0; } }
   .hero .header .container {
     padding: 0;
     box-shadow: 0 1px 0 rgba(143, 151, 158, 0.3); }
   .hero .tabs a {
     border: none; }
   .hero .tabs ul {
+    margin-bottom: 0;
     border-bottom: none; }
   .hero .subtitle {
     letter-spacing: normal; }
@@ -1266,7 +1271,7 @@ input[type='radio'] {
       color: #606c76; }
     .hero.is-dark.is-bold {
       background-image: linear-gradient(141deg, #415962 0%, #606c76 71%, #65738a 100%); }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 79.99rem) {
       .hero.is-dark .header-toggle span {
         background: #f4f5f6; }
       .hero.is-dark .header-toggle:hover {
@@ -1315,7 +1320,7 @@ input[type='radio'] {
       color: #6959ff; }
     .hero.is-primary.is-bold {
       background-image: linear-gradient(141deg, #2635ff 0%, #6959ff 71%, #9773ff 100%); }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 79.99rem) {
       .hero.is-primary .header-toggle span {
         background: #f4f5f6; }
       .hero.is-primary .header-toggle:hover {
@@ -1364,7 +1369,7 @@ input[type='radio'] {
       color: #42afe3; }
     .hero.is-info.is-bold {
       background-image: linear-gradient(141deg, #13bfdf 0%, #42afe3 71%, #53a1eb 100%); }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 79.99rem) {
       .hero.is-info .header-toggle span {
         background: #f4f5f6; }
       .hero.is-info .header-toggle:hover {
@@ -1413,7 +1418,7 @@ input[type='radio'] {
       color: #97cd76; }
     .hero.is-success.is-bold {
       background-image: linear-gradient(141deg, #8ecb45 0%, #97cd76 71%, #96d885 100%); }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 79.99rem) {
       .hero.is-success .header-toggle span {
         background: #f4f5f6; }
       .hero.is-success .header-toggle:hover {
@@ -1462,7 +1467,7 @@ input[type='radio'] {
       color: #fce473; }
     .hero.is-warning.is-bold {
       background-image: linear-gradient(141deg, #ffbd3d 0%, #fce473 71%, #fffe8a 100%); }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 79.99rem) {
       .hero.is-warning .header-toggle span {
         background: rgba(10, 10, 10, 0.5); }
       .hero.is-warning .header-toggle:hover {
@@ -1511,7 +1516,7 @@ input[type='radio'] {
       color: #ed6c63; }
     .hero.is-danger.is-bold {
       background-image: linear-gradient(141deg, #f32a3e 0%, #ed6c63 71%, #f39376 100%); }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 79.99rem) {
       .hero.is-danger .header-toggle span {
         background: #f4f5f6; }
       .hero.is-danger .header-toggle:hover {
@@ -1522,21 +1527,21 @@ input[type='radio'] {
         background: #ed6c63; }
         .hero.is-danger .header-menu .header-item {
           border-top-color: #f4f5f6; } }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 80rem) {
     .hero.is-fullheight .tabs, .hero.is-large .tabs {
       font-size: 1.8rem; } }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 80rem) {
     .hero.is-medium .hero-content {
       padding: 120px 20px; } }
-  @media screen and (min-width: 980px) {
+  @media screen and (min-width: 120rem) {
     .hero.is-medium .hero-content {
       padding: 120px 0; } }
   .hero.is-large .tabs a {
     padding: 10px 15px; }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 80rem) {
     .hero.is-large .hero-content {
       padding: 240px 20px; } }
-  @media screen and (min-width: 980px) {
+  @media screen and (min-width: 120rem) {
     .hero.is-large .hero-content {
       padding: 240px 0; } }
   .hero.is-fullheight {
@@ -1757,6 +1762,100 @@ td {
   td:last-child {
     padding-right: 0; }
 
+.tabs {
+  line-height: 2.4rem;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap; }
+  .tabs a {
+    border-bottom: 0.1rem solid #d1d1d1;
+    color: #8f979e;
+    display: block;
+    margin-bottom: -1px;
+    padding: 5px 0;
+    font-size: 1.4rem;
+    vertical-align: top; }
+    .tabs a:hover {
+      border-bottom-color: #8f979e;
+      color: #6959ff; }
+  .tabs li {
+    display: block;
+    margin-bottom: 0;
+    vertical-align: top; }
+    .tabs li + li {
+      margin-left: 2rem; }
+    .tabs li.is-active a {
+      border-bottom-color: #6959ff;
+      color: #6959ff; }
+  .tabs ul {
+    border-bottom: 1px solid #d1d1d1;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .tabs.is-centered a {
+    padding: 0.5rem 1rem; }
+  .tabs.is-centered li + li {
+    margin-left: 0; }
+  .tabs.is-centered ul {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center; }
+  .tabs.is-right ul {
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+  .tabs.is-boxed a {
+    border: 0.1rem solid transparent;
+    border-radius: 0.3rem 0.3rem 0 0;
+    padding: 0.5rem 1.5rem; }
+    .tabs.is-boxed a:hover {
+      background: #d1d1d1;
+      border-bottom-color: #d1d1d1; }
+  .tabs.is-boxed li + li {
+    margin-left: 0.5rem; }
+  .tabs.is-boxed li.is-active a {
+    background: #fff;
+    border-color: #d1d1d1;
+    border-bottom-color: transparent; }
+  .tabs.is-boxed.is-centered li,
+  .tabs.is-boxed.is-centered li + li {
+    margin: 0 0.2rem; }
+  .tabs.is-toggle a {
+    border: 0.1rem solid #d1d1d1;
+    margin-bottom: 0;
+    padding: 0.5rem 1rem;
+    position: relative; }
+    .tabs.is-toggle a:hover {
+      background: #d1d1d1;
+      border-color: #6959ff;
+      z-index: 2; }
+  .tabs.is-toggle li + li {
+    margin-left: -0.1rem; }
+  .tabs.is-toggle li:first-child a {
+    border-radius: 0.3rem 0 0 0.3rem; }
+  .tabs.is-toggle li:last-child a {
+    border-radius: 0 0.3rem 0.3rem 0; }
+  .tabs.is-toggle li.is-active a {
+    background: #6959ff;
+    border-color: #6959ff;
+    color: #f4f5f6;
+    z-index: 1; }
+  .tabs.is-toggle ul {
+    border-bottom: none; }
+  @media screen and (min-width: 80rem) {
+    .tabs.is-fullwidth li {
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
+      .tabs.is-fullwidth li + li {
+        margin-left: 0; }
+    .tabs.is-fullwidth ul {
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-align: center; } }
+
 .is-title:not(:last-child),
 .subtitle:not(:last-child) {
   margin-bottom: 2rem; }
@@ -1778,7 +1877,7 @@ td {
     font-weight: 400; }
     .is-title.is-normal strong {
       font-weight: 700; }
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 80rem) {
       .is-title.is-normal + .subtitle {
         margin-top: -1.5rem; } }
 
@@ -1800,6 +1899,15 @@ td {
     font-weight: 400; }
     .subtitle.is-normal strong {
       font-weight: 700; }
+
+.is-centered {
+  text-align: center; }
+
+.is-left {
+  text-align: left; }
+
+.is-right {
+  text-align: right; }
 
 .float-right {
   float: right; }
