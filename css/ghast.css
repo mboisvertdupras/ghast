@@ -837,6 +837,47 @@ input[type='submit'] {
         input[type='submit'].danger.inverted.outline:hover {
           background: rgba(0, 0, 0, 0.05); }
 
+.card-image {
+  display: block;
+  position: relative; }
+  .card-image img {
+    display: block; }
+  .card-image.is-square img, .card-image.is-4x3 img, .card-image.is-3x2 img {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%; }
+  .card-image.is-square {
+    padding-top: 100%; }
+  .card-image.is-4x3 {
+    padding-top: 75%; }
+  .card-image.is-3x2 {
+    padding-top: 66.6666%; }
+
+.card-content {
+  padding: 2rem; }
+  .card-content .title + .subtitle {
+    margin-top: -2rem; }
+
+.card-footer {
+  background: #d1d1d1;
+  display: block;
+  padding: 1rem; }
+
+.card {
+  background: white;
+  box-shadow: 0 0.2rem -0.3rem rgba(0, 0, 0, 0.1), 0 0 0 0.1rem rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  position: relative;
+  width: 30rem; }
+  .card .media:not(:last-child) {
+    margin-bottom: 1rem; }
+  .card.is-rounded {
+    border-radius: 0.5rem; }
+
 code {
   background: #f4f5f6;
   border-radius: 0.3rem;
@@ -1646,6 +1687,75 @@ dt,
 dd,
 li {
   margin-bottom: 1.0rem; }
+
+.media-number {
+  background: #fff;
+  border-radius: 0.3rem;
+  display: inline-block;
+  font-size: 1.8rem;
+  height: 3.2rem;
+  line-height: 2.4rem;
+  min-width: 3.2rem;
+  padding: 0.4rem 0.8rem;
+  text-align: center;
+  vertical-align: top; }
+  @media screen and (max-width: 79.99rem) {
+    .media-number {
+      margin-bottom: 1rem; } }
+  @media screen and (min-width: 80rem) {
+    .media-number {
+      margin-right: 1rem; } }
+
+.media-left {
+  margin-right: 1rem; }
+
+.media-right {
+  margin-left: 1rem; }
+
+.media-content {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: left; }
+
+.media {
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left; }
+  .media .content:not(:last-child) {
+    margin-bottom: 1rem; }
+  .media .media {
+    border-top: 0.1rem solid rgba(209, 209, 209, 0.5);
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 1rem;
+    /*.textarea
+      @include control-small*/
+    /*.button
+      @include button-small*/ }
+    .media .media .content:not(:last-child),
+    .media .media .control:not(:last-child) {
+      margin-bottom: 0.5rem; }
+    .media .media .media {
+      font-size: 1.2rem;
+      padding-top: 0.5rem; }
+      .media .media .media + .media {
+        margin-top: 0.5rem; }
+  .media + .media {
+    border-top: 0.1rem solid rgba(209, 209, 209, 0.5);
+    margin-top: 1rem;
+    padding-top: 1rem; }
+  .media.is-large + .media {
+    margin-top: 2rem;
+    padding-top: 2rem; }
+  @media screen and (min-width: 80rem) {
+    .media.is-large .media-number {
+      margin-right: 2rem; } }
 
 .switch {
   margin: 0.25rem;
