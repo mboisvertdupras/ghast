@@ -31,3 +31,9 @@ $desktop: 120rem
   @if ($media-size == desktop)
     @media screen and (min-width: $desktop)
       @content
+
+@mixin transition($transition)
+    -moz-transition:    $transition
+    -o-transition:      $transition
+    -webkit-transition: $transition
+    transition:         $transition

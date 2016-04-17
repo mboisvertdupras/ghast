@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700);
 html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
   margin: 0;
   padding: 0;
@@ -89,7 +89,7 @@ input[type="checkbox"] {
   vertical-align: bottom; }
 
 select, input, textarea {
-  font: 99% sans-serif; }
+  font: 99%; }
 
 table {
   font-size: inherit;
@@ -138,11 +138,10 @@ html {
   font-size: 62.5%; }
 
 body {
-  color: #606c76;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fafafa;
+  color: #444;
+  font-family: "Noto Serif", serif;
   font-size: 1.6em;
-  font-weight: 300;
-  letter-spacing: .01em;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -154,7 +153,7 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 120rem;
+  max-width: 64.5rem;
   padding: 0;
   position: relative;
   width: 100%; }
@@ -367,9 +366,7 @@ fieldset {
 pre,
 blockquote,
 dl,
-figure,
 table,
-p,
 ul,
 ol,
 form {
@@ -384,7 +381,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 300;
+  font-weight: 700;
   margin-bottom: 2.0rem;
   margin-top: 0; }
 
@@ -1052,6 +1049,7 @@ input[type='submit'] {
   max-width: 100%;
   position: relative;
   width: 100%;
+  margin-bottom: 2rem;
   border-radius: 0.3rem; }
   .card .media:not(:last-child) {
     margin-bottom: 1rem; }
@@ -1241,7 +1239,7 @@ input[type='radio'] {
   .header-item a:not(.button) {
     color: #8f979e; }
     .header-item a:not(.button):hover {
-      color: #222324; }
+      color: #111; }
     .header-item a:not(.button).is-active {
       color: #6959ff; }
 
@@ -1971,7 +1969,7 @@ li {
   font-size: 0; }
 
 .switch-trough {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Noto Serif", serif;
   font-weight: 700;
   position: relative;
   display: block;
@@ -2149,9 +2147,8 @@ td {
   margin-bottom: 2rem; }
 
 .title {
-  color: #8f979e;
   font-size: 3.6rem;
-  line-height: 1; }
+  line-height: 1.2; }
   .title strong {
     color: inherit; }
   .title code {

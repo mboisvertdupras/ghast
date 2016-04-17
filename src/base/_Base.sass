@@ -10,11 +10,10 @@ html
 
 // Default body styles
 body
+	background: $body-background-color
 	color: $body-font-color
 	font-family: $body-font-family
 	font-size: 1.6em // currently ems cause chrome bug misinterpreting rems on body element
-	font-weight: 300
-	letter-spacing: .01em
 	line-height: 1.6
 	@if $body-antialiased
 		-webkit-font-smoothing: antialiased
