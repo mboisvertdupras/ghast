@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700);
 html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
   margin: 0;
   padding: 0;
@@ -140,7 +140,7 @@ html {
 body {
   background: #fafafa;
   color: #444;
-  font-family: "Noto Serif", serif;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.6em;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -1746,7 +1746,7 @@ input[type='radio'] {
           border-top-color: #f4f5f6; } }
   @media screen and (min-width: 80rem) {
     .hero.is-fullheight .tabs, .hero.is-large .tabs {
-      font-size: 1.8rem; } }
+      font-size: 1.6rem; } }
   @media screen and (min-width: 80rem) {
     .hero.is-medium .hero-content {
       padding: 120px 20px; } }
@@ -1868,7 +1868,7 @@ li {
   background: #fff;
   border-radius: 0.3rem;
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   height: 3.2rem;
   line-height: 2.4rem;
   min-width: 3.2rem;
@@ -1969,7 +1969,7 @@ li {
   font-size: 0; }
 
 .switch-trough {
-  font-family: "Noto Serif", serif;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   position: relative;
   display: block;
@@ -2162,37 +2162,38 @@ td {
     font-weight: 400; }
     .title.is-normal strong {
       font-weight: 700; }
-  .title.is-1 {
+  .title.1 {
     font-size: 4.8rem; }
-    .title.is-1 code {
+    .title.1 code {
       font-size: 4rem; }
-  .title.is-2 {
+  .title.2 {
     font-size: 4rem; }
-    .title.is-2 code {
+    .title.2 code {
       font-size: 2.8rem; }
-  .title.is-3 {
+  .title.3 {
     font-size: 2.8rem; }
-    .title.is-3 code {
+    .title.3 code {
       font-size: 2.4rem; }
-  .title.is-4 {
+  .title.4 {
     font-size: 2.4rem; }
-    .title.is-4 code {
+    .title.4 code {
       font-size: 1.8rem; }
-  .title.is-5 {
+  .title.5 {
     font-size: 1.8rem; }
-    .title.is-5 code {
+    .title.5 code {
       font-size: 1.6rem; }
-  .title.is-6 {
+  .title.6 {
     font-size: 1.6rem; }
-    .title.is-6 code {
+    .title.6 code {
       font-size: 1.6rem; }
 
 .subtitle {
   font-size: 1.8rem;
+  font-weight: 400;
   line-height: 1.125; }
   .subtitle strong {
     color: #8f979e;
-    font-weight: 400; }
+    font-weight: 700; }
   .subtitle code {
     border-radius: 0.3rem;
     display: inline-block;

@@ -168,41 +168,154 @@
 				display: none;
 			}
 			}
-			pre.prettyprint {
-			border: 0 !important;
-			border-left: .3rem solid #6959ff !important;
-			color: #655d5d;
-			}
-			/* string content */
-			pre.prettyprint .str { color: #4b8b8b; }
-			/* a keyword */
-			pre.prettyprint .kwd { color: #8464c4; }
-			/* a comment */
-			pre.prettyprint .com { color: #adadad; }
-			/* a type name */
-			pre.prettyprint .typ { color: #7272ca; }
-			/* a literal value */
-			pre.prettyprint .lit { color: #9575CD; }
-			/* punctuation */
-			pre.prettyprint .pun { color: #5485b6; }
-			/* lisp open bracket */
-			pre.prettyprint .opn { color: #f4ecec; }
-			/* lisp close bracket */
-			pre.prettyprint .clo { color: #f4ecec; }
-			/* a markup tag name */
-			pre.prettyprint .tag { color: #9575CD; }
-			/* a markup attribute name */
-			pre.prettyprint .atn { color: #9575CD; }
-			/* a markup attribute value */
-			pre.prettyprint .atv { color: #5485b6; }
-			/* a declaration */
-			pre.prettyprint .dec { color: #b45a3c; }
-			/* a variable name */
-			pre.prettyprint .var { color: #ca4949; }
-			/* a function name */
-			pre.prettyprint .fun { color: #7272ca; }
-			/* markdown content */
-			pre.prettyprint.lang-md * { color: #655d5d !important; }
+      /* GitHub Theme */
+      pre.prettyprint {
+        background: #FFFFFF;
+        padding: 2.5rem 3rem;
+        border: 1px solid #CCCCCC !important;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .pln {
+        color: #333333;
+      }
+
+      @media screen {
+        .str {
+          color: #dd1144;
+        }
+
+        .kwd {
+          color: #333333;
+        }
+
+        .com {
+          color: #999988;
+        }
+
+        .typ {
+          color: #445588;
+        }
+
+        .lit {
+          color: #445588;
+        }
+
+        .pun {
+          color: #333333;
+        }
+
+        .opn {
+          color: #333333;
+        }
+
+        .clo {
+          color: #333333;
+        }
+
+        .tag {
+          color: navy;
+        }
+
+        .atn {
+          color: teal;
+        }
+
+        .atv {
+          color: #dd1144;
+        }
+
+        .dec {
+          color: #333333;
+        }
+
+        .var {
+          color: teal;
+        }
+
+        .fun {
+          color: #990000;
+        }
+      }
+      @media print, projection {
+        .str {
+          color: #006600;
+        }
+
+        .kwd {
+          color: #006;
+          font-weight: bold;
+        }
+
+        .com {
+          color: #600;
+          font-style: italic;
+        }
+
+        .typ {
+          color: #404;
+          font-weight: bold;
+        }
+
+        .lit {
+          color: #004444;
+        }
+
+        .pun, .opn, .clo {
+          color: #444400;
+        }
+
+        .tag {
+          color: #006;
+          font-weight: bold;
+        }
+
+        .atn {
+          color: #440044;
+        }
+
+        .atv {
+          color: #006600;
+        }
+      }
+      /* Specify class=linenums on a pre to get line numbering */
+      ol.linenums {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      /* IE indents via margin-left */
+      li.L0,
+      li.L1,
+      li.L2,
+      li.L3,
+      li.L4,
+      li.L5,
+      li.L6,
+      li.L7,
+      li.L8,
+      li.L9 {
+        /* */
+      }
+
+      /* Alternate shading for lines */
+      li.L1,
+      li.L3,
+      li.L5,
+      li.L7,
+      li.L9 {
+        /* */
+      }
+
+      /* My additional styles */
+
+      /*li.L0, li.L1, li.L2, li.L3,
+      li.L5, li.L6, li.L7, li.L8
+      { list-style-type: decimal !important }*/
+
+      .prettyprint li {
+        margin-bottom: .3rem;
+      }
 	</style>
 	</head>
 	<body>
@@ -213,10 +326,17 @@
 			    <header class="header">
 			      <div class="container">
 			        <div class="header-left">
+                <span class="header-item">
+			            <a href="http://ghast.xyz">About</a>
+			          </span>
+                <span class="header-item">
+			            <a href="http://ghast.xyz">Code</a>
+			          </span>
 								<span class="header-item">
-									<a href="#">
-				            <img src="logo_text.svg" alt="Logo">
-				          </a>
+			            <a href="http://blog.voident.xyz/">Blog</a>
+			          </span>
+                <span class="header-item">
+			            <a href="http://ghast.xyz">Github</a>
 			          </span>
 			        </div>
 			        <span id="header-toggle" class="header-toggle">
@@ -224,25 +344,11 @@
 			          <span></span>
 			          <span></span>
 			        </span>
-			        <div id="header-menu" class="header-right header-menu">
-								<span class="header-item">
-			            <a href="http://ghast.xyz">Home</a>
-			          </span>
-								<span class="header-item">
-			            <a href="http://blog.voident.xyz/">Blog</a>
-			          </span>
-			          <span class="header-item">
-			            <a class="button dark outline" href="https://github.com/voident/ghast" target="_blank">
-			              GitHub
-			            </a>
-			          </span>
-			        </div>
 			      </div>
 			    </header>
 			  </div>
 			  <div class="hero-content">
 			    <div class="container">
-						<img class="svg" src="http://voident.github.io/img/logo.svg" alt="Logo">
 			      <h1 class="title">
 			        Ghast
 			      </h1>
@@ -250,15 +356,14 @@
 			        A terrifyingly simple CSS framework built with Flexbox
 			      </h2>
             <p class="hero-buttons">
-              <a href="#getting-started" class="button">Get Started</a>
-              <a href="#examples" class="button outline">View Examples</a>
+              <a href="#getting-started" class="button">Download</a>
             </p>
 			    </div>
 			  </div>
 			</section>
 
 			<section class="container section" id="why">
-				<h5 class="title">So, why Ghast?</h5>
+				<h1 class="title">So, is Ghast for you?</h1>
 				<p>Ghast was designed to provide everything you need to get started with your own website in a small, responsive package. It was built to be easy to understand, maintain and adapt to your needs. We hope you'll like it!</p>
 				<p>If you enjoy Ghast or think it's a cool project, help spread the word out by sharing it with your fam!</p>
 				<div class="share">
@@ -274,9 +379,8 @@
 			</section>
 
 			<section class="container section" id="getting-started">
-				<h5 class="title">Getting Started</h5>
+				<h1 class="title">Getting Started</h1>
 				<p>There are some ways to get started. First, see all download options available below, then choose the most suitable option for your need. Now you should add the main file of the Ghast and the CSS Reset in the header of your project. Just that!</p>
-				<p><a class="button" href="https://github.com/voident/ghast/archive/master.zip" title="Download Ghast">Download Ghast</a></p>
 				<div class="example">
 					<p><strong>Install with npm</strong></p>
 					<p>Ghast is available to install using npm.</p>
@@ -310,7 +414,7 @@
 			</section>
 
 			<section class="container section" id="typography">
-				<h5 class="title">Typography</h5>
+				<h1 class="title">Typography</h1>
 				<p>CSS3 introduces a few new units, including the <code>rem</code> unit, which stands for <em>"root em"</em>. The <code>rem</code> unit is relative to the font-size of the root element <code>&lt;html&gt;</code>. That means that we can define a single font size on the root element, and define all <code>rem</code> units to be a percentage of that. The typography has <code>font-size</code> defined as 1.6rem (16px) and <code>line-height</code> as 1.6 (24px). <strong>Ghast</strong> uses the <code>font-family</code> <a target="blank" href="https://www.google.com/fonts/specimen/Roboto" title="Roboto by Christian Robertson">Roboto</a>, created by <u>Christian Robertson</u>, and provided by Google.</p>
 				<div class="example">
 					<div class="row">
@@ -346,7 +450,7 @@
 			</section>
 
 			<section class="container section" id="blockquotes">
-				<h5 class="title">Blockquotes</h5>
+				<h1 class="title">Blockquotes</h1>
 				<p>The Blockquote represents a section that is quoted from another source.</p>
 				<div class="example">
 					<blockquote>
@@ -359,7 +463,7 @@
 			</section>
 
 			<section class="container section" id="buttons">
-				<h5 class="title">Buttons</h5>
+				<h1 class="title">Buttons</h1>
 				<p>The Button, an essential part of any user experience. Buttons come in three basic styles in Ghast: The <code>&lt;button&gt;</code> element has flat color by default, whereas <code>.button-outline</code> has a simple outline around, and <code>.button-clear</code> is entirely clear.</p>
 				<div class="example">
 					<a class="button" href="javascript: void(0)">Default Button</a>
@@ -379,7 +483,7 @@
 			</section>
 
 			<section class="container section" id="lists">
-				<h5 class="title">Lists</h5>
+				<h1 class="title">Lists</h1>
 				<p>The List is a very versatile and common way to display items. Ghast has three types of lists: The unordered list use <code>&lt;ul&gt;</code> element will be marked with a outline circles, the ordered list use <code>&lt;ol&gt;</code> element and your items will be marked with numbers, the description list use <code>&lt;dl&gt;</code> element and your items will not be marking, only spacings.</p>
 				<div class="row example">
 					<div class="column">
@@ -423,7 +527,7 @@
 			</section>
 
       <section class="container section" id="header">
-				<h5 class="title">Header</h5>
+				<h1 class="title">Header</h1>
 				<p>The header is a responsive horizontal navigation component that can contain links, tabs, buttons, etc..</p>
 				<div class="example">
 					<div class="row">
@@ -502,7 +606,7 @@
 			</section>
 
 			<section class="container section" id="footer">
-				<h5 class="title">Footer</h5>
+				<h1 class="title">Footer</h1>
 				<p>The footer is a simple responsive component which can contain almost anything.</p>
 				<div class="example">
 					<div class="footer">
@@ -527,7 +631,7 @@
 			</section>
 
 			<section class="container section" id="forms">
-				<h5 class="title">Forms</h5>
+				<h1 class="title">Forms</h1>
 				<p>Forms have never been exactly fun to work with, and they can be downright painful on a mobile device with its on-screen keyboard. Ghast helps to make this much easier with design focused on the user experience.</p>
 				<div class="example">
 					<form action="javascript: void(0)">
@@ -561,7 +665,7 @@
 			</section>
 
 			<section class="container section" id="switches">
-				<h5 class="title">Switches</h5>
+				<h1 class="title">Switches</h1>
 				<p>Good old checkboxes are just plain ugly and outdated in the mobile first world of today. Ghast provides beautifully crafted switches that convey a more familliar experience to mobile users and overall, they're just pretty!</p>
 				<div class="example">
 					<label class="switch">
@@ -600,7 +704,7 @@
 			</section>
 
 			<section class="container section" id="tables">
-				<h5 class="title">Tables</h5>
+				<h1 class="title">Tables</h1>
 				<p>The Table element represents data in two dimensions or more. We encourage the use of proper formatting with <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> to create a <code>&lt;table&gt;</code>. The code becomes cleaner without disturbing understanding.</p>
 				<div class="example">
 					<table>
@@ -657,7 +761,7 @@
 			</section>
 
 			<section class="container section" id="grids">
-				<h5 class="title">Grids</h5>
+				<h1 class="title">Grids</h1>
 				<p>The Grid is a fluid system with a max width of <code>70.0rem</code> <small>(1120px)</small>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. Ghast is different than most because of its use of the <strong>CSS Flexible Box Layout Module standard</strong>. The advantage is the simplicity, and we know that a functional code is very important for maintainability and scalability. Simply add columns you want in a row, and they'll evenly take up the available space. If you want three columns, add three columns, if you want five columns, add five columns. There is no restriction on number of columns, but we advise you to follow a design pattern of grid system. See more tips on best practices in the <a href="#tips" title="Tips">tips</a>.</p>
 				<div class="example">
 					<div class="container">
@@ -694,7 +798,7 @@
 			</section>
 
 			<section class="container section" id="codes">
-				<h5 class="title">Codes</h5>
+				<h1 class="title">Codes</h1>
 				<p>The Code element represents a fragment of computer code. Just wrap anything in a <code>&lt;code&gt;</code> and it will appear like this. if you need a block, by default, enter the <code>&lt;code&gt;</code> within the <code>&lt;pre&gt;</code> element.</p>
 				<div class="example">
 <pre><code>.Ghast {
@@ -710,7 +814,7 @@
 			</section>
 
 			<section class="container section" id="utilities">
-				<h5 class="title">Utilities</h5>
+				<h1 class="title">Utilities</h1>
 				<p>Ghast has some functional classes to improve the performance and productivity everyday.</p>
 				<pre class="code prettyprint lang-html"><code class="code-content"><!-- Functional Classes -->
 
@@ -725,7 +829,7 @@
 			</section>
 
 			<section class="container section" id="tips">
-				<h5 class="title">Tips</h5>
+				<h1 class="title">Tips</h1>
 				<p>Tips, techniques, and best practice on using Cascading Style Sheets.</p>
 				<p><strong>Mobile First</strong></p>
 				<p>The Mobile First is the design strategy that takes priority development for mobile devices like smartphones and tablets. It means all styles outside of a media queries apply to all devices, then larger screens are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. Ghast use some breakpoints like these:</p>
@@ -818,7 +922,7 @@
 			</section>
 
 			<section class="container section" id="browser-support">
-				<h5 class="title">Browser Support</h5>
+				<h1 class="title">Browser Support</h1>
 				<p>While not designed for old browsers, Ghast has support for some old versions, but we recommend using the latest versions of their browsers.</p>
 				<ul>
 					<li>Chrome <small>latest</small></li>
@@ -830,7 +934,7 @@
 			</section>
 
 			<section class="container section" id="examples">
-				<h5 class="title">Examples</h5>
+				<h1 class="title">Examples</h1>
 				<p>You can view more examples of using Ghast.</p>
 				<p>
 					<ul>
@@ -854,7 +958,7 @@
 			</section>
 
 			<section class="container section" id="contributing">
-				<h5 class="title">Contributing</h5>
+				<h1 class="title">Contributing</h1>
 				<p>Want to contribute? Follow these <a href="https://github.com/voident/ghast/blob/master/contributing.md" title="Contributing">recommendations</a>.</p>
 			</section>
 
