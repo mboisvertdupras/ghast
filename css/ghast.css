@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:700,400);
 html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
   margin: 0;
   padding: 0;
@@ -141,7 +141,7 @@ body {
   background: #fafafa;
   color: #444;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.6em;
+  font-size: 1.8em;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -415,7 +415,7 @@ h6 {
   letter-spacing: 0;
   line-height: 1.4; }
 
-@media (min-width: 40rem) {
+@media screen and (min-width: 80rem) {
   h1 {
     font-size: 5.0rem; }
   h2 {
