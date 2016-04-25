@@ -4,23 +4,27 @@
 
 // The base font-size is set at 62.5% for having the convenience
 // of sizing rems in a way that is similar to using px. 1.6rem=16px
+// See $global-font-size in _variables.sass
+
 html
-	box-sizing: border-box
-	font-size: $global-font-size
+  box-sizing: border-box
+  font: $global-font-size $body-font-family
+  line-height: $global-lineheight
+
 
 // Default body styles
 body
-	background: $body-background-color
-	color: $body-font-color
-	font-family: $body-font-family
-	font-size: 1.8em // currently ems cause chrome bug misinterpreting rems on body element
-	line-height: 1.6
-	@if $body-antialiased
-		-webkit-font-smoothing: antialiased
-		-moz-osx-font-smoothing: grayscale
+  background: $body-background-color
+  color: $body-font-color
+  font-size: 1.6rem
+
+  @if $body-antialiased
+    -moz-osx-font-smoothing: grayscale
+    -webkit-font-smoothing: antialiased
+
 
 // Set box-sizing globally to handle padding and border widths
 *,
 *:after,
 *:before
-	box-sizing: inherit
+  box-sizing: inherit
