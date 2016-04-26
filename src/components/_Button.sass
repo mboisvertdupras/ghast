@@ -7,66 +7,66 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit']
-	background-color: $gray
-	border: .1rem solid
-  border-color: $gray
-	border-radius: $global-radius
-	color: $gray
+  background-color: $gray-lightest
+  border: .1rem solid
+  border-color: $gray-lightest
+  border-radius: $global-radius
+  color: $gray
   cursor: pointer
-	display: inline-block
-	font-size: 1.1rem
-	font-weight: 700
-	height: 3.8rem
-	letter-spacing: .1rem
-	line-height: 3.8rem
+  display: inline-block
+  font-size: 1.1rem
+  font-weight: 700
+  height: 3.8rem
+  letter-spacing: .1rem
+  line-height: 3.8rem
   opacity: 1
   padding: 0 3rem
   text-align: center
   text-decoration: none
   text-transform: uppercase
-	white-space: nowrap
+  white-space: nowrap
 
-	&:hover,
-	&:focus
-		background-color: $gray
-		border-color: transparent
-		color: $gray
-		outline: 0
+  &:hover,
+  &:focus
+    background-color: $gray-lighter
+    border-color: transparent
+    color: $gray
+    outline: 0
 
-	&.disabled,
-	&[disabled]
+  &.disabled,
+  &[disabled]
     cursor: default
-		opacity: .5
+    opacity: .5
 
-		&:hover,
-		&:focus
-			background-color: $gray-light
-			border-color: $gray-light
+    &:hover,
+    &:focus
+      background-color: $gray-light
+      border-color: $gray-light
 
-	&.outline
+  &.outline
     background-color: transparent
-		color: inherit
+    color: inherit
 
-		&:hover,
-		&:focus
+    &:hover,
+    &:focus
       background-color: transparentize($gray, .9)
       border-color: inherit
-			color: inherit
+      color: inherit
 
-	&.clear
+  &.clear
     background-color: transparent
     border-color: transparent
-		color: $gray
+    color: $gray
 
-		&:hover,
-		&:focus
+    &:hover,
+    &:focus
       background-color: transparentize($gray, .9)
       border-color: transparent
-			color: inherit
+      color: inherit
 
 
   // Set styles for each colors defined in _Variables.sass
-	@each $name, $pair in $colors
+  @each $name, $pair in $colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.#{$name}
@@ -92,7 +92,7 @@ input[type='submit']
         background: $color-invert
         color: $color
         &:hover
-          background: darken($color-invert, 5%)
+          background: $color-invert
         &.outline
           background-color: transparent
           border-color: $color-invert

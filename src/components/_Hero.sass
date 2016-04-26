@@ -38,7 +38,7 @@
       margin-right: 2rem
 
 .hero
-  background: $gray-light
+  background: $faded
   text-align: center
   .header
     background: none
@@ -64,7 +64,7 @@
   .subtitle
     letter-spacing: normal
   &.is-alt
-    background: $offwhite
+    background: $faded
     color: $gray
   @each $name, $pair in $colors
     $color: nth($pair, 1)
@@ -82,7 +82,7 @@
         strong
           color: $color-invert
       .header .container
-        box-shadow: 0 1px 0 transparentize($color-invert, .7)
+        box-shadow: 0 1px 0 $color-invert
       .header-icon,
       .header-item > a:not(.button)
         color: $color-invert
