@@ -3,13 +3,13 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .switch
-    margin: 0.25rem
+    margin: .25rem
     position: relative
     display: inline-block
     vertical-align: top
     width: 7rem
     height: 2.4rem
-    padding: 0.3rem
+    padding: .3rem
     background-color: transparent
     border-radius: 1.2rem
     cursor: pointer
@@ -18,11 +18,11 @@
     position: absolute
     top: 0
     left: 0
-    margin: 0.25em 0.5em
+    margin: .25em .5em
     opacity: 0
 
 .switch-input:focus ~ .switch-handle
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4)
+    box-shadow: 0 .1rem .3rem 0 rgba(0, 0, 0, .4)
 
 .switch-group
     display: inline-block
@@ -44,35 +44,35 @@
 // Switch through
 
 .switch-trough
-    font-family: $body-font-family
+    font-family: inherit
     font-weight: 700
     position: relative
     display: block
     height: inherit
     font-size: 1.1rem
     text-transform: uppercase
-    background: $quaternary
+    background: $gray-lightest
     border-radius: inherit
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15)
+    box-shadow: inset 0 .1rem .2rem rgba(0, 0, 0, .12), inset 0 0 .2rem rgba(0, 0, 0, .15)
     transition: 150ms ease-out
     transition-property: opacity background
 
 .switch-trough:before, .switch-trough:after
     position: absolute
     top: 50%
-    margin-top: -0.5rem
+    margin-top: -.5rem
     line-height: 1
     transition: inherit
 
 .switch-trough:before
     content: attr(data-off)
     right: 1.1rem
-    color: $secondary
+    color: $gray
 
 .switch-trough:after
     content: attr(data-on)
     left: 1.1rem
-    color: white
+    color: $white
     opacity: 0
 
 
@@ -80,13 +80,13 @@
 
 .switch-handle
     position: absolute
-    top: 0.4rem
-    left: 0.4rem
+    top: .4rem
+    left: .4rem
     width: 2.2rem
     height: 2.2rem
     background: $initial
     border-radius: 50%
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4)
+    box-shadow: 0 .1rem .3rem 0 rgba(0, 0, 0, .4)
     transition: left 150ms ease-out
 
 .switch-handle:before
@@ -94,10 +94,10 @@
     position: absolute
     top: 50%
     left: 50%
-    margin: -0.6rem 0 0 -0.6rem
+    margin: -.6rem 0 0 -.6rem
     width: 1.2rem
     height: 1.2rem
-    border-radius: 0.6rem
+    border-radius: .6rem
 
 
 

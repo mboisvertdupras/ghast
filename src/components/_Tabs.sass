@@ -5,15 +5,15 @@
   overflow-x: auto
   white-space: nowrap
   a
-    border-bottom: 0.1rem solid $quaternary
-    color: $secondary
+    border-bottom: .1rem solid $gray-lightest
+    color: $gray
     display: block
-    margin-bottom: -1px
-    padding: 5px 0
+    margin-bottom: -.1rem
+    padding: .5rem 0
     font-size: 1.4rem
     vertical-align: top
     &:hover
-      border-bottom-color: $secondary
+      border-bottom-color: $gray
       color: $primary
   li
     display: block
@@ -26,11 +26,11 @@
         border-bottom-color: $primary
         color: $primary
   ul
-    border-bottom: 1px solid $quaternary
+    border-bottom: .1rem solid $gray-lightest
     display: flex
   &.is-centered
     a
-      padding: 0.5rem 1rem
+      padding: .5rem 1rem
     li
       & + li
         margin-left: 0
@@ -42,38 +42,38 @@
       justify-content: flex-end
   &.is-boxed
     a
-      border: 0.1rem solid transparent
+      border: .1rem solid transparent
       border-radius: $global-radius $global-radius 0 0
-      padding: 0.5rem 1.5rem
+      padding: .5rem 1.5rem
       &:hover
-        background: $quaternary
-        border-bottom-color: $quaternary
+        background: $gray-lightest
+        border-bottom-color: $gray-lightest
     li
       & + li
-        margin-left: 0.5rem
+        margin-left: .5rem
       &.is-active
         a
           background: $white
-          border-color: $quaternary
+          border-color: $gray-lightest
           border-bottom-color: transparent
     &.is-centered
       li
         &,
         & + li
-          margin: 0 0.2rem
+          margin: 0 .2rem
   &.is-toggle
     a
-      border: 0.1rem solid $quaternary
+      border: .1rem solid $gray-lightest
       margin-bottom: 0
-      padding: 0.5rem 1rem
+      padding: .5rem 1rem
       position: relative
       &:hover
-        background: $quaternary
+        background: $gray-lightest
         border-color: $primary
         z-index: 2
     li
       & + li
-        margin-left: -0.1rem
+        margin-left: -.1rem
       &:first-child a
         border-radius: $global-radius 0 0 $global-radius
       &:last-child a
