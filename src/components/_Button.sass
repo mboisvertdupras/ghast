@@ -2,7 +2,7 @@
 // Button
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.button,
+.btn,
 button,
 input[type='button'],
 input[type='reset'],
@@ -64,7 +64,6 @@ input[type='submit']
       border-color: transparent
       color: inherit
 
-
   // Set styles for each colors defined in _Variables.sass
   @each $name, $pair in $colors
     $color: nth($pair, 1)
@@ -99,3 +98,35 @@ input[type='submit']
           color: $color-invert
           &:hover
             background: transparentize($black, .5)
+
+// Button Groups
+.btn-group
+  display: inline-flex
+  flex-wrap: wrap
+
+  .btn
+    flex: 1 0 auto
+
+    &:first-child:not(:last-child)
+      border-bottom-right-radius: 0
+      border-top-right-radius: 0
+    
+    &:not(:first-child):not(:last-child)
+      border-radius: 0
+      margin-left: -.1rem
+    
+    &:last-child:not(:first-child)
+      border-bottom-left-radius: 0
+      border-top-left-radius: 0
+      margin-left: -.1rem
+    
+    &:hover,
+    &:focus
+      z-index: 99
+    
+  
+
+  &.btn-group-block
+    display: flex
+  
+

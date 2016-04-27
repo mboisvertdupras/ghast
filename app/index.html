@@ -72,26 +72,26 @@
 			font-weight: 600;
 			letter-spacing: .1rem;
 			}
-      .button {
+      .btn {
         font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
       }
-			.button-blue {
+			.btn-blue {
 				background-color: #536DFE;
 				border-color: #536DFE;
 			}
-			.button-blue.outline {
+			.btn-blue.outline {
 				color: #536DFE;
 			}
-			.button-blue.clear {
+			.btn-blue.clear {
 				color: #536DFE;
 			}
-			.button-large {
+			.btn-large {
 				font-size: 1.4rem;
 				height: 4.5rem;
 				line-height: 4.5rem;
 				padding: 0 2rem;
 			}
-			.button-small {
+			.btn-small {
 				font-size: .8rem;
 				height: 2.8rem;
 				line-height: 2.8rem;
@@ -317,18 +317,24 @@
 	<body>
 
 		<main class="wrapper">
-			<section class="hero is-medium">
+			<section class="hero hero-md">
 			  <div class="hero-header">
 			    <header class="header">
 			      <div class="container">
 			        <div class="header-left">
-                <span class="header-item">
-                    <a class="dropdown" id="toggle" href="#!">About</a>
-                    <div id="myDropdown" class="dropdown-content">
-                      <a href="#">Link 1</a>
-                      <a href="#">Link 2</a>
-                      <a href="#">Link 3</a>
-                    </div>
+                <span class="header-item dropdown">
+                    <a href="#!">About</a>
+                    <ul id="myDropdown" class="dropdown-content">
+                      <li>
+                        <a href="#">Link 1</a>
+                      </li>
+                      <li>
+                        <a href="#">Link 2</a>
+                      </li>
+                      <li>
+                        <a href="#">Link 3</a>
+                      </li>
+                    </ul>
 			          </span>
                 <span class="header-item">
 			            <a href="http://ghast.xyz">Develop</a>
@@ -342,6 +348,21 @@
                 <span class="header-item">
 			            <a href="http://ghast.xyz">Github</a>
 			          </span>
+                
+                <span class="header-item dropdown">
+                    <a href="#!">About</a>
+                    <ul id="myDropdown" class="dropdown-content">
+                      <li>
+                        <a href="#">Link 1</a>
+                      </li>
+                      <li>
+                        <a href="#">Link 2</a>
+                      </li>
+                      <li>
+                        <a href="#">Link 3</a>
+                      </li>
+                    </ul>
+                </span>
 			        </div>
 			        <span id="header-toggle" class="header-toggle">
 			          <span></span>
@@ -359,8 +380,10 @@
 			      <h2 class="subtitle description">
 			        A terrifyingly simple CSS framework
 			      </h2>
-            <p class="hero-buttons">
-              <a href="#getting-started" class="button outline">Download</a>
+            <p class="hero-button btn-group">
+              <a href="#getting-started" class="btn outline">Download</a>
+              <a href="#getting-started" class="btn outline">Download</a>
+              <a href="#getting-started" class="btn outline">Download</a>
             </p>
 			    </div>
 			  </div>
@@ -469,22 +492,22 @@
 
 			<section class="container section" id="buttons">
 				<h1 class="title">Buttons</h1>
-				<p>The Button, an essential part of any user experience. Buttons come in three basic styles in Ghast: The <code>&lt;button&gt;</code> element has flat color by default, whereas <code>.button-outline</code> has a simple outline around, and <code>.button-clear</code> is entirely clear.</p>
+				<p>The button, an essential part of any user experience. btns come in three basic styles in Ghast: The <code>&lt;btn&gt;</code> element has flat color by default, whereas <code>.btn-outline</code> has a simple outline around, and <code>.btn-clear</code> is entirely clear.</p>
 				<div class="example">
-					<a class="button" href="javascript: void(0)">Default Button</a>
-					<button class="button outline">Outline Button</button>
-					<input class="button clear" type="submit" value="Clear Button">
+					<a class="btn" href="javascript: void(0)">Default btn</a>
+					<button class="btn outline">Outline btn</button>
+					<input class="btn clear" type="submit" value="Clear btn">
 				</div>
-				<pre class="code prettyprint"><code class="code-content"><!-- Default Button -->
-<a class="button" href="#">Default Button</a>
+				<pre class="code prettyprint"><code class="code-content"><!-- Default btn -->
+<a class="btn" href="#">Default btn</a>
 
-<!-- Outline Button -->
-<button class="button outline">Outline Button</button>
+<!-- Outline btn -->
+<button class="btn outline">Outline btn</button>
 
-<!-- Clear Button -->
-<input class="button clear" type="submit" value="Clear Button">
+<!-- Clear btn -->
+<input class="btn clear" type="submit" value="Clear btn">
 
-<!-- Easily apply the .button class for button style in the anchor element. --></code></pre>
+<!-- Easily apply the .btn class for btn style in the anchor element. --></code></pre>
 			</section>
 
 			<section class="container section" id="lists">
@@ -533,7 +556,7 @@
 
       <section class="container section" id="header">
 				<h1 class="title">Header</h1>
-				<p>The header is a responsive horizontal navigation component that can contain links, tabs, buttons, etc..</p>
+				<p>The header is a responsive horizontal navigation component that can contain links, tabs, btns, etc..</p>
 				<div class="example">
 					<div class="row">
 						<div class="col">
@@ -568,7 +591,7 @@
 							        <a href="#">Other nav item</a>
 							      </span>
 							      <span class="header-item">
-							        <a class="button" href="#">Button</a>
+							        <a class="btn" href="#">btn</a>
 							      </span>
 							    </div>
 							  </div>
@@ -603,7 +626,7 @@
         <a href="#">Other nav item</a>
       </span>
       <span class="header-item">
-        <a class="button" href="#">Button</a>
+        <a class="btn" href="#">btn</a>
       </span>
     </div>
   </div>
@@ -649,7 +672,7 @@
 								<input type="checkbox" id="confirmField">
 								<label class="label-inline" for="confirmField">Send a copy to yourself</label>
 							</div>
-							<input class="button-primary" type="submit" value="Send">
+							<input class="btn-primary" type="submit" value="Send">
 						</fieldset>
 					</form>
 				</div>
@@ -662,7 +685,7 @@
     <div class="example-send-yourself-copy">
       <input type="checkbox" id="confirmField">
     </div>
-    <input class="button" type="submit" value="Send">
+    <input class="btn" type="submit" value="Send">
   </fieldset>
 </form>
 
@@ -876,49 +899,49 @@
 				<p>The style of an element can be defined in several different locations, which interact in a complex way. It is form of interaction makes CSS powerful, but it can make it confusing and difficult to debug.</p>
 				<div class="example row">
 					<div class="col">
-						<a href="javascript: void(0)" class="button">Default .button</a>
-						<a href="javascript: void(0)" class="button outline">Outline .button</a>
-						<a href="javascript: void(0)" class="button clear">Clear .button</a>
+						<a href="javascript: void(0)" class="btn">Default .btn</a>
+						<a href="javascript: void(0)" class="btn outline">Outline .btn</a>
+						<a href="javascript: void(0)" class="btn clear">Clear .btn</a>
 					</div>
 					<div class="col">
-						<a href="javascript: void(0)" class="button primary">.primary</a>
-						<a href="javascript: void(0)" class="button primary outline">.primary</a>
-						<a href="javascript: void(0)" class="button primary clear">.primary</a>
+						<a href="javascript: void(0)" class="btn primary">.primary</a>
+						<a href="javascript: void(0)" class="btn primary outline">.primary</a>
+						<a href="javascript: void(0)" class="btn primary clear">.primary</a>
 					</div>
 					<div class="col col-20">
-						<a href="javascript: void(0)" class="button button-small">.button-small</a>
-						<a href="javascript: void(0)" class="button button-small outline">.button-small</a>
-						<a href="javascript: void(0)" class="button button-small clear">.button-small</a>
+						<a href="javascript: void(0)" class="btn btn-small">.btn-small</a>
+						<a href="javascript: void(0)" class="btn btn-small outline">.btn-small</a>
+						<a href="javascript: void(0)" class="btn btn-small clear">.btn-small</a>
 					</div>
 					<div class="col">
-						<a href="javascript: void(0)" class="button button-large">.button-large</a>
-						<a href="javascript: void(0)" class="button button-large outline">.button-large</a>
-						<a href="javascript: void(0)" class="button button-large clear">.button-large</a>
+						<a href="javascript: void(0)" class="btn btn-large">.btn-large</a>
+						<a href="javascript: void(0)" class="btn btn-large outline">.btn-large</a>
+						<a href="javascript: void(0)" class="btn btn-large clear">.btn-large</a>
 					</div>
 				</div>
 				<pre class="code prettyprint lang-css"><code class="code-content">/* Extending The Inheritances */
 
 /* Applying color variation */
-.button-blue {
+.btn-blue {
   background-color: #536DFE;
   border-color: #536DFE;
 }
-.button-blue.outline {
+.btn-blue.outline {
   color: #536DFE;
 }
-.button-blue.clear {
+.btn-blue.clear {
   color: #536DFE;
 }
 
 /* Applying size variation */
-.button-small {
+.btn-small {
   font-size: .8rem;
   height: 2.8rem;
   line-height: 2.8rem;
   padding: 0 1.5rem;
 }
 
-.button-large {
+.btn-large {
   font-size: 1.4rem;
   height: 4.5rem;
   line-height: 4.5rem;
@@ -946,7 +969,7 @@
 						<li><a href="https://voident.github.io/index.html#getting-started" title="Getting Started">Getting Started</a></li>
 						<li><a href="https://voident.github.io/index.html#typography" title="Typography">Typography</a></li>
 						<li><a href="https://voident.github.io/index.html#blockquotes" title="Blockquotes">Blockquotes</a></li>
-						<li><a href="https://voident.github.io/index.html#buttons" title="Buttons">Buttons</a></li>
+						<li><a href="https://voident.github.io/index.html#btns" title="btns">btns</a></li>
 						<li><a href="https://voident.github.io/index.html#lists" title="Lists">Lists</a></li>
             <li><a href="https://voident.github.io/index.html#header" title="Header">Header</a></li>
             <li><a href="https://voident.github.io/index.html#footer" title="Footer">Footer</a></li>
@@ -997,24 +1020,14 @@
 					$menu.toggleClass('is-active');
 				});
 
-        $('#toggle').click(function(){
+        /*$('#toggle').hover(function(){
             $('#myDropdown').addClass('show');
         });
+        $('#myDropdown, #toggle').mouseleave(function(){
+            $('#myDropdown').removeClass('show');
+        });*/
 
-        // Close the dropdown menu if the user clicks outside of it
-        window.onclick = function(event) {
-          if (!event.target.matches('.dropdown')) {
-
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
-            }
-          }
-        }
+        
 
 			});
 		</script>

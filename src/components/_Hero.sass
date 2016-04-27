@@ -69,7 +69,7 @@
   @each $name, $pair in $colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
-    &.is-#{$name}
+    &.#{$name}
       background: $color
       color: $color-invert
       .title
@@ -109,7 +109,7 @@
             &:hover
               background: $color-invert
               color: $color
-      &.is-bold
+      &.gradient
         $gradient-top-left: darken(saturate(adjust-hue($color, -10deg), 10%), 10%)
         $gradient-bottom-right: lighten(saturate(adjust-hue($color, 10deg), 5%), 5%)
         background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%)
@@ -126,19 +126,19 @@
           background: $color
           .header-item
             border-top-color: $color-invert
-  &.is-fullheight,
-  &.is-large
+  &.hero-fh,
+  &.hero-lg
     +media(tablet)
       .tabs
         font-size: 1.6rem
-  &.is-medium
+  &.hero-md
     +media(tablet)
       .hero-content
         padding: 12rem 2rem
     +media(desktop)
       .hero-content
         padding: 12rem 0
-  &.is-large
+  &.hero-lg
     .tabs
       a
         padding: 1rem 1.5rem
@@ -148,7 +148,7 @@
     +media(desktop)
       .hero-content
         padding: 24rem 0
-  &.is-fullheight
+  &.hero-fh
     align-items: stretch
     display: flex
     flex-direction: column
@@ -162,7 +162,3 @@
       flex: 1
       flex-direction: column
       justify-content: center
-  &.is-left
-    text-align: left
-  &.is-right
-    text-align: right
