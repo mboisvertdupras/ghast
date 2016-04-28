@@ -3,22 +3,34 @@
 
 .dropdown
   cursor: pointer
+  &::before
+    content: ""
+    position: absolute
+    top: $header-height - 1rem
+    left: 0
+    background: transparent
+    height: 1rem
+    width: 100%
+  a
+    padding: 1rem
 
 .dropdown-content
+  display: block
   visibility: hidden
   position: absolute
-  top: 5rem
+  top: $header-height
   background-color: $initial
   padding: .8rem 1.6rem
   margin-top: -.3rem
-  margin-left: -5rem
   min-width: 16rem
+  font-size: $size-small
   list-style: none
+  text-align: left
   opacity: 0
   border: .1rem solid $gray-lightest
   border-radius: $global-radius
-  box-shadow: 0 .4rem 1rem 0 rgba(0,0,0,.1)
-  transition: visibility 0s 0.15s, opacity 0.15s, margin-top 0.15s;
+  box-shadow: 0 .1rem .2rem 0 rgba(0,0,0,.1)
+  transition: visibility 0s 0.15s, opacity 0.15s, margin-top 0.15s
   li
     margin: 0
     a
@@ -33,7 +45,7 @@
   visibility: visible
   margin-top: 0
   opacity: 1
-  transition-delay: 0s;
+  transition-delay: 0s
 
 .show
   display: block

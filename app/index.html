@@ -59,6 +59,9 @@
 			padding-bottom: 0;
 			padding-top: 0;
 			}
+      #lm-footer {
+        fill: #d1d1d1;
+      }
 			.col-demo {
 			background: #d1d1d1;
 			display: block;
@@ -322,25 +325,27 @@
 			    <header class="header">
 			      <div class="container">
 			        <div class="header-left">
-                <span class="header-item dropdown">
-                    <a href="#!">About</a>
-                    <ul id="myDropdown" class="dropdown-content">
-                      <li>
-                        <a href="#">Link 1</a>
-                      </li>
-                      <li>
-                        <a href="#">Link 2</a>
-                      </li>
-                      <li>
-                        <a href="#">Link 3</a>
-                      </li>
-                    </ul>
+                <span class="header-item">
+			            <a href="http://ghast.xyz">Home</a>
+			          </span>
+                <span class="header-item">
+                    <div class="dropdown">
+                      <a href="#!">Documentation</a>
+                      <ul id="myDropdown" class="dropdown-content">
+                        <li>
+                          <a href="#">Link 1</a>
+                        </li>
+                        <li>
+                          <a href="#">Link 2</a>
+                        </li>
+                        <li>
+                          <a href="#">Link 3</a>
+                        </li>
+                      </ul>
+                    </div>
 			          </span>
                 <span class="header-item">
 			            <a href="http://ghast.xyz">Develop</a>
-			          </span>
-                <span class="header-item">
-			            <a href="http://ghast.xyz">Docs</a>
 			          </span>
 								<span class="header-item">
 			            <a href="http://blog.voident.xyz/">Blog</a>
@@ -348,21 +353,6 @@
                 <span class="header-item">
 			            <a href="http://ghast.xyz">Github</a>
 			          </span>
-                
-                <span class="header-item dropdown">
-                    <a href="#!">About</a>
-                    <ul id="myDropdown" class="dropdown-content">
-                      <li>
-                        <a href="#">Link 1</a>
-                      </li>
-                      <li>
-                        <a href="#">Link 2</a>
-                      </li>
-                      <li>
-                        <a href="#">Link 3</a>
-                      </li>
-                    </ul>
-                </span>
 			        </div>
 			        <span id="header-toggle" class="header-toggle">
 			          <span></span>
@@ -380,9 +370,7 @@
 			      <h2 class="subtitle description">
 			        A terrifyingly simple CSS framework
 			      </h2>
-            <p class="hero-button btn-group">
-              <a href="#getting-started" class="btn outline">Download</a>
-              <a href="#getting-started" class="btn outline">Download</a>
+            <p class="hero-button">
               <a href="#getting-started" class="btn outline">Download</a>
             </p>
 			    </div>
@@ -696,21 +684,10 @@
 				<h1 class="title">Switches</h1>
 				<p>Good old checkboxes are just plain ugly and outdated in the mobile first world of today. Ghast provides beautifully crafted switches that convey a more familliar experience to mobile users and overall, they're just pretty!</p>
 				<div class="example">
-					<label class="switch">
-				    <input type="checkbox" class="switch-input" checked>
-				    <span class="switch-trough" data-on="On" data-off="Off"></span>
-				    <span class="switch-handle"></span>
-					</label>
-					<label class="switch">
-				    <input type="checkbox" class="switch-input" checked>
-				    <span class="switch-trough" data-on="✔" data-off="✘"></span>
-				    <span class="switch-handle"></span>
-					</label>
-					<label class="switch no-label">
-					  <input type="checkbox" class="switch-input" checked>
-					  <span class="switch-trough" data-on="On" data-off="Off"></span>
-					  <span class="switch-handle"></span>
-					</label>
+          <label class="switch">
+            <input type="checkbox" />
+            <i class="switch-icon"></i> Send me emails with news and tips
+        </label>
 				</div>
 				<pre class="code prettyprint"><code class="code-content"><label class="switch">
   <input type="checkbox" class="switch-input" checked>
@@ -790,7 +767,7 @@
 
 			<section class="container section" id="grids">
 				<h1 class="title">Grids</h1>
-				<p>The Grid is a fluid system with a max width of <code>70.0rem</code> <small>(1120px)</small>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all cols will resize accordingly. Ghast is different than most because of its use of the <strong>CSS Flexible Box Layout Module standard</strong>. The advantage is the simplicity, and we know that a functional code is very important for maintainability and scalability. Simply add cols you want in a row, and they'll evenly take up the available space. If you want three cols, add three cols, if you want five cols, add five cols. There is no restriction on number of cols, but we advise you to follow a design pattern of grid system. See more tips on best practices in the <a href="#tips" title="Tips">tips</a>.</p>
+				<p>The default grid is a fluid system with a max width of <code>64.5rem</code> <small>(645px)</small>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all cols will resize accordingly. Ghast is different than most because of its use of the <strong>CSS Flexible Box Layout Module standard</strong>. The advantage is the simplicity, and we know that a functional code is very important for maintainability and scalability. Simply add cols you want in a row, and they'll evenly take up the available space. If you want three cols, add three cols, if you want five cols, add five cols. There is no restriction on number of cols, but we advise you to follow a design pattern of grid system. See more tips on best practices in the <a href="#tips" title="Tips">tips</a>.</p>
 				<div class="example">
 					<div class="container">
 						<div class="row">
@@ -801,8 +778,11 @@
 						</div>
 						<div class="row">
 							<div class="col"><span class="col-demo">.col</span></div>
-							<div class="col col-50 col-offset-25"><span class="col-demo">.col-50.col-offset-25</span></div>
+							<div class="col col-50 col-o-25"><span class="col-demo">.col-50.col-o-25</span></div>
 						</div>
+            <div class="row">
+              <div class="col"><span class="col-demo">.col</span></div>
+            </div>
 					</div>
 				</div>
 				<pre class="code prettyprint"><code class="code-content"><!-- .container is main centered wrapper -->
@@ -994,12 +974,14 @@
 			  <div class="container">
 			    <div class="content text-centered">
 			      <p>
-			        Built by
+			        <small>A thing built by</small>
 			      </p>
-            <h1>IMPRIA</h1>
-            <p>
-              Licensed under the <a target="blank" href="https://github.com/voident/ghast#license" title="MIT License">MIT License</a>.
-            </p>
+            <svg width="226px" height="44px" viewBox="0 0 226 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="lm-footer-container" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <path d="M11.872,42.822 C11.872,43.6073373 11.4793373,44 10.694,44 L2.138,44 C1.35266274,44 0.96,43.6073373 0.96,42.822 L0.96,1.778 C0.96,0.99266274 1.35266274,0.6 2.138,0.6 L10.694,0.6 C11.4793373,0.6 11.872,0.99266274 11.872,1.778 L11.872,42.822 Z M70.214,0.6 C70.4620012,0.68266708 70.6789991,0.8273323 70.865,1.034 C71.0510009,1.2406677 71.144,1.48866522 71.144,1.778 L71.144,42.822 C71.144,43.1526683 71.0303345,43.4316655 70.803,43.659 C70.5756655,43.8863345 70.2966683,44 69.966,44 L61.658,44 C61.3273317,44 61.0586677,43.8863345 60.852,43.659 C60.6453323,43.4316655 60.542,43.1526683 60.542,42.822 L60.542,21.06 L56.202,31.6 C55.664664,32.9226733 55.127336,34.2246603 54.59,35.506 C54.052664,36.7873397 53.5773354,37.9343283 53.164,38.947 C52.7506646,39.9596717 52.409668,40.7966634 52.141,41.458 C51.872332,42.1193366 51.7173335,42.4706665 51.676,42.512 L51.552,42.946 C51.4279994,43.2353348 51.2110015,43.4833323 50.901,43.69 C50.5909985,43.8966677 50.2706683,44 49.94,44 L42.748,44 C42.4173317,44 42.0970016,43.8966677 41.787,43.69 C41.4769984,43.4833323 41.2600006,43.2353348 41.136,42.946 L40.95,42.512 C40.9086665,42.4706665 40.753668,42.1193366 40.485,41.458 C40.216332,40.7966634 39.8753354,39.9596717 39.462,38.947 C39.0486646,37.9343283 38.5836693,36.7873397 38.067,35.506 C37.5503308,34.2246603 37.023336,32.9226733 36.486,31.6 C35.2046603,28.4999845 33.7786745,24.9866863 32.208,21.06 L32.208,42.822 C32.208,43.6073373 31.8153373,44 31.03,44 L22.784,44 C21.9986627,44 21.606,43.6073373 21.606,42.822 L21.606,1.778 C21.606,1.32333106 21.7919981,0.9926677 22.164,0.786 C22.2880006,0.66199938 22.4739988,0.6 22.722,0.6 L22.784,0.6 L31.34,0.6 L32.022,0.6 C32.3526683,0.6 32.6729985,0.7033323 32.983,0.91 C33.2930015,1.1166677 33.5099994,1.36466522 33.634,1.654 L46.344,30.732 L59.054,1.654 C59.1780006,1.36466522 59.3949985,1.1166677 59.705,0.91 C60.0150015,0.7033323 60.3353317,0.6 60.666,0.6 L61.348,0.6 L69.966,0.6 L70.028,0.6 L70.214,0.6 Z M106.918,0.6 C107.910005,0.6 108.850329,0.79633137 109.739,1.189 C110.627671,1.58166863 111.39233,2.09833013 112.033,2.739 C112.67367,3.37966987 113.190331,4.14432889 113.583,5.033 C113.975669,5.92167111 114.172,6.86199504 114.172,7.854 L114.172,24.284 C114.172,25.276005 113.975669,26.2163289 113.583,27.105 C113.190331,27.9936711 112.67367,28.7583301 112.033,29.399 C111.39233,30.0396699 110.627671,30.5563314 109.739,30.949 C108.850329,31.3416686 107.910005,31.538 106.918,31.538 L93.092,31.538 C92.7613317,31.538 92.4823345,31.6413323 92.255,31.848 C92.0276655,32.0546677 91.914,32.3233317 91.914,32.654 L91.914,42.822 C91.914,43.6073373 91.5213373,44 90.736,44 L82.18,44 C81.3946627,44 81.002,43.6073373 81.002,42.822 L81.002,1.778 C81.002,0.99266274 81.3946627,0.6 82.18,0.6 L106.918,0.6 Z M103.632,21.432 L103.632,10.458 L91.542,10.458 L91.542,21.432 L103.632,21.432 Z M159.184,43.008 C159.349334,43.2973348 159.370001,43.5349991 159.246,43.721 C159.121999,43.9070009 158.894668,44 158.564,44 L148.706,44 C148.375332,44 148.044668,43.9070009 147.714,43.721 C147.383332,43.5349991 147.135334,43.2973348 146.97,43.008 L140.398,31.228 C140.315333,31.0626658 140.170668,30.98 139.964,30.98 L132.586,30.98 C132.379332,30.98 132.276,31.0833323 132.276,31.29 L132.276,42.822 C132.276,43.6073373 131.883337,44 131.098,44 L122.542,44 C121.756663,44 121.364,43.6073373 121.364,42.822 L121.364,1.778 C121.364,0.99266274 121.756663,0.6 122.542,0.6 L150.566,0.6 C151.558005,0.6 152.498329,0.79633137 153.387,1.189 C154.275671,1.58166863 155.04033,2.09833013 155.681,2.739 C156.32167,3.37966987 156.838331,4.14432889 157.231,5.033 C157.623669,5.92167111 157.82,6.86199504 157.82,7.854 L157.82,24.16 C157.82,25.7306745 157.355005,27.146327 156.425,28.407 C155.494995,29.667673 154.306674,30.5253311 152.86,30.98 L152.674,31.042 C152.384665,31.1246671 152.322666,31.2486658 152.488,31.414 C152.488,31.414 152.508666,31.4553329 152.55,31.538 L159.184,43.008 Z M146.846,10.706 L131.904,10.706 L131.904,21.246 L146.846,21.246 L146.846,10.706 Z M179.52,42.822 C179.52,43.6073373 179.127337,44 178.342,44 L169.786,44 C169.000663,44 168.608,43.6073373 168.608,42.822 L168.608,1.778 C168.608,0.99266274 169.000663,0.6 169.786,0.6 L178.342,0.6 C179.127337,0.6 179.52,0.99266274 179.52,1.778 L179.52,42.822 Z M218.394,0.6 C219.386005,0.6 220.326329,0.79633137 221.215,1.189 C222.103671,1.58166863 222.86833,2.09833013 223.509,2.739 C224.14967,3.37966987 224.666331,4.14432889 225.059,5.033 C225.451669,5.92167111 225.648,6.86199504 225.648,7.854 L225.648,42.822 C225.648,43.1526683 225.534334,43.4316655 225.307,43.659 C225.079666,43.8863345 224.800668,44 224.47,44 L215.852,44 C215.521332,44 215.242334,43.8863345 215.015,43.659 C214.787666,43.4316655 214.674,43.1526683 214.674,42.822 L214.674,31.724 C214.674,31.3933317 214.570668,31.1143345 214.364,30.887 C214.157332,30.6596655 213.888668,30.546 213.558,30.546 L201.282,30.546 C200.951332,30.546 200.672334,30.6596655 200.445,30.887 C200.217666,31.1143345 200.104,31.3933317 200.104,31.724 L200.104,42.822 C200.104,43.6073373 199.711337,44 198.926,44 L190.37,44 C189.584663,44 189.192,43.6073373 189.192,42.822 L189.192,7.854 C189.192,6.86199504 189.377998,5.92167111 189.75,5.033 C190.122002,4.14432889 190.638663,3.37966987 191.3,2.739 C191.961337,2.09833013 192.736329,1.58166863 193.625,1.189 C194.513671,0.79633137 195.453995,0.6 196.446,0.6 L218.394,0.6 Z M214.674,21.246 L214.674,10.334 L200.104,10.334 L200.104,21.246 L214.674,21.246 Z" id="lm-footer" fill="#000000"></path>
+                </g>
+            </svg>
 			    </div>
 			  </div>
 			</footer>
@@ -1027,7 +1009,7 @@
             $('#myDropdown').removeClass('show');
         });*/
 
-        
+
 
 			});
 		</script>

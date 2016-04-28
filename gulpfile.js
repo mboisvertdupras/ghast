@@ -41,7 +41,8 @@ gulp.task('watch', ['clean', 'default'], function() {
         server: {
             baseDir: ["app", "css"]
         },
-        notify: true
+        notify: true,
+        open: false
     });
 
     gulp.watch(['src/*/*.sass', 'src/**/*.sass'], ['default']).on('change', browserSync.reload);

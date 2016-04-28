@@ -85,8 +85,19 @@ input[type='submit']
         color: $color
         &:hover,
         &:focus
+          background-color: transparentize($color, .9)
           border-color: darken($color, 10%)
           color: darken($color, 10%)
+      &.clear
+          background-color: transparent
+          border-color: transparent
+          color: $color
+
+          &:hover,
+          &:focus
+            background-color: transparentize($color, .9)
+            border-color: transparent
+            color: $color
       &.inverted
         background: $color-invert
         color: $color

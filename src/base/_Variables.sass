@@ -5,7 +5,7 @@
 // Imports
 // ---------
 
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans:700,400)
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700)
 
 // 1. Global
 // ---------
@@ -16,14 +16,36 @@ $global-lineheight: 1.65
 $global-radius: .3rem
 
 $body-background-color: $white
-$body-font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+$body-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
 $monospace-font-family: 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', 'Monaco', monospace
-$body-antialiased: true
 $colors: (dark: ($gray-dark, $dark-invert), primary: ($primary, $primary-invert), blue: ($blue, $blue-invert), green: ($green, $green-invert), yellow: ($yellow, $yellow-invert), red: ($red, $red-invert))
 $body-font-color: $gray
 
+// 2. Typography
+// -------------
 
-// 2. Header
+// Enables font antialiasing in Webkit/Chrome and Firefox
+$body-antialiased: true
+
+$size-1: 4.8rem
+$size-2: 4rem
+$size-3: 2.8rem
+$size-4: 2.4rem
+$size-5: 1.8rem
+$size-6: 1.6rem
+$size-7: 1.4rem
+$size-8: 1.1rem
+
+$size-tiny: $size-8
+$size-small: $size-7
+$size-normal: $size-6
+$size-medium: $size-5
+$size-large: $size-3
+$size-huge: $size-1
+
+$sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8
+
+// 3. Header
 // ---------
 
 $header-height: 5rem
