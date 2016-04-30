@@ -1,6 +1,7 @@
 .header
   +clearfix
   background: $white
+  padding: 0 2rem
   box-shadow: 0 .1rem .2rem rgba($black, .1)
   display: flex
   height: $header-height
@@ -67,7 +68,6 @@
   &:hover
     background: $gray-lightest
   &.is-active
-    +media(tablet)
     height: $header-height
     width: $header-height
     span
@@ -84,10 +84,9 @@
         transform-origin: left bottom
 
 .header-toggle
+  @extend .hamburger
   +media(tablet)
     display: none
-
-  @extend .hamburger
 
 // Elements
 

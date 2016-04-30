@@ -96,15 +96,15 @@
           opacity: .5
           &:hover
             opacity: 1
-        li.is-active a
+        li.active a
           opacity: 1
-        &.is-boxed,
-        &.is-toggle
+        &.boxed,
+        &.toggle
           a
             color: $color-invert
             &:hover
               background: rgba($black, .1)
-          li.is-active a
+          li.active a
             &,
             &:hover
               background: $color-invert
@@ -131,14 +131,14 @@
     +media(tablet)
       .tabs
         font-size: 1.6rem
-  &.hero-md
+  &.hero-md // Medium sized hero
     +media(tablet)
       .hero-content
         padding: 12rem 2rem
     +media(desktop)
       .hero-content
         padding: 12rem 0
-  &.hero-lg
+  &.hero-lg // Large size hero
     .tabs
       a
         padding: 1rem 1.5rem
@@ -148,7 +148,7 @@
     +media(desktop)
       .hero-content
         padding: 24rem 0
-  &.hero-fh
+  &.hero-fh // Full height hero
     align-items: stretch
     display: flex
     flex-direction: column
