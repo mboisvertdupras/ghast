@@ -4,24 +4,17 @@
 .dropdown
   cursor: pointer
   a
-    padding: 1rem
-  &::before
-    content: ""
-    position: absolute
-    top: $header-height - 1rem
-    left: 0
-    background: transparent
-    height: 1rem
-    width: 100%
+    padding: ($header-height / 2 - .8rem) 1rem
   &::after
     content: ""
     position: absolute
-    top: $header-height / 2 - .2rem
+    top: ($header-height / 2) - .2rem
     width: .8rem
     height: .4rem
     margin-left: -.3rem
     background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iNzNweCIgaGVpZ2h0PSIzNHB4IiB2aWV3Qm94PSIwIDAgNzMgMzQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiPiAgICAgICAgPHRpdGxlPlNsaWNlIDE8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBza2V0Y2g6dHlwZT0iTVNQYWdlIj4gICAgICAgIDxwYXRoIGQ9Ik03MS4yNTYzOTQxLDEuMTU0MjIyOCBDNzAuMTE5Mzk0MSwtMC4yMDY3NzcxOTkgNjguMTA2Mzk0MSwtMC4zOTA3NzcxOTkgNjYuNzQyMzk0MSwwLjc0NDIyMjgwMSBMMzYuMDAwMzk0MSwyNi4zNzMyMjI4IEw1LjI1ODM5NDA4LDAuNzQ0MjIyODAxIEMzLjg5NzM5NDA4LC0wLjM4Nzc3NzE5OSAxLjg3NzM5NDA4LC0wLjIwMjc3NzE5OSAwLjc0NDM5NDA3OSwxLjE1NDIyMjggQy0wLjM5MDYwNTkyMSwyLjUxMjIyMjggLTAuMjA2NjA1OTIxLDQuNTM1MjIyOCAxLjE1MjM5NDA4LDUuNjY4MjIyOCBMMzMuOTQ3Mzk0MSwzMy4wMDYyMjI4IEMzNC41NDEzOTQxLDMzLjUwMjIyMjggMzUuMjcxMzk0MSwzMy43NTAyMjI4IDM2LjAwMDM5NDEsMzMuNzUwMjIyOCBDMzYuNzMwMzk0MSwzMy43NTAyMjI4IDM3LjQ1OTM5NDEsMzMuNTAyMjIyOCAzOC4wNTMzOTQxLDMzLjAwNjIyMjggTDcwLjg0ODM5NDEsNS42NjgyMjI4IEM3Mi4yMDczOTQxLDQuNTM1MjIyOCA3Mi4zOTEzOTQxLDIuNTEzMjIyOCA3MS4yNTYzOTQxLDEuMTU0MjIyOCBMNzEuMjU2Mzk0MSwxLjE1NDIyMjggWiIgaWQ9IlNoYXBlIiBmaWxsPSIjMDAwMDAwIiBza2V0Y2g6dHlwZT0iTVNTaGFwZUdyb3VwIj48L3BhdGg+ICAgIDwvZz48L3N2Zz4=') center right no-repeat
     background-size: 100% 100%
+    opacity: .4
   &:hover
     > a
       color: $primary
@@ -44,7 +37,7 @@
   list-style: none
   text-align: left
   opacity: 0
-  border: .1rem solid $gray-lightest
+  border: .1rem solid rgba(0,0,0,.1)
   border-radius: $global-radius
   box-shadow: 0 .1rem .2rem 0 rgba(0,0,0,.1)
   transition: visibility 0s 0.15s, opacity 0.15s, margin-top 0.15s
@@ -57,6 +50,3 @@
       display: block
       &:hover
         color: $primary
-
-.show
-  display: block

@@ -76,31 +76,6 @@
 			font-weight: 600;
 			letter-spacing: .1rem;
 			}
-      .btn {
-        font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
-      }
-			.btn-blue {
-				background-color: #536DFE;
-				border-color: #536DFE;
-			}
-			.btn-blue.outline {
-				color: #536DFE;
-			}
-			.btn-blue.clear {
-				color: #536DFE;
-			}
-			.btn-large {
-				font-size: 1.4rem;
-				height: 4.5rem;
-				line-height: 4.5rem;
-				padding: 0 2rem;
-			}
-			.btn-small {
-				font-size: .8rem;
-				height: 2.8rem;
-				line-height: 2.8rem;
-				padding: 0 1.5rem;
-			}
 			.heading-font-size {
 			font-size: 1.2rem;
 			color: #999;
@@ -482,11 +457,14 @@
 			<section class="container section" id="buttons">
 				<h1 class="title">Buttons</h1>
 				<p>The button, an essential part of any user experience. btns come in three basic styles in Ghast: The <code>&lt;btn&gt;</code> element has flat color by default, whereas <code>.btn-outline</code> has a simple outline around, and <code>.btn-clear</code> is entirely clear.</p>
-				<div class="example">
-					<a class="btn" href="javascript: void(0)">Default btn</a>
+				<div class="col example">
+					<a class="btn" href="#!">Default btn</a>
 					<button class="btn outline">Outline btn</button>
 					<input class="btn clear" type="submit" value="Clear btn">
 				</div>
+        <div class="col">
+          <a class="btn btn-block" href="#!">Block btn</a>
+        </div>
 				<pre class="code prettyprint"><code class="code-content"><!-- Default btn -->
 <a class="btn" href="#">Default btn</a>
 
@@ -890,14 +868,14 @@
 						<a href="javascript: void(0)" class="btn primary clear">.primary</a>
 					</div>
 					<div class="col col-20">
-						<a href="javascript: void(0)" class="btn btn-small">.btn-small</a>
-						<a href="javascript: void(0)" class="btn btn-small outline">.btn-small</a>
-						<a href="javascript: void(0)" class="btn btn-small clear">.btn-small</a>
+						<a href="javascript: void(0)" class="btn btn-sm">.btn-sm</a>
+						<a href="javascript: void(0)" class="btn btn-sm outline">.btn-sm</a>
+						<a href="javascript: void(0)" class="btn btn-sm clear">.btn-sm</a>
 					</div>
 					<div class="col">
-						<a href="javascript: void(0)" class="btn btn-large">.btn-large</a>
-						<a href="javascript: void(0)" class="btn btn-large outline">.btn-large</a>
-						<a href="javascript: void(0)" class="btn btn-large clear">.btn-large</a>
+						<a href="javascript: void(0)" class="btn btn-lg">.btn-lg</a>
+						<a href="javascript: void(0)" class="btn btn-lg outline">.btn-lg</a>
+						<a href="javascript: void(0)" class="btn btn-lg clear">.btn-lg</a>
 					</div>
 				</div>
 				<pre class="code prettyprint lang-css"><code class="code-content">/* Extending The Inheritances */
@@ -915,14 +893,14 @@
 }
 
 /* Applying size variation */
-.btn-small {
+.btn-sm {
   font-size: .8rem;
   height: 2.8rem;
   line-height: 2.8rem;
   padding: 0 1.5rem;
 }
 
-.btn-large {
+.btn-lg {
   font-size: 1.4rem;
   height: 4.5rem;
   line-height: 4.5rem;

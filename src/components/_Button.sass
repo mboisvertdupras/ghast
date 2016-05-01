@@ -28,7 +28,7 @@ input[type='submit']
 
   &:hover,
   &:focus
-    background-color: $gray-lighter
+    background-color: darken($gray-lightest, 10%)
     border-color: transparent
     color: $gray
     outline: 0
@@ -50,7 +50,7 @@ input[type='submit']
     &:hover,
     &:focus
       background-color: transparentize($gray, .9)
-      border-color: inherit
+      border-color: transparentize($gray, .5)
       color: inherit
 
   &.clear
@@ -64,6 +64,21 @@ input[type='submit']
       border-color: transparent
       color: inherit
 
+  &.btn-sm
+    font-size: .8rem
+    height: 2.8rem
+    line-height: 2.8rem
+    padding: 0 1.5rem
+
+  &.btn-lg
+    font-size: 1.4rem
+    height: 4.5rem
+    line-height: 4.5rem
+    padding: 0 2rem
+  &.btn-block
+    display: block
+    width: 100%
+
   // Set styles for each colors defined in _Variables.sass
   @each $name, $pair in $colors
     $color: nth($pair, 1)
@@ -74,7 +89,7 @@ input[type='submit']
       color: $color-invert
       &:hover,
       &:focus
-        background: darken($color, 10%)
+        background: adjust-hue($color, 10%)
         border-color: transparent
         color: $color-invert
       &:active
@@ -86,13 +101,12 @@ input[type='submit']
         &:hover,
         &:focus
           background-color: transparentize($color, .9)
-          border-color: darken($color, 10%)
+          border-color: transparentize($color, 0.5)
           color: darken($color, 10%)
       &.clear
           background-color: transparent
           border-color: transparent
           color: $color
-
           &:hover,
           &:focus
             background-color: transparentize($color, .9)
@@ -114,30 +128,21 @@ input[type='submit']
 .btn-group
   display: inline-flex
   flex-wrap: wrap
-
   .btn
     flex: 1 0 auto
-
     &:first-child:not(:last-child)
       border-bottom-right-radius: 0
       border-top-right-radius: 0
-    
     &:not(:first-child):not(:last-child)
       border-radius: 0
       margin-left: -.1rem
-    
     &:last-child:not(:first-child)
       border-bottom-left-radius: 0
       border-top-left-radius: 0
       margin-left: -.1rem
-    
     &:hover,
     &:focus
       z-index: 99
-    
-  
 
   &.btn-group-block
     display: flex
-  
-

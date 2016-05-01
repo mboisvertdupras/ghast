@@ -54,7 +54,7 @@
           padding-right: 0;
   .header .container
     padding: 0
-    box-shadow: 0 .1rem 0 transparentize($gray, .7)
+    box-shadow: 0 .1rem 0 transparentize($gray, .8)
   .tabs
     a
       border: 0
@@ -79,17 +79,15 @@
           color: inherit
       .subtitle
         color: $color-invert
-        strong
-          color: $color-invert
       .header .container
-        box-shadow: 0 1px 0 $color-invert
+        box-shadow: 0 1px 0 transparentize($color-invert, 0.8)
       .header-icon,
-      .header-item > a:not(.button)
-        color: $color-invert
-        opacity: .5
+      .header-item > a:not(.button),
+      .header-item > .dropdown > a
+        color: transparentize($color-invert, 0.2)
         &:hover,
         &.is-active
-          opacity: 1
+          color: $color-invert
       .tabs
         a
           color: $color-invert
