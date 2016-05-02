@@ -1,6 +1,6 @@
 .switch
   line-height: 1.8rem
-  padding: .3rem 2rem .3rem 3.6rem
+  padding: .4rem 2rem .3rem 4.8rem
   cursor: pointer
   display: inline-block
   position: relative
@@ -12,20 +12,21 @@
     border: .1rem solid $gray-lightest
     background: $gray-lightest
     display: inline-block
-    width: 3rem
-    height: 1.8rem
+    width: 4rem
+    height: 2.2rem
     padding: 0
-    border-radius: .9rem
+    border-radius: 2rem
     position: absolute
     top: .3rem
     left: 0
     outline: none
+    transition: all .15s ease
     &::after
       content: ""
       display: block
-      width: 1.6rem
-      height: 1.6rem
-      border-radius: .8rem
+      width: 2rem
+      height: 2rem
+      border-radius: 2rem
       position: absolute
       top: 0
       left: 0
@@ -35,5 +36,7 @@
   input:checked + .switch-icon
     background: $primary
     border-color: $primary
+    transition: all .15s ease
     &::after
-      left: 1.2rem
+      left: 1.8rem
+      box-shadow: 0 .1rem .3rem transparentize($black, .5)
