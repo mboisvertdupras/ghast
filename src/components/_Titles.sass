@@ -25,7 +25,7 @@
       font-weight: 700
   @each $size in $sizes
     $i: index($sizes, $size)
-    &.#{$i}
+    &.s-#{$i}
       font-size: $size
       code
         font-size: nth($sizes, min($i + 1, 6))
@@ -51,7 +51,7 @@
       font-weight: 700
   @each $size in $sizes
     $i: index($sizes, $size)
-    &.is-#{$i}
+    &.s-#{$i}
       font-size: $size
       code
         font-size: nth($sizes, min($i + 1, 6))

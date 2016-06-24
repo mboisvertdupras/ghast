@@ -9,12 +9,12 @@
   line-height: 1.6rem
   position: relative
   text-align: center
-  z-index: 2
+  z-index: $z-index-2
   .container
     align-items: stretch
     display: flex
     width: 100%
-  .button
+  .btn
     height: 3.2rem
     margin-bottom: 0
     line-height: 3.2rem
@@ -63,7 +63,7 @@
     &:nth-child(2)
       margin-top: -.1rem
     &:nth-child(3)
-      margin-top: .1rem
+      margin-top: .4rem
 
   &:hover
     background: $gray-lightest
@@ -98,7 +98,7 @@
     height: 2rem
     margin-top: -.1rem
     vertical-align: middle
-  a:not(.button)
+  a:not(.btn)
     color: $gray
     &:hover
       color: $primary
@@ -115,8 +115,8 @@
   padding: 13px 15px
   &:hover
     border-bottom: 1px solid $primary
-  &.is-active
-    border-bottom: 3px solid $primary
+  &.active
+    border-bottom: 2px solid $primary
     color: $primary
 
 // Containers
@@ -161,16 +161,17 @@
 
 .header-menu
   +media(mobile)
+    visibility: hidden
     background: $white
     box-shadow: 0 .4rem .7rem rgba($black, .1)
-    display: none
+    display: block
     min-width: 12rem
     position: absolute
     right: 0
     top: 5rem
-    z-index: 100
+    z-index: $z-index-2
     .header-item
       border-top: 1px solid rgba($black, .2)
       padding: 1rem
     &.is-active
-      display: block
+      visibility: visible
