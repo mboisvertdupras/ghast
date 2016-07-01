@@ -30,8 +30,11 @@ gulp.task('sourcemap', function () {
 });
 
 gulp.task('sass', function () {
-  gulp.src('./src/**/*.sass')
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+  gulp.src('./src/ghast.sass')
+    .pipe(sass({
+      includePaths: ['./src/base', './src/components', './src/utilities'],
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
     .pipe(gulp.dest('./css'))
 });
 

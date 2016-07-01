@@ -4,6 +4,10 @@
 
 // .container is main centered wrapper with a max width of 1120rem (1120px)
 .container
+  +media(desktop)
+    &.fluid
+      max-width: none
+      margin: 0 2rem
   +media(mobile)
     padding: 0 2rem
   margin: 0 auto

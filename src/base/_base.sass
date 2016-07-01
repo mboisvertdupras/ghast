@@ -6,6 +6,12 @@
 // of sizing rems in a way that is similar to using px. 1.6rem=16px
 // See $global-font-size in _variables.sass
 
+// Set box-sizing globally to handle padding and border widths
+*,
+*:after,
+*:before
+  box-sizing: inherit
+
 html
   box-sizing: border-box
   font: $global-font-size $body-font-family
@@ -19,12 +25,16 @@ body
   font-size: 1.6rem
 
   @if $body-antialiased
-    -moz-osx-font-smoothing: grayscale
+    -moz-osx-font-smoothing: auto
     -webkit-font-smoothing: antialiased
 
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section
+  display: block
 
-// Set box-sizing globally to handle padding and border widths
-*,
-*:after,
-*:before
-  box-sizing: inherit
+

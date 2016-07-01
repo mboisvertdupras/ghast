@@ -1,0 +1,55 @@
+.card-header
+  align-items: stretch
+  box-shadow: 0 .1rem .2rem rgba($black, 0.1)
+  display: flex
+  min-height: 4rem
+
+.card-header-title
+  align-items: flex-start
+  display: flex
+  flex: 1
+  font-weight: 700
+  padding: 1rem
+
+.card-header-icon
+  align-items: center
+  cursor: pointer
+  display: flex
+  justify-content: center
+  width: 4rem
+
+.card-image
+  display: block
+  position: relative
+
+.card-content
+  padding: 2rem
+  .title + .subtitle
+    margin-top: -2rem
+
+.card-footer
+  border-top: .1rem solid $gray-lightest
+  align-items: stretch
+  display: flex
+
+.card-footer-item
+  align-items: center
+  display: flex
+  flex: 1
+  justify-content: center
+  padding: 1rem
+  &:not(:last-child)
+    border-right: .1rem solid $gray-lightest
+
+.card
+  background-color: $white
+  box-shadow: 0 .2rem .3rem rgba($black, .1), 0 0 0 .1rem rgba($black, .1)
+  max-width: 100%
+  position: relative
+  width: 30rem
+  border-radius: $global-radius
+  .media:not(:last-child)
+    margin-bottom: 1rem
+  // Modifiers
+  &.fullwidth
+    width: 100%
