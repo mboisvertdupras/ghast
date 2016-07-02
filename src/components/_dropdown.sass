@@ -25,6 +25,7 @@
       transition-delay: 0s
 
 .dropdown-content
+  overflow-y: scroll
   display: block
   visibility: hidden
   position: absolute
@@ -33,6 +34,7 @@
   padding: .8rem 1.6rem
   margin-top: -.3rem
   min-width: 16rem
+  max-height: 50vh
   font-size: $size-small
   list-style: none
   text-align: left
@@ -50,3 +52,9 @@
       display: block
       &:hover
         color: $primary
+
+.dropdown-content::-webkit-scrollbar
+    width: .4rem
+.dropdown-content::-webkit-scrollbar-thumb
+    background: rgba($black,.2)
+    border-radius: 1rem
