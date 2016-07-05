@@ -57,10 +57,12 @@ gulp.task('watch', ['clean', 'default'], function() {
     gulp.watch("app/*.{html,php}").on('change', browserSync.reload);
 });
 
-gulp.task('default', ['sass', 'sourcemap'], function() {
+gulp.task('build', ['sass', 'sourcemap'], function() {
   gulp.src('./src/**/*.sass')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream())
 });
+
+gulp.task('default', ['build']);

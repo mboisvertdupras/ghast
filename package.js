@@ -9,6 +9,6 @@ Package.describe({
 Package.onUse(function (api) {
 	api.versionsFrom('METEOR@1.0');
 	api.addFiles([
-		'dist/ghast.css'
+		'css/ghast.css'
 	], 'client');
 });
