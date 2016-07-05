@@ -1,5 +1,6 @@
 'use strict';
 
+var autoprefixer = require('gulp-autoprefixer');
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
@@ -15,7 +16,7 @@ gulp.task('clean', function() {
 gulp.task('lint', function () {
   gulp.src(['./src/base/*.s+(a|c)ss', './src/components/*.s+(a|c)ss'])
     .pipe(sassLint({
-      'maxBuffer': 1228800
+      configFile: '.sass-lint.yaml'
     }))
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError())
@@ -35,6 +36,10 @@ gulp.task('sass', function () {
       includePaths: ['./src/base', './src/components', './src/utilities'],
       outputStyle: 'compressed'
     }).on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(rename({
+        extname: ".min.css"
+      }))
     .pipe(gulp.dest('./css'))
 });
 
@@ -55,6 +60,7 @@ gulp.task('watch', ['clean', 'default'], function() {
 gulp.task('default', ['sass', 'sourcemap'], function() {
   gulp.src('./src/**/*.sass')
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream())
 });

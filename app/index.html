@@ -121,30 +121,6 @@
 			left: 0;
 			max-height: none;
 			}
-			.share,
-			.share-list,
-			.share-list a {
-			position: relative;
-			text-decoration: none;
-			}
-			.share-item {
-			display: inline-block;
-			margin: 1.0rem .1rem;
-			}
-			.share-icon {
-			background-color: #6959ff;
-			border-radius: .4rem;
-			color: #ffffff;
-			display: block;
-			font-size: 1.5rem;
-			height: 2.2rem;
-			line-height: 2.2rem;
-			text-align: center;
-			width: 5.0rem;
-			}
-			.share-icon:hover {
-			background-color: #606c76;
-			}
 			@media (min-width: 40.0rem) {
 			.only-mobile {
 				display: none;
@@ -355,24 +331,21 @@
 
 			<section class="container section" id="why">
 				<h1 class="title">So, is Ghast for you?</h1>
-				<p>Ghast was designed to provide everything you need to get started with your own website in a small, responsive package. It was built to be easy to understand, maintain and adapt to your needs.</p>
+				<p>Ghast was designed to be as simple and easy to understand as possible. You could also say it's a slightly opiniated framework as it relies on flexbox support and thus ditches older browsers (I'm looking at you, IE 8) in favour of newer ones.</p>
         <br>
 				<p>If you enjoy Ghast or think it's a cool project, help spread the word out by sharing it with your fam!</p>
-				<div class="share">
-					<ul class="share-list">
-						<li class="share-item"><a href="https://github.com/impria/ghast" title="Share Ghast on Github" target="blank"><i class="icon fa fa-github share-icon"></i></a></li>
-						<li class="share-item"><a class="share-dialog" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/impria/ghast" title="Share Ghast on Facebook" target="blank"><i class="icon fa fa-facebook share-icon"></i></a></li>
-						<li class="share-item"><a class="share-dialog" href="https://twitter.com/intent/tweet?text=Ghast %7C A spritely CSS framework&amp;url=https://github.com/impria/ghast" title="Share Ghast on Twitter" target="blank"><i class="icon fa fa-twitter share-icon"></i></a></li>
-						<li class="share-item"><a class="share-dialog" href="https://plus.google.com/share?url=https://github.com/impria/ghast" title="Share Ghast on Google+" target="blank"><i class="icon fa fa-google-plus share-icon"></i></a></li>
-						<li class="share-item only-mobile"><a href="whatsapp://send?text=Ghast %7C A spritely CSS framework https://github.com/impria/ghast" title="Share Ghast on Whatsapp" target="blank"><i class="icon fa fa-whatsapp share-icon"></i></a></li>
-						<li class="share-item"><a class="share-dialog" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://github.com/impria/ghast&amp;title=Ghast | A spritely CSS framework" title="Share Ghast on LinkedIn" target="blank"><i class="icon fa fa-linkedin share-icon"></i></a></li>
-					</ul>
-				</div>
+        <div class="btn-group btn-group-block">
+          <a href="https://github.com/impria/ghast" title="Star Ghast on GitHub" target="blank" class="btn"><i class="fa fa-github"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/impria/ghast" title="Share Ghast on Facebook" target="blank" class="btn"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/intent/tweet?text=Ghast %7C A terrifyingly simple CSS framework&amp;url=https://github.com/impria/ghast" title="Share Ghast on Twitter" target="blank" class="btn"><i class="fa fa-twitter"></i></a>
+          <a href="https://plus.google.com/share?url=https://github.com/impria/ghast" title="Share Ghast on Google+" target="blank" class="btn"><i class="fa fa-google"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://github.com/impria/ghast&amp;title=Ghast | A terrifyingly simple CSS framework" title="Share Ghast on LinkedIn" target="blank" class="btn"><i class="fa fa-linkedin"></i></a>
+        </div>
 			</section>
 
 			<section class="container section" id="getting-started">
 				<h1 class="title">Getting Started</h1>
-				<p>There are a few ways to get started with Ghast. First, see all download options available below, then choose the most suitable option for your need. Next, just add the main ghast.css or ghast.min.css file and the CSS Reset in the header of your project.</p>
+				<p>There are a few ways to get started with Ghast. First, check out all the download options available below, then choose the most suitable option for your needs. Next, just add ghast.min.css and normalize.css in the header of your project.</p>
 				<div class="example">
 					<p><strong>Install with npm</strong></p>
 					<p>Ghast is available to install using npm.</p>
@@ -399,9 +372,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
 
 <!-- Ghast CSS minified -->
-<link rel="stylesheet" href="ghast/css/ghast.min.css">
+<link rel="stylesheet" href="css/ghast.min.css">
 
-<!-- You should properly set the path from the main file. --></code></pre></p>
+<!-- You should properly set the path from the root of your working directory. --></code></pre></p>
 				</div>
 			</section>
 

@@ -1,41 +1,36 @@
-$dimensions: 1.6 2.4 3.2 4.8 6.4 9.6 12.8
+$dimensions: 16 24 32 48 64 96 128
 
 .image
   display: block
   position: relative
-
   img
     display: block
-
-  &.is-square,
-  &.is-1by1,
-  &.is-4by3,
-  &.is-3by2,
-  &.is-16by9,
-  &.is-2by1
+    height: auto
+    width: 100%
+  // Ratio
+  &.square,
+  &.1x1,
+  &.4x3,
+  &.3x2,
+  &.16x9,
+  &.2x1
     img
       +overlay
-
       height: 100%
       width: 100%
-
-  &.is-square,
-  &.is-1by1
+  &.square,
+  &.1x1
     padding-top: 100%
-
-  &.is-4by3
+  &.4x3
     padding-top: 75%
-
-  &.is-3by2
+  &.3x2
     padding-top: 66.6666%
-
-  &.is-16by9
+  &.16x9
     padding-top: 56.25%
-
-  &.is-2by1
+  &.2x1
     padding-top: 50%
-
+  // Sizes
   @each $dimension in $dimensions
-    &.is-#{$dimension}x#{$dimension}
+    &.#{$dimension}x#{$dimension}
       height: $dimension * .1rem
       width: $dimension * .1rem

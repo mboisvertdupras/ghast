@@ -8,8 +8,8 @@
 
 // Set box-sizing globally to handle padding and border widths
 *,
-*:after,
-*:before
+*::after,
+*::before
   box-sizing: inherit
 
 html
@@ -17,16 +17,11 @@ html
   font: $global-font-size $body-font-family
   line-height: $global-lineheight
 
-
 // Default body styles
 body
   background: $body-background-color
   color: $body-font-color
   font-size: 1.6rem
-
-  @if $body-antialiased
-    -moz-osx-font-smoothing: auto
-    -webkit-font-smoothing: antialiased
 
 article,
 aside,
