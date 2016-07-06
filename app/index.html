@@ -31,7 +31,6 @@
 		<link rel="canonical" href="https://ghast.xyz/">
 		<link rel="image_src" href="https://ghast.xyz/img/thumbnail.jpg">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
 		<link rel="stylesheet" href="ghast.css">
 		<link rel="icon" href="https://ghast.xyz/img/favicon.ico">
@@ -128,6 +127,7 @@
 			}
       /* GitHub Theme */
       pre.prettyprint {
+        overflow: auto;
         border: none !important;
         box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
         -webkit-font-smoothing: antialiased;
@@ -523,7 +523,7 @@
 							    <!-- Left side -->
 							    <div class="header-left">
 							      <a class="header-item" href="#">
-							        <img src="logo_text.svg" alt="Logo">
+							        My Project
 							      </a>
 							      <a class="header-tab" href="#">
 							        Tab
@@ -624,7 +624,7 @@
 						<fieldset>
 							<label for="nameField">Name</label>
 							<input type="text" placeholder="Your name" id="nameField">
-              <input class="red" type="text" placeholder="Your name" id="nameField">
+              <input class="red" type="text" placeholder="Input warning">
 							<label for="commentField">Comment</label>
 							<textarea placeholder="Are you a meme?" id="commentField"></textarea>
 							<div class="float-right">
@@ -639,6 +639,7 @@
   <fieldset>
     <label for="nameField">Name</label>
     <input type="text" placeholder="Your name" id="nameField">
+    <input class="red" type="text" placeholder="Input warning">
     <label for="commentField">Comment</label>
     <textarea placeholder="Are you a meme? &hellip;" id="commentField"></textarea>
     <div class="example-send-yourself-copy">
@@ -756,6 +757,10 @@
   <div class="row">
     <div class="col">.col</div>
     <div class="col col-50 col-offset-25">.col col-50 col-offset-25</div>
+  </div>
+
+  <div class="row">
+    <div class="col"><span class="col-demo">.col</span></div>
   </div>
 
 </div>
@@ -930,9 +935,9 @@
 
 			<footer class="footer">
 			  <div class="container">
-			    <div class="content text-centered">
+			    <div class="content text-center">
 			      <p>
-			        <small>A thing built by</small>
+			        <small>Made with ♥ in Montreal. Licensed under the <a target="blank" href="https://github.com/voident/ghast#license" title="MIT License">MIT License</a>.</small>
 			      </p>
             <svg width="226px" height="44px" viewBox="0 0 226 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs></defs>

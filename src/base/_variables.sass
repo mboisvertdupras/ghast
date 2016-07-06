@@ -2,7 +2,7 @@
 // Settings
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-// 1. Global
+// Global
 // ---------
 
 $global-font-size: 62.5%
@@ -13,8 +13,6 @@ $global-radius: .3rem
 $body-background-color: $white
 $body-font-family: -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif
 $monospace-font-family: 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', 'Monaco', monospace
-$colors: (dark: ($gray-dark, $dark-invert), primary: ($primary, $primary-invert), blue: ($blue, $blue-invert), green: ($green, $green-invert), yellow: ($yellow, $yellow-invert), red: ($red, $red-invert))
-$body-font-color: $gray
 
 $z-index-1:   100;
 $z-index-2:   200;
@@ -27,7 +25,15 @@ $z-index-8:   800;
 $z-index-9:   900;
 $z-index-10: 1000;
 
-// 2. Typography
+// Color
+// -------------
+
+$colors: (dark: ($gray-dark, $dark-invert), primary: ($primary, $primary-invert), blue: ($blue, $blue-invert), green: ($green, $green-invert), yellow: ($yellow, $yellow-invert), red: ($red, $red-invert))
+$text-color: $gray
+$link-color: $primary
+$link-color-hover: darken($link-color, 10%)
+
+// Typography
 // -------------
 
 $size-1: 4.8rem
@@ -48,7 +54,7 @@ $size-huge: $size-1
 
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8
 
-// 3. Header
+// Header
 // ---------
 
 $header-height: 5rem

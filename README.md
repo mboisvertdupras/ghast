@@ -31,7 +31,7 @@ $ bower install ghast
 #### Clone the repo & install
 
 ```sh
-$ git clone git@github.com:voident/ghast.git
+$ git clone https://github.com/impria/ghast.git
 $ npm install
 ```
 

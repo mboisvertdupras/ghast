@@ -1,0 +1,32 @@
+.menu-nav
+  a
+    display: block
+    padding: .5rem 1rem
+
+.menu-list
+  a
+    border-radius: $global-radius
+    color: $text-color
+    display: block
+    padding: .5rem 1rem
+    &:hover
+      background-color: $gray-lightest
+      color: $link-color
+    // Modifiers
+    &.active
+      background-color: $link-color
+      color: $link-color-hover
+  li
+    ul
+      border-left: .1rem solid $global-radius
+      margin: 1rem
+      padding-left: 1rem
+
+.menu-label
+  color: $gray-lightest
+  font-size: $size-small
+  letter-spacing: .1rem
+  margin-bottom: .5rem
+  text-transform: uppercase
+  &:not(:first-child)
+    margin-top: 2rem
