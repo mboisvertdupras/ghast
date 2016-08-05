@@ -28,25 +28,32 @@
   align-items: flex-start
   display: flex
   text-align: left
+
   .content:not(:last-child)
     margin-bottom: 1rem
+
   .media
     border-top: .1rem solid rgba($gray-lightest, .5)
     display: flex
     padding-top: 1rem
+
     .content:not(:last-child),
     .control:not(:last-child)
       margin-bottom: .5rem
+
     .media
       font-size: 1.2rem
       padding-top: .5rem
+
       & + .media
         margin-top: .5rem
+
   & + .media
     border-top: .1rem solid rgba($gray-lightest, .5)
     margin-top: 1rem
     padding-top: 1rem
-  &.is-large
+
+  &.large
     & + .media
       margin-top: 2rem
       padding-top: 2rem

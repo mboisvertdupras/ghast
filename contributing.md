@@ -8,31 +8,31 @@
  * NPM (<http://npmjs.org>)
  * Sass (<http://sass-lang.com>)
 
-1. Clone repository
+2. Clone repository
 
    ```bash
-   $ git clone git@github.com:voident/ghast.git
+   $ git clone https://github.com/impria/ghast.git
    $ cd carbon
    ```
 
-1. Install node dependencies using npm
+3. Install node dependencies using npm
 
    ```bash
    $ npm install
    ```
 
-1. Build
+4. Develop
 
    ```bash
-   $ gulp
+   $ gulp watch
    ```
 
 ## Contributing
 
-Help improve these docs. Open an [issue](https://github.com/voident/ghast/issues/new) or submit a pull request.
+Help improve these docs. Open an [issue](https://github.com/impria/ghast/issues/new) or submit a pull request.
 
 - Navigate to the main page of the repository
-- [Fork it!](https://github.com/voident/ghast#fork-destination-box)
+- [Fork it!](https://github.com/impria/ghast#fork-destination-box)
 - Create your feature branch: git checkout -b my-new-feature
 - Commit your changes: git commit -m 'Add some feature'
 - Push to the branch: git push origin my-new-feature

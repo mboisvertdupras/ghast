@@ -25,8 +25,11 @@ gulp.task('lint', function () {
 gulp.task('sourcemap', function () {
   gulp.src('./src/**/*.sass')
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+      .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write())
+    .pipe (rename({
+      extname: ".css.map"
+    }))
     .pipe(gulp.dest('./css'));
 });
 
@@ -47,22 +50,20 @@ gulp.task('watch', ['clean', 'default'], function() {
 
     browserSync.init({
         server: {
-            baseDir: ["app", "css"]
+            baseDir: "css"
         },
         notify: true,
         open: false
     });
 
     gulp.watch(['src/*/*.sass', 'src/**/*.sass'], ['default']).on('change', browserSync.reload);
-    gulp.watch("app/*.{html,php}").on('change', browserSync.reload);
 });
 
-gulp.task('build', ['sass', 'sourcemap'], function() {
+gulp.task('build', ['clean', 'sass', 'sourcemap'], function() {
   gulp.src('./src/**/*.sass')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest('./css'))
-    .pipe(browserSync.stream())
 });
 
 gulp.task('default', ['build']);

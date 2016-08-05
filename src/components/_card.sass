@@ -1,6 +1,6 @@
 .card-header
   align-items: stretch
-  box-shadow: 0 .1rem .2rem rgba($black, 0.1)
+  box-shadow: 0 .1rem .2rem rgba($black, .1)
   display: flex
   min-height: 4rem
 
@@ -24,8 +24,10 @@
 
 .card-content
   padding: 2rem
+
   .title + .subtitle
     margin-top: -2rem
+    margin-bottom: 0
 
 .card-footer
   border-top: .1rem solid $gray-lightest
@@ -38,6 +40,16 @@
   flex: 1
   justify-content: center
   padding: 1rem
+  font-size: 1.1rem
+  font-weight: 700
+  height: 3.8rem
+  letter-spacing: .1rem
+  line-height: 3.8rem
+  padding: 0 3rem
+  text-align: center
+  text-decoration: none
+  text-transform: uppercase
+
   &:not(:last-child)
     border-right: .1rem solid $gray-lightest
 
@@ -46,10 +58,12 @@
   box-shadow: 0 .2rem .3rem rgba($black, .1), 0 0 0 .1rem rgba($black, .1)
   max-width: 100%
   position: relative
-  width: 30rem
+  width: 100%
   border-radius: $global-radius
+
   .media:not(:last-child)
     margin-bottom: 1rem
+    
   // Modifiers
   &.fullwidth
     width: 100%

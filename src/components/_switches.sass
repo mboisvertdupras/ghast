@@ -4,8 +4,10 @@
   cursor: pointer
   display: inline-block
   position: relative
+
   input
     display: none
+
   .switch-icon
     line-height: 2.4rem
     vertical-align: top
@@ -21,6 +23,7 @@
     left: 0
     outline: none
     transition: all .15s ease
+
     &::after
       content: ''
       display: block
@@ -32,10 +35,12 @@
       left: 0
       background: $white
       transition: left .15s ease
+
   input:checked + .switch-icon
     background: $primary
     border-color: $primary
     transition: all .15s ease
+    
     &::after
       left: 1.8rem
       box-shadow: 0 .1rem .3rem transparentize($black, .5)

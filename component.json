@@ -1,12 +1,12 @@
 {
 	"name": "ghast",
-	"version": "0.0.6",
+	"version": "0.1.0",
   "description": "A terrifyingly simple CSS framework.",
-  "homepage": "http://voident.github.io",
+  "homepage": "https://impria.github.io",
   "repository": "voident/ghast",
   "license": "MIT",
   "author": "Marc Boisvert <bladetecltd@gmail.com>",
-  "main": "app/ghast.css",
+  "main": "css/ghast.css",
 	"keywords": [
 		"bootstrap",
 		"css",

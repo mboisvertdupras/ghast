@@ -1,8 +1,6 @@
-
 // Grid
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-// .container is main centered wrapper with a max width of 1120rem (1120px)
+// .container is main centered wrapper with a max width defined in _variables.sass
 .container
   +media(desktop)
     &.fluid
@@ -26,12 +24,16 @@
   flex-direction: column
   padding: 0
   width: 100%
-  .row-wrap
+
+  &.row-wrap
     flex-wrap: wrap
+
   .row-no-padding
     padding: 0
+
     &> .col
       padding: 0
+
   & + .row
     margin-top: -.5rem
     padding-top: 0
@@ -40,14 +42,19 @@
   // .row-* vertically aligns every .col in the .row
   .row-top
     align-items: flex-start
+
   .row-bottom
     align-items: flex-end
+
   .row-center
     align-items: center
+
   .row-stretch
     align-items: stretch
+
   .row-baseline
     align-items: baseline
+
   .col
     display: block
     flex: 1
@@ -58,30 +65,40 @@
     // .col-* vertically aligns an individual .col
     .col-top
       align-self: flex-start
+
     .col-bottom
       align-self: flex-end
+
     .col-center
       align-self: center
 
     // Column Offsets
     &.col-o-10
       margin-left: 10%
+
     &.col-o-20
       margin-left: 20%
+
     &.col-o-25
       margin-left: 25%
+
     &.col-o-33,
     &.col-o-34
       margin-left: 33.3333%
+
     &.col-o-50
       margin-left: 50%
+
     &.col-o-66,
     &.col-o-67
       margin-left: 66.6666%
+
     &.col-o-75
       margin-left: 75%
+
     &.col-o-80
       margin-left: 80%
+
     &.col-o-90
       margin-left: 90%
 
@@ -92,38 +109,55 @@
     &.col-10
       flex: 0 0 10%
       max-width: 10%
+
     &.col-20
       flex: 0 0 20%
       max-width: 20%
+
     &.col-25
       flex: 0 0 25%
       max-width: 25%
+
     &.col-33,
     &.col-34
       flex: 0 0 33.3333%
       max-width: 33.3333%
+
     &.col-40
       flex: 0 0 40%
       max-width: 40%
+
     &.col-50
       flex: 0 0 50%
       max-width: 50%
+
     &.col-60
       flex: 0 0 60%
       max-width: 60%
+
     &.col-66,
     &.col-67
       flex: 0 0 66.6666%
       max-width: 66.6666%
+
     &.col-75
       flex: 0 0 75%
       max-width: 75%
+
     &.col-80
       flex: 0 0 80%
       max-width: 80%
+
     &.col-90
       flex: 0 0 90%
       max-width: 90%
+
+    // Responsive Column Sizes
+    &.col-sm
+      +media(mobile)
+        flex: 1
+        max-width: 100%
+        width: 100%
 
 // Larger than mobile screen
 @media (min-width: 40rem)
@@ -131,6 +165,7 @@
     flex-direction: row
     margin-left: -1rem
     width: calc(100% + 2rem)
+    
     .col
       margin-bottom: inherit
       padding: 0 1rem

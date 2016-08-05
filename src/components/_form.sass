@@ -1,14 +1,14 @@
 
 // Form
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-input[type='email'],
-input[type='number'],
-input[type='password'],
-input[type='search'],
-input[type='tel'],
-input[type='text'],
-input[type='url'],
+input
+[type='email']
+[type='number']
+[type='password']
+[type='search']
+[type='tel']
+[type='text']
+[type='url'],
 textarea,
 select
   appearance: none // Removes awkward default styles on some inputs for iOS
@@ -31,6 +31,7 @@ select
   @each $name, $pair in $colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
+    
     &.#{$name}
       border: .1rem solid $color
       outline: 0
@@ -56,8 +57,9 @@ fieldset
   border-width: 0
   padding: 0
 
-input[type='checkbox'],
-input[type='radio']
+input
+[type='checkbox']
+[type='radio']
   display: inline
 
 .label-inline

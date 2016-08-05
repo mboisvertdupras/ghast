@@ -1,8 +1,8 @@
 Package.describe({
-	name: 'voident:ghast',
-	version: '0.0.6',
+	name: 'impria:ghast',
+	version: '0.1.0',
 	summary: 'A terrifyingly simple CSS framework.',
-	git: 'https://github.com/voident/ghast.git',
+	git: 'https://github.com/impria/ghast.git',
 	documentation: 'README.md'
 });
 

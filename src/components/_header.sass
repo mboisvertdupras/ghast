@@ -1,3 +1,6 @@
+
+// Header
+// ----------
 .header
   +clearfix
   background: $white
@@ -10,10 +13,12 @@
   position: relative
   text-align: center
   z-index: $z-index-2
+
   .container
     align-items: stretch
     display: flex
     width: 100%
+
   .btn
     height: 3.2rem
     margin-bottom: 0
@@ -21,6 +26,7 @@
 
   &.is-centered
     justify-content: center
+
     .header-left,
     .header-center,
     .header-right
@@ -31,12 +37,15 @@
     box-shadow: none
     height: 4rem
     z-index: 1
+
     .container
       height: 4rem
+
     .header-tab
       font-size: 1.3rem
       height: 4rem
       padding: .8rem 1rem
+
       &:hover,
       &.is-active
         border-bottom-width: .2rem
@@ -47,6 +56,7 @@
   height: 5rem
   position: relative
   width: 5rem
+
   span
     background: $gray
     display: block
@@ -58,26 +68,33 @@
     transition: none 200ms ease
     transition-property: background, left, opacity, transform
     width: 1.5rem
+
     &:nth-child(1)
       margin-top: -.6rem
+
     &:nth-child(2)
       margin-top: -.1rem
+
     &:nth-child(3)
       margin-top: .4rem
 
   &:hover
     background: $gray-lightest
-  &.is-active
+
+  &.active
     height: $header-height
     width: $header-height
     span
       background: $gray-lightest
+
       &:nth-child(1)
         margin-left: -.5rem
         transform: rotate(45deg)
         transform-origin: left top
+
       &:nth-child(2)
         opacity: 0
+
       &:nth-child(3)
         margin-left: -.5rem
         transform: rotate(-45deg)
@@ -94,14 +111,18 @@
   align-items: center
   display: flex
   padding: 1rem
+
   img
     height: 2rem
     margin-top: -.1rem
     vertical-align: middle
+
   a:not(.btn)
     color: $gray
+
     &:hover
       color: $primary
+
     &.is-active
       color: darken($primary, .3)
 
@@ -113,8 +134,10 @@
   height: $header-height
   line-height: 24px
   padding: 13px 15px
+
   &:hover
     border-bottom: 1px solid $primary
+
   &.active
     border-bottom: 2px solid $primary
     color: $primary
@@ -147,12 +170,14 @@
   justify-content: center
   text-align: center
   width: 100%
+
   & > .header-item
     align-items: stretch
     display: flex
     flex: 1
     justify-content: center
     padding: 0
+
     & > a
       align-items: center
       display: flex
@@ -170,8 +195,10 @@
     right: 0
     top: 5rem
     z-index: $z-index-2
+
     .header-item
       border-top: 1px solid rgba($black, .2)
       padding: 1rem
-    &.is-active
+
+    &.active
       visibility: visible

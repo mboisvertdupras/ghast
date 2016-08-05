@@ -1,12 +1,12 @@
 
 // Button
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .btn,
 button,
-input[type='button'],
-input[type='reset'],
-input[type='submit']
+input
+[type='button']
+[type='reset']
+[type='submit']
   background-color: $gray-lightest
   border: .1rem solid
   border-color: $gray-lightest
@@ -84,44 +84,61 @@ input[type='submit']
   @each $name, $pair in $colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
+
     &.#{$name}
       background: $color
       border-color: transparent
       color: $color-invert
+
       &:hover,
       &:focus
         background: adjust-hue($color, 10%)
         border-color: transparent
         color: $color-invert
+
       &:active
         border-color: transparent
-      &.outline
+
+      &.btn-outline
         background: transparent
         border-color: $color
         color: $color
+
         &:hover,
         &:focus
           background-color: transparentize($color, .9)
-          border-color: transparentize($color, 0.5)
+          border-color: transparentize($color, .5)
           color: darken($color, 10%)
-      &.clear
-          background-color: transparent
+
+      &.btn-clear
+        background-color: transparent
+        border-color: transparent
+        color: $color
+
+        &:hover,
+        &:focus
+          background-color: transparentize($color, .9)
           border-color: transparent
           color: $color
+
           &:hover,
           &:focus
             background-color: transparentize($color, .9)
             border-color: transparent
             color: $color
-      &.inverted
+
+      &.btn-inverted
         background: $color-invert
         color: $color
+
         &:hover
           background: $color-invert
+
         &.outline
           background-color: transparent
           border-color: $color-invert
           color: $color-invert
+          
           &:hover
             background: transparentize($black, .5)
 

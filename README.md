@@ -1,4 +1,4 @@
-# [Ghast](https://voident.github.io)
+# [Ghast](https://impria.github.io)
 
 | A terrifyingly simple CSS framework.
 

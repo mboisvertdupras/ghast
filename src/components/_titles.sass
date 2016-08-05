@@ -1,6 +1,5 @@
 
 // Titles
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .title,
 .subtitle
@@ -10,23 +9,32 @@
 .title
   font-size: 3.6rem
   line-height: 1.2
+
   strong
     color: inherit
+
   code
     display: inline-block
     font-size: inherit
+
   & + .subtitle
     margin-top: -1rem
+
   & + .highlight
     margin-top: -1rem
+
   &.is-normal
     font-weight: 400
+
     strong
       font-weight: 700
+
   @each $size in $sizes
     $i: index($sizes, $size)
+
     &.s-#{$i}
       font-size: $size
+
       code
         font-size: nth($sizes, min($i + 1, 6))
 
@@ -34,24 +42,32 @@
   font-size: 1.8rem
   font-weight: 400
   line-height: 1.125
+
   strong
     color: $secondary
     font-weight: 700
+
   code
     border-radius: $global-radius
     display: inline-block
     font-size: 1rem
     padding: .2rem .3rem
     vertical-align: top
+
   & + .text
     margin-top: 2rem
+
   &.is-normal
     font-weight: 400
+
     strong
       font-weight: 700
+
   @each $size in $sizes
     $i: index($sizes, $size)
+
     &.s-#{$i}
       font-size: $size
+      
       code
         font-size: nth($sizes, min($i + 1, 6))
