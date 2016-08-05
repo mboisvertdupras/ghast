@@ -1,8 +1,13 @@
+// Hero
+// ----
+
 .hero-video
-  @include overlay
+  +overlay
   overflow: hidden
-  &.is-transparent
-    opacity: 0.3
+
+  &.transparent
+    opacity: .3
+
   video
     left: 50%
     min-height: 100%
@@ -14,99 +19,127 @@
     display: none
 
 .hero-content
-  padding: 40px 20px
+  padding: 4rem 2rem
+
   img
     height: 15rem
     margin-bottom: 2rem
   +media(desktop)
-    padding: 40px 0
+    padding: 6rem 0
 
 .hero-buttons
-  margin-top: 20px
+  margin-top: 2rem
   +media(mobile)
     .button
       display: block
+
       &:not(:last-child)
-        margin-bottom: 10px
+        margin-bottom: 1rem
   +media(tablet)
     display: flex
     justify-content: center
+
     .button:not(:last-child)
-      margin-right: 20px
+      margin-right: 2rem
 
 .hero
-  background: $tertiary
+  background: $faded
   text-align: center
+
   .header
     background: none
     box-shadow: none
+
     img
       height: 2rem
     +media(desktop)
       .header-left
         .header-item:first-child
-          padding-left: 0;
+          padding-left: 0
+
       .header-right
         .header-item:last-child
-          padding-right: 0;
-  .header .container
-    padding: 0
-    box-shadow: 0 1px 0 transparentize($secondary, 0.7)
+          padding-right: 0
+
+    .container
+      padding: 0
+      box-shadow: 0 .1rem 0 transparentize($gray, .8)
+
   .tabs
     a
-      border: none
+      border: 0
+
     ul
       margin-bottom: 0
-      border-bottom: none
+      border-bottom: 0
+
   .subtitle
     letter-spacing: normal
-  &.is-alt
-    background: $offwhite
-    color: $secondary
+
+  &.alt
+    background: $faded
+    color: $gray
   @each $name, $pair in $colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
-    &.is-#{$name}
+
+    &.#{$name}
       background: $color
       color: $color-invert
+
       .title
         color: $color-invert
+
         a,
         strong
           color: inherit
+
       .subtitle
         color: $color-invert
-        strong
-          color: $color-invert
-      .header .container
-        box-shadow: 0 1px 0 transparentize($color-invert, 0.7)
+
+      .header
+        .container
+          box-shadow: 0 1px 0 transparentize($color-invert, .8)
+
       .header-icon,
-      .header-item > a:not(.button)
-        color: $color-invert
-        opacity: 0.5
+      .header-item > a:not(.button),
+      .header-item > .dropdown > a
+        color: transparentize($color-invert, .2)
+
         &:hover,
         &.is-active
-          opacity: 1
+          color: $color-invert
+
       .tabs
         a
           color: $color-invert
-          opacity: 0.5
+          opacity: .5
+
           &:hover
             opacity: 1
-        li.is-active a
-          opacity: 1
-        &.is-boxed,
-        &.is-toggle
+
+        li
+          &.active
+            a
+              opacity: 1
+
+        &.boxed,
+        &.toggle
           a
             color: $color-invert
+
             &:hover
-              background: rgba(black, 0.1)
-          li.is-active a
-            &,
-            &:hover
-              background: $color-invert
-              color: $color
-      &.is-bold
+              background: rgba($black, .1)
+
+          li
+            &.active
+              a
+                &,
+                &:hover
+                  background: $color-invert
+                  color: $color
+
+      &.gradient
         $gradient-top-left: darken(saturate(adjust-hue($color, -10deg), 10%), 10%)
         $gradient-bottom-right: lighten(saturate(adjust-hue($color, 10deg), 5%), 5%)
         background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%)
@@ -114,83 +147,58 @@
         .header-toggle
           span
             background: $color-invert
+
           &:hover
-            background: rgba(black, 0.1)
-          &.is-active
+            background: rgba($black, .1)
+
+          &.active
             span
               background: $color-invert
+
         .header-menu
           background: $color
+
           .header-item
             border-top-color: $color-invert
-  &.is-fullheight,
-  &.is-large
+
+  &.hero-fh,
+  &.hero-lg
     +media(tablet)
       .tabs
-        font-size: $size-medium
-  &.is-medium
+        font-size: 1.6rem
+
+  &.hero-md // Medium sized hero
     +media(tablet)
       .hero-content
-        padding: 120px 20px
+        padding: 12rem 2rem
     +media(desktop)
       .hero-content
-        padding: 120px 0
-  &.is-large
+        padding: 12rem 0
+
+  &.hero-lg // Large size hero
     .tabs
       a
-        padding: 10px 15px
+        padding: 1rem 1.5rem
     +media(tablet)
       .hero-content
-        padding: 240px 20px
+        padding: 24rem 2rem
     +media(desktop)
       .hero-content
-        padding: 240px 0
-  &.is-fullheight
+        padding: 24rem 0
+
+  &.hero-fh // Full height hero
     align-items: stretch
     display: flex
     flex-direction: column
     justify-content: space-between
     min-height: 100vh
+
     .tabs
       a
-        padding: 15px 20px
+        padding: 1.5rem 2rem
+        
     .hero-content
       display: flex
       flex: 1
       flex-direction: column
       justify-content: center
-  &.is-left
-    text-align: left
-  &.is-right
-    text-align: right
-
-.dropdown
-	position: relative
-	display: inline-block
-	cursor: pointer
-
-.dropdown-content
-	display: none
-	position: absolute
-	background-color: $initial
-	min-width: 16rem
-	border: 0.1rem solid $quaternary
-	border-top: none
-	border-radius:  0 0 $global-radius $global-radius
-	box-shadow: 0 0.4rem 1rem 0 rgba(0,0,0,0.2)
-
-.dropdown-content a
-	color: $secondary
-	padding: 1rem 1.6rem
-	font-size: 1.2rem
-	text-decoration: none
-	display: block
-	&:last-child
-		border-radius:  0 0 $global-radius $global-radius
-
-.dropdown-content a:hover
-	background-color: $primary
-	color: $initial
-
-.dropdown:hover .dropdown-content
-	display: block

@@ -1,66 +1,104 @@
+
+// Header
+// ----------
 .header
   +clearfix
   background: $white
-  box-shadow: 0 1px 2px rgba(black, 0.1)
+  padding: 0 2rem
+  box-shadow: 0 .1rem .2rem rgba($black, .1)
   display: flex
-  height: 50px
+  height: $header-height
   font-size: 1.4rem
   line-height: 1.6rem
   position: relative
   text-align: center
-  z-index: 2
+  z-index: $z-index-2
+
   .container
     align-items: stretch
     display: flex
     width: 100%
-  .button
+
+  .btn
     height: 3.2rem
     margin-bottom: 0
     line-height: 3.2rem
-  +media(tablet)
-    height: $header-height
+
+  &.is-centered
+    justify-content: center
+
+    .header-left,
+    .header-center,
+    .header-right
+      justify-content: center
+
+  &.is-small
+    background: $white
+    box-shadow: none
+    height: 4rem
+    z-index: 1
+
+    .container
+      height: 4rem
+
+    .header-tab
+      font-size: 1.3rem
+      height: 4rem
+      padding: .8rem 1rem
+
+      &:hover,
+      &.is-active
+        border-bottom-width: .2rem
 
 .hamburger
   cursor: pointer
   display: block
-  height: 50px
+  height: 5rem
   position: relative
-  width: 50px
+  width: 5rem
+
   span
-    background: $secondary
+    background: $gray
     display: block
-    height: 1px
+    height: .1rem
     left: 50%
-    margin-left: -7px
+    margin-left: -.7rem
     position: absolute
     top: 50%
     transition: none 200ms ease
     transition-property: background, left, opacity, transform
-    width: 15px
+    width: 1.5rem
+
     &:nth-child(1)
-      margin-top: -6px
+      margin-top: -.6rem
+
     &:nth-child(2)
-      margin-top: -1px
+      margin-top: -.1rem
+
     &:nth-child(3)
-      margin-top: 4px
+      margin-top: .4rem
+
   &:hover
-    background: $quaternary
-  &.is-active
-    span
-      background: $secondary
-      &:nth-child(1)
-        margin-left: -5px
-        transform: rotate(45deg)
-        transform-origin: left top
-      &:nth-child(2)
-        opacity: 0
-      &:nth-child(3)
-        margin-left: -5px
-        transform: rotate(-45deg)
-        transform-origin: left bottom
-  +media(tablet)
+    background: $gray-lightest
+
+  &.active
     height: $header-height
     width: $header-height
+    span
+      background: $gray-lightest
+
+      &:nth-child(1)
+        margin-left: -.5rem
+        transform: rotate(45deg)
+        transform-origin: left top
+
+      &:nth-child(2)
+        opacity: 0
+
+      &:nth-child(3)
+        margin-left: -.5rem
+        transform: rotate(-45deg)
+        transform-origin: left bottom
 
 .header-toggle
   @extend .hamburger
@@ -73,41 +111,45 @@
   align-items: center
   display: flex
   padding: 1rem
+
   img
     height: 2rem
-    margin-top: -0.1rem
+    margin-top: -.1rem
     vertical-align: middle
-  a:not(.button)
-    color: $secondary
+
+  a:not(.btn)
+    color: $gray
+
     &:hover
-      color: $gray-darker
-    &.is-active
       color: $primary
+
+    &.is-active
+      color: darken($primary, .3)
 
 .header-tab
   align-items: center
   border-bottom: 1px solid transparent
-  color: $secondary
+  color: $gray
   display: block
   height: $header-height
   line-height: 24px
   padding: 13px 15px
+
   &:hover
     border-bottom: 1px solid $primary
-  &.is-active
-    border-bottom: 3px solid $primary
+
+  &.active
+    border-bottom: 2px solid $primary
     color: $primary
 
 // Containers
 
 .header-left
+  +media(desktop)
   align-items: stretch
   display: flex
   flex: 1
-  overflow: hidden
-  overflow-x: auto
   white-space: nowrap
-  @include media(desktop)
 
 .header-center
   align-items: stretch
@@ -117,10 +159,10 @@
   transform: translateX(-50%)
 
 .header-right
-  align-items: stretch
-  @include media(tablet)
+  +media(tablet)
     display: flex
-  @include media(desktop)
+  +media(desktop)
+  align-items: stretch
 
 .header-full
   align-items: stretch
@@ -128,12 +170,14 @@
   justify-content: center
   text-align: center
   width: 100%
+
   & > .header-item
     align-items: stretch
     display: flex
     flex: 1
     justify-content: center
     padding: 0
+
     & > a
       align-items: center
       display: flex
@@ -141,41 +185,20 @@
       width: 100%
 
 .header-menu
-  @include media(mobile)
-    background: white
-    box-shadow: 0 4px 7px rgba($black, 0.1)
-    display: none
-    min-width: 120px
+  +media(mobile)
+    visibility: hidden
+    background: $white
+    box-shadow: 0 .4rem .7rem rgba($black, .1)
+    display: block
+    min-width: 12rem
     position: absolute
     right: 0
-    top: 50px
-    z-index: 100
+    top: 5rem
+    z-index: $z-index-2
+
     .header-item
-      border-top: 1px solid rgba($black, 0.2)
-      padding: 10px
-    &.is-active
-      display: block
+      border-top: 1px solid rgba($black, .2)
+      padding: 1rem
 
-// States
-
-.header.is-centered
-  justify-content: center
-  .header-left,
-  .header-center,
-  .header-right
-    justify-content: center
-
-.header.is-small
-  background: $white
-  box-shadow: none
-  height: 40px
-  z-index: 1
-  .container
-    height: 40px
-  .header-tab
-    font-size: 13px
-    height: 40px
-    padding: 8px 10px
-    &:hover,
-    &.is-active
-      border-bottom-width: 2px
+    &.active
+      visibility: visible

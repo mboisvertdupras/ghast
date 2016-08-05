@@ -1,33 +1,35 @@
 
 // Mixins
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 $tablet: 80rem
 $desktop: 120rem
 
-@mixin clearfix
+=clearfix
   &:after
     clear: both
-    content: " "
+    content: ' '
     display: table
 
-@mixin overlay($offset: 0)
+=overlay($offset: 0)
   bottom: $offset
   left: $offset
   position: absolute
   right: $offset
   top: $offset
 
-@mixin media($media-size)
+=media($media-size)
   @if ($media-size == mobile)
-    @media screen and (max-width: $tablet - 0.01rem)
+    @media screen and (max-width: $tablet - .01rem)
       @content
   @if ($media-size == tablet)
     @media screen and (min-width: $tablet)
       @content
   @if ($media-size == touch)
-    @media screen and (max-width: $desktop - 0.01rem)
+    @media screen and (max-width: $desktop - .01rem)
       @content
   @if ($media-size == desktop)
     @media screen and (min-width: $desktop)
       @content
+
+=transition($transition)
+  transition: $transition

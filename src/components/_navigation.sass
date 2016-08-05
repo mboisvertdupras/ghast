@@ -1,0 +1,136 @@
+.nav-toggle
+  @extend .hamburger
+  // Responsiveness
+  +media(tablet)
+    display: none
+
+.nav-item
+  align-items: center
+  display: flex
+  justify-content: center
+  padding: 1rem
+
+  a
+    flex-grow: 1
+
+  img
+    max-height: 2.4rem
+
+  .btn + .btn
+    margin-left: 1rem
+
+  .tag
+    &:first-child
+      margin-right: .5rem
+
+    &:last-child
+      margin-left: .5rem
+  // Responsiveness
+  +media(mobile)
+    justify-content: flex-start
+
+.nav-item a,
+a.nav-item
+  color: $gray
+
+  &:hover
+    color: $primary
+
+  // Modifiers
+  &.active
+    color: $primary
+
+  &.tab
+    border-bottom: .1rem solid transparent
+    border-top: .1rem solid transparent
+    padding-left: 1.2rem
+    padding-right: 1.2rem
+
+    &:hover
+      border-bottom: .1rem solid $primary
+      border-top: .1rem solid transparent
+
+    &.active
+      border-bottom: .3rem solid $primary
+      border-top: .3rem solid transparent
+      color: $primary
+
+// Containers
+
+.nav-menu
+  // Responsiveness
+  +media(mobile)
+    background-color: $white
+    box-shadow: 0 .4rem .7rem rgba($black, .1)
+    left: 0
+    display: none
+    right: 0
+    top: 100%
+    position: absolute
+
+    .nav-item
+      border-top: .1rem solid rgba($gray-lightest, .5)
+      padding: 1rem
+
+    &.active
+      display: block
+
+.nav-left
+  align-items: stretch
+  display: flex
+  flex: 1
+  justify-content: flex-start
+  overflow: hidden
+  overflow-x: auto
+  white-space: nowrap
+
+.nav-center
+  align-items: stretch
+  display: flex
+  justify-content: center
+
+.nav-right
+  // Responsiveness
+  +media(tablet)
+    align-items: stretch
+    display: flex
+    flex: 1
+    justify-content: flex-end
+
+// Main container
+
+.nav
+  align-items: stretch
+  background-color: $white
+  display: flex
+  min-height: $header-height
+  position: relative
+  text-align: center
+  z-index: $z-index-2
+
+  & > .container
+    align-items: stretch
+    display: flex
+    min-height: $header-height
+    width: 100%
+
+    & > .nav-left
+      & > .nav-item:first-child:not(.tab)
+        padding-left: 0
+
+    & > .nav-right
+      & > .nav-item:last-child:not(.tab)
+        padding-right: 0
+
+  .container > &
+    & > .nav-left
+      & > .nav-item:first-child:not(.tab)
+        padding-left: 0
+
+    & > .nav-right
+      & > .nav-item:last-child:not(.tab)
+        padding-right: 0
+
+  // Modifiers
+  &.has-shadow
+    box-shadow: 0 .2rem .3rem rgba($black, .1)

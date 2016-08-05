@@ -1,15 +1,15 @@
 {
   "name": "ghast",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "A terrifyingly simple CSS framework.",
-  "homepage": "http://voident.github.io",
+  "homepage": "https://impria.github.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/voident/ghast.git"
+    "url": "https://github.com/impria/ghast.git"
   },
   "license": "MIT",
   "author": "Marc Boisvert <bladetecltd@gmail.com>",
-  "main": "app/ghast.css",
+  "main": "css/ghast.css",
   "keywords": [
     "bootstrap",
     "css",
@@ -45,17 +45,14 @@
     "src",
     "test"
   ],
-  "dependencies": {
-    "normalize.css": "latest"
-  },
   "devDependencies": {
-    "bower": "^1.6.8",
     "browser-sync": "^2.11.1",
     "del": "^2.2.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.1",
+    "gulp-sass-lint": "^1.1.1",
     "gulp-sourcemaps": "^1.6.0"
   },
   "engines": {
@@ -63,6 +60,7 @@
   },
   "scripts": {
     "start": "gulp",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "lint": "gulp lint"
   }
 }

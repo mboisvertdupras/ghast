@@ -1,0 +1,28 @@
+// Base
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*::after,
+*::before
+  box-sizing: inherit
+
+html
+  box-sizing: border-box
+  font: $global-font-size $body-font-family
+  line-height: $global-lineheight
+
+// Default body styles
+body
+  margin: 0
+  background: $body-background-color
+  color: $text-color
+  font-size: 1.6rem
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section
+  display: block

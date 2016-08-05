@@ -1,0 +1,171 @@
+
+// Button
+
+.btn,
+button,
+input
+[type='button']
+[type='reset']
+[type='submit']
+  background-color: $gray-lightest
+  border: .1rem solid
+  border-color: $gray-lightest
+  border-radius: $global-radius
+  color: $gray
+  cursor: pointer
+  display: inline-block
+  font-size: 1.1rem
+  font-weight: 700
+  height: 3.8rem
+  letter-spacing: .1rem
+  line-height: 3.8rem
+  opacity: 1
+  padding: 0 3rem
+  text-align: center
+  text-decoration: none
+  text-transform: uppercase
+  white-space: nowrap
+
+  &:hover,
+  &:focus
+    background-color: darken($gray-lightest, 10%)
+    border-color: transparent
+    color: $gray
+    outline: 0
+
+  &.disabled,
+  &[disabled]
+    cursor: default
+    opacity: .5
+
+    &:hover,
+    &:focus
+      background-color: $gray-light
+      border-color: $gray-light
+
+  &.btn-outline
+    background-color: transparent
+    color: inherit
+
+    &:hover,
+    &:focus
+      background-color: transparentize($gray, .9)
+      border-color: transparentize($gray, .7)
+      color: inherit
+
+  &.btn-clear
+    background-color: transparent
+    border-color: transparent
+    color: inherit
+
+    &:hover,
+    &:focus
+      background-color: transparentize($gray, .9)
+      border-color: transparent
+      color: inherit
+
+  &.btn-sm
+    font-size: .8rem
+    height: 2.8rem
+    line-height: 2.8rem
+    padding: 0 1.5rem
+
+  &.btn-lg
+    font-size: 1.4rem
+    height: 4.5rem
+    line-height: 4.5rem
+    padding: 0 2rem
+
+  &.btn-block
+    display: block
+    width: 100%
+
+  // Set styles for each colors defined in _Variables.sass
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+
+    &.#{$name}
+      background: $color
+      border-color: transparent
+      color: $color-invert
+
+      &:hover,
+      &:focus
+        background: adjust-hue($color, 10%)
+        border-color: transparent
+        color: $color-invert
+
+      &:active
+        border-color: transparent
+
+      &.btn-outline
+        background: transparent
+        border-color: $color
+        color: $color
+
+        &:hover,
+        &:focus
+          background-color: transparentize($color, .9)
+          border-color: transparentize($color, .5)
+          color: darken($color, 10%)
+
+      &.btn-clear
+        background-color: transparent
+        border-color: transparent
+        color: $color
+
+        &:hover,
+        &:focus
+          background-color: transparentize($color, .9)
+          border-color: transparent
+          color: $color
+
+          &:hover,
+          &:focus
+            background-color: transparentize($color, .9)
+            border-color: transparent
+            color: $color
+
+      &.btn-inverted
+        background: $color-invert
+        color: $color
+
+        &:hover
+          background: $color-invert
+
+        &.outline
+          background-color: transparent
+          border-color: $color-invert
+          color: $color-invert
+          
+          &:hover
+            background: transparentize($black, .5)
+
+// Button Groups
+.btn-group
+  display: inline-flex
+  flex-wrap: wrap
+
+  .btn
+    flex: 1 0 auto
+
+    &:first-child:not(:last-child)
+      border-bottom-right-radius: 0
+      border-top-right-radius: 0
+
+    &:not(:first-child):not(:last-child)
+      border-radius: 0
+      margin-left: -.1rem
+
+    &:last-child:not(:first-child)
+      border-bottom-left-radius: 0
+      border-top-left-radius: 0
+      margin-left: -.1rem
+
+    &:hover,
+    &:focus
+      z-index: 99
+
+  &.btn-group-block
+    display: flex
