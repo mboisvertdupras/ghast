@@ -11,33 +11,33 @@ $dimensions: 16 24 32 48 64 96 128
 
   // Ratio
   &.square,
-  &.1x1,
-  &.4x3,
-  &.3x2,
-  &.16x9,
-  &.2x1
+  &.i-1x1,
+  &.i-4x3,
+  &.i-3x2,
+  &.i-16x9,
+  &.i-2x1
     img
       +overlay
       height: 100%
       width: 100%
 
   &.square,
-  &.1x1
+  &.i-1x1
     padding-top: 100%
 
-  &.4x3
+  &.i-4x3
     padding-top: 75%
 
-  &.3x2
+  &.i-3x2
     padding-top: 66.6666%
 
-  &.16x9
+  &.i-16x9
     padding-top: 56.25%
-    
-  &.2x1
+
+  &.i-2x1
     padding-top: 50%
   // Sizes
   @each $dimension in $dimensions
-    &.#{$dimension}x#{$dimension}
+    &.i-#{$dimension}x#{$dimension}
       height: $dimension * .1rem
       width: $dimension * .1rem
