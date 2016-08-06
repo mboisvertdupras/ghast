@@ -2,10 +2,10 @@
 
 var autoprefixer = require('gulp-autoprefixer');
 var gulp = require('gulp');
+var watch  = require('gulp-watch');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var rename = require("gulp-rename");
-var browserSync = require('browser-sync').create();
 var sassLint = require('gulp-sass-lint');
 var del = require('del');
 
@@ -46,17 +46,8 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./css'))
 });
 
-gulp.task('watch', ['clean', 'default'], function() {
-
-    browserSync.init({
-        server: {
-            baseDir: "css"
-        },
-        notify: true,
-        open: false
-    });
-
-    gulp.watch(['src/*/*.sass', 'src/**/*.sass'], ['default']).on('change', browserSync.reload);
+gulp.task('watch', function() {
+    gulp.watch(['src/*/*.sass', 'src/**/*.sass'], ['default']);
 });
 
 gulp.task('build', ['clean', 'sass', 'sourcemap'], function() {

@@ -3,7 +3,7 @@
 	"version": "0.1.0",
   "description": "A terrifyingly simple CSS framework.",
   "homepage": "https://impria.github.io",
-  "repository": "voident/ghast",
+  "repository": "impria/ghast",
   "license": "MIT",
   "author": "Marc Boisvert <bladetecltd@gmail.com>",
   "main": "css/ghast.css",
@@ -42,11 +42,10 @@
 		"src",
 		"test"
 	],
-	"repo": "voident/ghast",
+	"repo": "impria/ghast",
 	"styles": [
-		"demo",
-		"dist/ghast.css",
-		"dist/ghast.min.css",
+		"css/ghast.css",
+		"css/ghast.min.css",
 		"license",
 		"README.md"
 	]
