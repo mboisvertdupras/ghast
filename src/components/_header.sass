@@ -22,7 +22,7 @@
   .btn
     height: 3.2rem
     margin-bottom: 0
-    line-height: 3.2rem
+    line-height: 3rem
 
   &.centered
     justify-content: center
@@ -90,15 +90,17 @@
 // Containers
 
 .header-left
+  +media(mobile)
+    overflow-x: scroll
   +media(desktop)
     align-items: stretch
-  overflow-x: scroll
   display: flex
   flex: 1
   white-space: nowrap
 
 .header-center
-  overflow-x: scroll
+  +media(mobile)
+    overflow-x: scroll
   align-items: stretch
   display: flex
   left: 50%
@@ -106,7 +108,8 @@
   transform: translateX(-50%)
 
 .header-right
-  overflow-x: scroll
+  +media(mobile)
+    overflow-x: scroll
   +media(tablet)
     display: flex
   +media(desktop)
