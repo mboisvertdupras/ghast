@@ -3,15 +3,41 @@
 
 table
   width: 100%
+  border-collapse: collapse
 
-th,
-td
-  border-bottom: .1rem solid $gray-lightest
-  padding: 1.2rem 1.5rem
-  text-align: left
+  tr
+    th,
+    td
+      border: .1rem solid $gray-lightest
+      border-width: 0 0 .1rem
+      padding: 1.2rem 1.5rem
+      text-align: left
 
-  &:first-child
-    padding-left: 0
-    
-  &:last-child
-    padding-right: 0
+  thead
+    tr
+      th
+        font-weight: 700
+
+  tbody
+    tr
+      th,
+      td
+        &:first-child
+          padding-left: 0
+
+        &:last-child
+          padding-right: 0
+
+  &.bordered
+
+    thead
+      tr
+        th
+          border-width: .1rem
+
+    tbody
+      tr
+        th,
+        td
+          padding: 1.2rem 1.5rem
+          border-width: .1rem

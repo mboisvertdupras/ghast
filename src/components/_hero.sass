@@ -19,6 +19,7 @@
     display: none
 
 .hero-content
+  z-index: $z-index-1
   padding: 4rem 2rem
 
   img
@@ -62,6 +63,8 @@
           padding-right: 0
 
     .container
+      +media(mobile)
+        box-shadow: none
       padding: 0
       box-shadow: 0 .1rem 0 transparentize($gray, .8)
 
@@ -196,7 +199,7 @@
     .tabs
       a
         padding: 1.5rem 2rem
-        
+
     .hero-content
       display: flex
       flex: 1
