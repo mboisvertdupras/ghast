@@ -12,7 +12,7 @@
   line-height: 1.6rem
   position: relative
   text-align: center
-  z-index: $z-index-2
+  z-index: $z-index-9
 
   .container
     align-items: stretch
@@ -22,9 +22,9 @@
   .btn
     height: 3.2rem
     margin-bottom: 0
-    line-height: 3.2rem
+    line-height: 3rem
 
-  &.is-centered
+  &.centered
     justify-content: center
 
     .header-left,
@@ -32,7 +32,7 @@
     .header-right
       justify-content: center
 
-  &.is-small
+  &.small
     background: $white
     box-shadow: none
     height: 4rem
@@ -49,61 +49,6 @@
       &:hover,
       &.is-active
         border-bottom-width: .2rem
-
-.hamburger
-  cursor: pointer
-  display: block
-  height: 5rem
-  position: relative
-  width: 5rem
-
-  span
-    background: $gray
-    display: block
-    height: .1rem
-    left: 50%
-    margin-left: -.7rem
-    position: absolute
-    top: 50%
-    transition: none 200ms ease
-    transition-property: background, left, opacity, transform
-    width: 1.5rem
-
-    &:nth-child(1)
-      margin-top: -.6rem
-
-    &:nth-child(2)
-      margin-top: -.1rem
-
-    &:nth-child(3)
-      margin-top: .4rem
-
-  &:hover
-    background: $gray-lightest
-
-  &.active
-    height: $header-height
-    width: $header-height
-    span
-      background: $gray-lightest
-
-      &:nth-child(1)
-        margin-left: -.5rem
-        transform: rotate(45deg)
-        transform-origin: left top
-
-      &:nth-child(2)
-        opacity: 0
-
-      &:nth-child(3)
-        margin-left: -.5rem
-        transform: rotate(-45deg)
-        transform-origin: left bottom
-
-.header-toggle
-  @extend .hamburger
-  +media(tablet)
-    display: none
 
 // Elements
 
@@ -145,13 +90,17 @@
 // Containers
 
 .header-left
+  +media(mobile)
+    overflow-x: scroll
   +media(desktop)
-  align-items: stretch
+    align-items: stretch
   display: flex
   flex: 1
   white-space: nowrap
 
 .header-center
+  +media(mobile)
+    overflow-x: scroll
   align-items: stretch
   display: flex
   left: 50%
@@ -159,10 +108,12 @@
   transform: translateX(-50%)
 
 .header-right
+  +media(mobile)
+    overflow-x: scroll
   +media(tablet)
     display: flex
   +media(desktop)
-  align-items: stretch
+    align-items: stretch
 
 .header-full
   align-items: stretch
@@ -183,22 +134,3 @@
       display: flex
       justify-content: center
       width: 100%
-
-.header-menu
-  +media(mobile)
-    visibility: hidden
-    background: $white
-    box-shadow: 0 .4rem .7rem rgba($black, .1)
-    display: block
-    min-width: 12rem
-    position: absolute
-    right: 0
-    top: 5rem
-    z-index: $z-index-2
-
-    .header-item
-      border-top: 1px solid rgba($black, .2)
-      padding: 1rem
-
-    &.active
-      visibility: visible

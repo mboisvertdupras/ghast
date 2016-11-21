@@ -187,7 +187,7 @@ textarea {
 
 html {
   box-sizing: border-box;
-  font: 62.5% -apple-system, BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+  font: 62.5% -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
   line-height: 1.65; }
 
 body {
@@ -204,15 +204,6 @@ header,
 hgroup,
 section {
   display: block; }
-
-pre,
-blockquote,
-dl,
-table,
-ul,
-ol,
-form {
-  margin-bottom: 2.5rem; }
 
 .container {
   margin: 0 auto;
@@ -251,22 +242,27 @@ form {
   .row .row-top {
     -webkit-box-align: start;
         -ms-flex-align: start;
+                -ms-grid-row-align: flex-start;
             align-items: flex-start; }
   .row .row-bottom {
     -webkit-box-align: end;
         -ms-flex-align: end;
+                -ms-grid-row-align: flex-end;
             align-items: flex-end; }
   .row .row-center {
     -webkit-box-align: center;
         -ms-flex-align: center;
+                -ms-grid-row-align: center;
             align-items: center; }
   .row .row-stretch {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
+                -ms-grid-row-align: stretch;
             align-items: stretch; }
   .row .row-baseline {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
+                -ms-grid-row-align: baseline;
             align-items: baseline; }
   .row .col {
     display: block;
@@ -284,7 +280,6 @@ form {
           align-self: flex-end; }
     .row .col .col-center {
       -ms-flex-item-align: center;
-          -ms-grid-row-align: center;
           align-self: center; }
     .row .col.col-o-10 {
       margin-left: 10%; }
@@ -426,6 +421,25 @@ form {
     height: 12.8rem;
     width: 12.8rem; }
 
+.btn,
+button {
+  margin-bottom: 1rem; }
+
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+
+pre,
+blockquote,
+dl,
+table,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem; }
+
 p {
   margin-top: 0; }
 
@@ -441,22 +455,27 @@ h6 {
 
 h1 {
   font-size: 4rem;
+  letter-spacing: -.1rem;
   line-height: 1.2; }
 
 h2 {
   font-size: 3.6rem;
+  letter-spacing: -.1rem;
   line-height: 1.25; }
 
 h3 {
   font-size: 3rem;
+  letter-spacing: -.1rem;
   line-height: 1.3; }
 
 h4 {
   font-size: 2.4rem;
+  letter-spacing: -.08rem;
   line-height: 1.35; }
 
 h5 {
   font-size: 1.8rem;
+  letter-spacing: -.05rem;
   line-height: 1.5; }
 
 h6 {
@@ -478,35 +497,18 @@ h6 {
   h6 {
     font-size: 1.5rem; } }
 
-.blank {
-  background: #f8f8f8;
-  border-radius: 0.3rem;
-  text-align: center;
-  padding: 2rem; }
-  .blank .blank-title {
-    font-size: 1.8rem;
-    margin: 1.5rem 0 .2rem 0; }
-  .blank .blank-meta {
-    font-size: 1.4rem;
-    color: #999; }
-  .blank .blank-action {
-    margin-top: 1rem; }
-
 blockquote {
   margin: 0;
   padding: 1rem 0 .5rem 1.75rem;
   color: #666;
   font-style: italic;
   border-left: 0.5rem solid #e0e0e0; }
-  blockquote cite {
-    color: #999; }
 
 .btn,
 button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-  margin-bottom: 1rem;
   background-color: #e0e0e0;
   border: .1rem solid;
   border-color: #e0e0e0;
@@ -632,683 +634,683 @@ input[type='submit'] {
   input[type='submit'].btn-block {
     display: block;
     width: 100%; }
-  .btn.btn-dark,
-  button.btn-dark,
-  input[type='button'].btn-dark,
-  input[type='reset'].btn-dark,
-  input[type='submit'].btn-dark {
+  .btn.dark,
+  button.dark,
+  input[type='button'].dark,
+  input[type='reset'].dark,
+  input[type='submit'].dark {
     background: #333;
     border-color: transparent;
     color: #fff; }
-    .btn.btn-dark:hover, .btn.btn-dark:focus,
-    button.btn-dark:hover,
-    button.btn-dark:focus,
-    input[type='button'].btn-dark:hover,
-    input[type='button'].btn-dark:focus,
-    input[type='reset'].btn-dark:hover,
-    input[type='reset'].btn-dark:focus,
-    input[type='submit'].btn-dark:hover,
-    input[type='submit'].btn-dark:focus {
+    .btn.dark:hover, .btn.dark:focus,
+    button.dark:hover,
+    button.dark:focus,
+    input[type='button'].dark:hover,
+    input[type='button'].dark:focus,
+    input[type='reset'].dark:hover,
+    input[type='reset'].dark:focus,
+    input[type='submit'].dark:hover,
+    input[type='submit'].dark:focus {
       background: #333333;
       border-color: transparent;
       color: #fff; }
-    .btn.btn-dark:active,
-    button.btn-dark:active,
-    input[type='button'].btn-dark:active,
-    input[type='reset'].btn-dark:active,
-    input[type='submit'].btn-dark:active {
+    .btn.dark:active,
+    button.dark:active,
+    input[type='button'].dark:active,
+    input[type='reset'].dark:active,
+    input[type='submit'].dark:active {
       border-color: transparent; }
-    .btn.btn-dark.btn-outline,
-    button.btn-dark.btn-outline,
-    input[type='button'].btn-dark.btn-outline,
-    input[type='reset'].btn-dark.btn-outline,
-    input[type='submit'].btn-dark.btn-outline {
+    .btn.dark.btn-outline,
+    button.dark.btn-outline,
+    input[type='button'].dark.btn-outline,
+    input[type='reset'].dark.btn-outline,
+    input[type='submit'].dark.btn-outline {
       background: transparent;
       border-color: #333;
       color: #333; }
-      .btn.btn-dark.btn-outline:hover, .btn.btn-dark.btn-outline:focus,
-      button.btn-dark.btn-outline:hover,
-      button.btn-dark.btn-outline:focus,
-      input[type='button'].btn-dark.btn-outline:hover,
-      input[type='button'].btn-dark.btn-outline:focus,
-      input[type='reset'].btn-dark.btn-outline:hover,
-      input[type='reset'].btn-dark.btn-outline:focus,
-      input[type='submit'].btn-dark.btn-outline:hover,
-      input[type='submit'].btn-dark.btn-outline:focus {
+      .btn.dark.btn-outline:hover, .btn.dark.btn-outline:focus,
+      button.dark.btn-outline:hover,
+      button.dark.btn-outline:focus,
+      input[type='button'].dark.btn-outline:hover,
+      input[type='button'].dark.btn-outline:focus,
+      input[type='reset'].dark.btn-outline:hover,
+      input[type='reset'].dark.btn-outline:focus,
+      input[type='submit'].dark.btn-outline:hover,
+      input[type='submit'].dark.btn-outline:focus {
         background-color: rgba(51, 51, 51, 0.1);
         border-color: rgba(51, 51, 51, 0.5);
         color: #1a1a1a; }
-    .btn.btn-dark.btn-clear,
-    button.btn-dark.btn-clear,
-    input[type='button'].btn-dark.btn-clear,
-    input[type='reset'].btn-dark.btn-clear,
-    input[type='submit'].btn-dark.btn-clear {
+    .btn.dark.btn-clear,
+    button.dark.btn-clear,
+    input[type='button'].dark.btn-clear,
+    input[type='reset'].dark.btn-clear,
+    input[type='submit'].dark.btn-clear {
       background-color: transparent;
       border-color: transparent;
       color: #333; }
-      .btn.btn-dark.btn-clear:hover, .btn.btn-dark.btn-clear:focus,
-      button.btn-dark.btn-clear:hover,
-      button.btn-dark.btn-clear:focus,
-      input[type='button'].btn-dark.btn-clear:hover,
-      input[type='button'].btn-dark.btn-clear:focus,
-      input[type='reset'].btn-dark.btn-clear:hover,
-      input[type='reset'].btn-dark.btn-clear:focus,
-      input[type='submit'].btn-dark.btn-clear:hover,
-      input[type='submit'].btn-dark.btn-clear:focus {
+      .btn.dark.btn-clear:hover, .btn.dark.btn-clear:focus,
+      button.dark.btn-clear:hover,
+      button.dark.btn-clear:focus,
+      input[type='button'].dark.btn-clear:hover,
+      input[type='button'].dark.btn-clear:focus,
+      input[type='reset'].dark.btn-clear:hover,
+      input[type='reset'].dark.btn-clear:focus,
+      input[type='submit'].dark.btn-clear:hover,
+      input[type='submit'].dark.btn-clear:focus {
         background-color: rgba(51, 51, 51, 0.1);
         border-color: transparent;
         color: #333; }
-        .btn.btn-dark.btn-clear:hover:hover, .btn.btn-dark.btn-clear:hover:focus, .btn.btn-dark.btn-clear:focus:hover, .btn.btn-dark.btn-clear:focus:focus,
-        button.btn-dark.btn-clear:hover:hover,
-        button.btn-dark.btn-clear:hover:focus,
-        button.btn-dark.btn-clear:focus:hover,
-        button.btn-dark.btn-clear:focus:focus,
-        input[type='button'].btn-dark.btn-clear:hover:hover,
-        input[type='button'].btn-dark.btn-clear:hover:focus,
-        input[type='button'].btn-dark.btn-clear:focus:hover,
-        input[type='button'].btn-dark.btn-clear:focus:focus,
-        input[type='reset'].btn-dark.btn-clear:hover:hover,
-        input[type='reset'].btn-dark.btn-clear:hover:focus,
-        input[type='reset'].btn-dark.btn-clear:focus:hover,
-        input[type='reset'].btn-dark.btn-clear:focus:focus,
-        input[type='submit'].btn-dark.btn-clear:hover:hover,
-        input[type='submit'].btn-dark.btn-clear:hover:focus,
-        input[type='submit'].btn-dark.btn-clear:focus:hover,
-        input[type='submit'].btn-dark.btn-clear:focus:focus {
+        .btn.dark.btn-clear:hover:hover, .btn.dark.btn-clear:hover:focus, .btn.dark.btn-clear:focus:hover, .btn.dark.btn-clear:focus:focus,
+        button.dark.btn-clear:hover:hover,
+        button.dark.btn-clear:hover:focus,
+        button.dark.btn-clear:focus:hover,
+        button.dark.btn-clear:focus:focus,
+        input[type='button'].dark.btn-clear:hover:hover,
+        input[type='button'].dark.btn-clear:hover:focus,
+        input[type='button'].dark.btn-clear:focus:hover,
+        input[type='button'].dark.btn-clear:focus:focus,
+        input[type='reset'].dark.btn-clear:hover:hover,
+        input[type='reset'].dark.btn-clear:hover:focus,
+        input[type='reset'].dark.btn-clear:focus:hover,
+        input[type='reset'].dark.btn-clear:focus:focus,
+        input[type='submit'].dark.btn-clear:hover:hover,
+        input[type='submit'].dark.btn-clear:hover:focus,
+        input[type='submit'].dark.btn-clear:focus:hover,
+        input[type='submit'].dark.btn-clear:focus:focus {
           background-color: rgba(51, 51, 51, 0.1);
           border-color: transparent;
           color: #333; }
-    .btn.btn-dark.btn-inverted,
-    button.btn-dark.btn-inverted,
-    input[type='button'].btn-dark.btn-inverted,
-    input[type='reset'].btn-dark.btn-inverted,
-    input[type='submit'].btn-dark.btn-inverted {
+    .btn.dark.btn-inverted,
+    button.dark.btn-inverted,
+    input[type='button'].dark.btn-inverted,
+    input[type='reset'].dark.btn-inverted,
+    input[type='submit'].dark.btn-inverted {
       background: #fff;
       color: #333; }
-      .btn.btn-dark.btn-inverted:hover,
-      button.btn-dark.btn-inverted:hover,
-      input[type='button'].btn-dark.btn-inverted:hover,
-      input[type='reset'].btn-dark.btn-inverted:hover,
-      input[type='submit'].btn-dark.btn-inverted:hover {
+      .btn.dark.btn-inverted:hover,
+      button.dark.btn-inverted:hover,
+      input[type='button'].dark.btn-inverted:hover,
+      input[type='reset'].dark.btn-inverted:hover,
+      input[type='submit'].dark.btn-inverted:hover {
         background: #fff; }
-      .btn.btn-dark.btn-inverted.outline,
-      button.btn-dark.btn-inverted.outline,
-      input[type='button'].btn-dark.btn-inverted.outline,
-      input[type='reset'].btn-dark.btn-inverted.outline,
-      input[type='submit'].btn-dark.btn-inverted.outline {
+      .btn.dark.btn-inverted.outline,
+      button.dark.btn-inverted.outline,
+      input[type='button'].dark.btn-inverted.outline,
+      input[type='reset'].dark.btn-inverted.outline,
+      input[type='submit'].dark.btn-inverted.outline {
         background-color: transparent;
         border-color: #fff;
         color: #fff; }
-        .btn.btn-dark.btn-inverted.outline:hover,
-        button.btn-dark.btn-inverted.outline:hover,
-        input[type='button'].btn-dark.btn-inverted.outline:hover,
-        input[type='reset'].btn-dark.btn-inverted.outline:hover,
-        input[type='submit'].btn-dark.btn-inverted.outline:hover {
+        .btn.dark.btn-inverted.outline:hover,
+        button.dark.btn-inverted.outline:hover,
+        input[type='button'].dark.btn-inverted.outline:hover,
+        input[type='reset'].dark.btn-inverted.outline:hover,
+        input[type='submit'].dark.btn-inverted.outline:hover {
           background: rgba(10, 10, 10, 0.5); }
-  .btn.btn-primary,
-  button.btn-primary,
-  input[type='button'].btn-primary,
-  input[type='reset'].btn-primary,
-  input[type='submit'].btn-primary {
+  .btn.primary,
+  button.primary,
+  input[type='button'].primary,
+  input[type='reset'].primary,
+  input[type='submit'].primary {
     background: #536dfe;
     border-color: transparent;
     color: #fff; }
-    .btn.btn-primary:hover, .btn.btn-primary:focus,
-    button.btn-primary:hover,
-    button.btn-primary:focus,
-    input[type='button'].btn-primary:hover,
-    input[type='button'].btn-primary:focus,
-    input[type='reset'].btn-primary:hover,
-    input[type='reset'].btn-primary:focus,
-    input[type='submit'].btn-primary:hover,
-    input[type='submit'].btn-primary:focus {
+    .btn.primary:hover, .btn.primary:focus,
+    button.primary:hover,
+    button.primary:focus,
+    input[type='button'].primary:hover,
+    input[type='button'].primary:focus,
+    input[type='reset'].primary:hover,
+    input[type='reset'].primary:focus,
+    input[type='submit'].primary:hover,
+    input[type='submit'].primary:focus {
       background: #5653fe;
       border-color: transparent;
       color: #fff; }
-    .btn.btn-primary:active,
-    button.btn-primary:active,
-    input[type='button'].btn-primary:active,
-    input[type='reset'].btn-primary:active,
-    input[type='submit'].btn-primary:active {
+    .btn.primary:active,
+    button.primary:active,
+    input[type='button'].primary:active,
+    input[type='reset'].primary:active,
+    input[type='submit'].primary:active {
       border-color: transparent; }
-    .btn.btn-primary.btn-outline,
-    button.btn-primary.btn-outline,
-    input[type='button'].btn-primary.btn-outline,
-    input[type='reset'].btn-primary.btn-outline,
-    input[type='submit'].btn-primary.btn-outline {
+    .btn.primary.btn-outline,
+    button.primary.btn-outline,
+    input[type='button'].primary.btn-outline,
+    input[type='reset'].primary.btn-outline,
+    input[type='submit'].primary.btn-outline {
       background: transparent;
       border-color: #536dfe;
       color: #536dfe; }
-      .btn.btn-primary.btn-outline:hover, .btn.btn-primary.btn-outline:focus,
-      button.btn-primary.btn-outline:hover,
-      button.btn-primary.btn-outline:focus,
-      input[type='button'].btn-primary.btn-outline:hover,
-      input[type='button'].btn-primary.btn-outline:focus,
-      input[type='reset'].btn-primary.btn-outline:hover,
-      input[type='reset'].btn-primary.btn-outline:focus,
-      input[type='submit'].btn-primary.btn-outline:hover,
-      input[type='submit'].btn-primary.btn-outline:focus {
+      .btn.primary.btn-outline:hover, .btn.primary.btn-outline:focus,
+      button.primary.btn-outline:hover,
+      button.primary.btn-outline:focus,
+      input[type='button'].primary.btn-outline:hover,
+      input[type='button'].primary.btn-outline:focus,
+      input[type='reset'].primary.btn-outline:hover,
+      input[type='reset'].primary.btn-outline:focus,
+      input[type='submit'].primary.btn-outline:hover,
+      input[type='submit'].primary.btn-outline:focus {
         background-color: rgba(83, 109, 254, 0.1);
         border-color: rgba(83, 109, 254, 0.5);
         color: #2042fe; }
-    .btn.btn-primary.btn-clear,
-    button.btn-primary.btn-clear,
-    input[type='button'].btn-primary.btn-clear,
-    input[type='reset'].btn-primary.btn-clear,
-    input[type='submit'].btn-primary.btn-clear {
+    .btn.primary.btn-clear,
+    button.primary.btn-clear,
+    input[type='button'].primary.btn-clear,
+    input[type='reset'].primary.btn-clear,
+    input[type='submit'].primary.btn-clear {
       background-color: transparent;
       border-color: transparent;
       color: #536dfe; }
-      .btn.btn-primary.btn-clear:hover, .btn.btn-primary.btn-clear:focus,
-      button.btn-primary.btn-clear:hover,
-      button.btn-primary.btn-clear:focus,
-      input[type='button'].btn-primary.btn-clear:hover,
-      input[type='button'].btn-primary.btn-clear:focus,
-      input[type='reset'].btn-primary.btn-clear:hover,
-      input[type='reset'].btn-primary.btn-clear:focus,
-      input[type='submit'].btn-primary.btn-clear:hover,
-      input[type='submit'].btn-primary.btn-clear:focus {
+      .btn.primary.btn-clear:hover, .btn.primary.btn-clear:focus,
+      button.primary.btn-clear:hover,
+      button.primary.btn-clear:focus,
+      input[type='button'].primary.btn-clear:hover,
+      input[type='button'].primary.btn-clear:focus,
+      input[type='reset'].primary.btn-clear:hover,
+      input[type='reset'].primary.btn-clear:focus,
+      input[type='submit'].primary.btn-clear:hover,
+      input[type='submit'].primary.btn-clear:focus {
         background-color: rgba(83, 109, 254, 0.1);
         border-color: transparent;
         color: #536dfe; }
-        .btn.btn-primary.btn-clear:hover:hover, .btn.btn-primary.btn-clear:hover:focus, .btn.btn-primary.btn-clear:focus:hover, .btn.btn-primary.btn-clear:focus:focus,
-        button.btn-primary.btn-clear:hover:hover,
-        button.btn-primary.btn-clear:hover:focus,
-        button.btn-primary.btn-clear:focus:hover,
-        button.btn-primary.btn-clear:focus:focus,
-        input[type='button'].btn-primary.btn-clear:hover:hover,
-        input[type='button'].btn-primary.btn-clear:hover:focus,
-        input[type='button'].btn-primary.btn-clear:focus:hover,
-        input[type='button'].btn-primary.btn-clear:focus:focus,
-        input[type='reset'].btn-primary.btn-clear:hover:hover,
-        input[type='reset'].btn-primary.btn-clear:hover:focus,
-        input[type='reset'].btn-primary.btn-clear:focus:hover,
-        input[type='reset'].btn-primary.btn-clear:focus:focus,
-        input[type='submit'].btn-primary.btn-clear:hover:hover,
-        input[type='submit'].btn-primary.btn-clear:hover:focus,
-        input[type='submit'].btn-primary.btn-clear:focus:hover,
-        input[type='submit'].btn-primary.btn-clear:focus:focus {
+        .btn.primary.btn-clear:hover:hover, .btn.primary.btn-clear:hover:focus, .btn.primary.btn-clear:focus:hover, .btn.primary.btn-clear:focus:focus,
+        button.primary.btn-clear:hover:hover,
+        button.primary.btn-clear:hover:focus,
+        button.primary.btn-clear:focus:hover,
+        button.primary.btn-clear:focus:focus,
+        input[type='button'].primary.btn-clear:hover:hover,
+        input[type='button'].primary.btn-clear:hover:focus,
+        input[type='button'].primary.btn-clear:focus:hover,
+        input[type='button'].primary.btn-clear:focus:focus,
+        input[type='reset'].primary.btn-clear:hover:hover,
+        input[type='reset'].primary.btn-clear:hover:focus,
+        input[type='reset'].primary.btn-clear:focus:hover,
+        input[type='reset'].primary.btn-clear:focus:focus,
+        input[type='submit'].primary.btn-clear:hover:hover,
+        input[type='submit'].primary.btn-clear:hover:focus,
+        input[type='submit'].primary.btn-clear:focus:hover,
+        input[type='submit'].primary.btn-clear:focus:focus {
           background-color: rgba(83, 109, 254, 0.1);
           border-color: transparent;
           color: #536dfe; }
-    .btn.btn-primary.btn-inverted,
-    button.btn-primary.btn-inverted,
-    input[type='button'].btn-primary.btn-inverted,
-    input[type='reset'].btn-primary.btn-inverted,
-    input[type='submit'].btn-primary.btn-inverted {
+    .btn.primary.btn-inverted,
+    button.primary.btn-inverted,
+    input[type='button'].primary.btn-inverted,
+    input[type='reset'].primary.btn-inverted,
+    input[type='submit'].primary.btn-inverted {
       background: #fff;
       color: #536dfe; }
-      .btn.btn-primary.btn-inverted:hover,
-      button.btn-primary.btn-inverted:hover,
-      input[type='button'].btn-primary.btn-inverted:hover,
-      input[type='reset'].btn-primary.btn-inverted:hover,
-      input[type='submit'].btn-primary.btn-inverted:hover {
+      .btn.primary.btn-inverted:hover,
+      button.primary.btn-inverted:hover,
+      input[type='button'].primary.btn-inverted:hover,
+      input[type='reset'].primary.btn-inverted:hover,
+      input[type='submit'].primary.btn-inverted:hover {
         background: #fff; }
-      .btn.btn-primary.btn-inverted.outline,
-      button.btn-primary.btn-inverted.outline,
-      input[type='button'].btn-primary.btn-inverted.outline,
-      input[type='reset'].btn-primary.btn-inverted.outline,
-      input[type='submit'].btn-primary.btn-inverted.outline {
+      .btn.primary.btn-inverted.outline,
+      button.primary.btn-inverted.outline,
+      input[type='button'].primary.btn-inverted.outline,
+      input[type='reset'].primary.btn-inverted.outline,
+      input[type='submit'].primary.btn-inverted.outline {
         background-color: transparent;
         border-color: #fff;
         color: #fff; }
-        .btn.btn-primary.btn-inverted.outline:hover,
-        button.btn-primary.btn-inverted.outline:hover,
-        input[type='button'].btn-primary.btn-inverted.outline:hover,
-        input[type='reset'].btn-primary.btn-inverted.outline:hover,
-        input[type='submit'].btn-primary.btn-inverted.outline:hover {
+        .btn.primary.btn-inverted.outline:hover,
+        button.primary.btn-inverted.outline:hover,
+        input[type='button'].primary.btn-inverted.outline:hover,
+        input[type='reset'].primary.btn-inverted.outline:hover,
+        input[type='submit'].primary.btn-inverted.outline:hover {
           background: rgba(10, 10, 10, 0.5); }
-  .btn.btn-blue,
-  button.btn-blue,
-  input[type='button'].btn-blue,
-  input[type='reset'].btn-blue,
-  input[type='submit'].btn-blue {
+  .btn.blue,
+  button.blue,
+  input[type='button'].blue,
+  input[type='reset'].blue,
+  input[type='submit'].blue {
     background: #42afe3;
     border-color: transparent;
     color: #fff; }
-    .btn.btn-blue:hover, .btn.btn-blue:focus,
-    button.btn-blue:hover,
-    button.btn-blue:focus,
-    input[type='button'].btn-blue:hover,
-    input[type='button'].btn-blue:focus,
-    input[type='reset'].btn-blue:hover,
-    input[type='reset'].btn-blue:focus,
-    input[type='submit'].btn-blue:hover,
-    input[type='submit'].btn-blue:focus {
+    .btn.blue:hover, .btn.blue:focus,
+    button.blue:hover,
+    button.blue:focus,
+    input[type='button'].blue:hover,
+    input[type='button'].blue:focus,
+    input[type='reset'].blue:hover,
+    input[type='reset'].blue:focus,
+    input[type='submit'].blue:hover,
+    input[type='submit'].blue:focus {
       background: #4294e3;
       border-color: transparent;
       color: #fff; }
-    .btn.btn-blue:active,
-    button.btn-blue:active,
-    input[type='button'].btn-blue:active,
-    input[type='reset'].btn-blue:active,
-    input[type='submit'].btn-blue:active {
+    .btn.blue:active,
+    button.blue:active,
+    input[type='button'].blue:active,
+    input[type='reset'].blue:active,
+    input[type='submit'].blue:active {
       border-color: transparent; }
-    .btn.btn-blue.btn-outline,
-    button.btn-blue.btn-outline,
-    input[type='button'].btn-blue.btn-outline,
-    input[type='reset'].btn-blue.btn-outline,
-    input[type='submit'].btn-blue.btn-outline {
+    .btn.blue.btn-outline,
+    button.blue.btn-outline,
+    input[type='button'].blue.btn-outline,
+    input[type='reset'].blue.btn-outline,
+    input[type='submit'].blue.btn-outline {
       background: transparent;
       border-color: #42afe3;
       color: #42afe3; }
-      .btn.btn-blue.btn-outline:hover, .btn.btn-blue.btn-outline:focus,
-      button.btn-blue.btn-outline:hover,
-      button.btn-blue.btn-outline:focus,
-      input[type='button'].btn-blue.btn-outline:hover,
-      input[type='button'].btn-blue.btn-outline:focus,
-      input[type='reset'].btn-blue.btn-outline:hover,
-      input[type='reset'].btn-blue.btn-outline:focus,
-      input[type='submit'].btn-blue.btn-outline:hover,
-      input[type='submit'].btn-blue.btn-outline:focus {
+      .btn.blue.btn-outline:hover, .btn.blue.btn-outline:focus,
+      button.blue.btn-outline:hover,
+      button.blue.btn-outline:focus,
+      input[type='button'].blue.btn-outline:hover,
+      input[type='button'].blue.btn-outline:focus,
+      input[type='reset'].blue.btn-outline:hover,
+      input[type='reset'].blue.btn-outline:focus,
+      input[type='submit'].blue.btn-outline:hover,
+      input[type='submit'].blue.btn-outline:focus {
         background-color: rgba(66, 175, 227, 0.1);
         border-color: rgba(66, 175, 227, 0.5);
         color: #1f99d3; }
-    .btn.btn-blue.btn-clear,
-    button.btn-blue.btn-clear,
-    input[type='button'].btn-blue.btn-clear,
-    input[type='reset'].btn-blue.btn-clear,
-    input[type='submit'].btn-blue.btn-clear {
+    .btn.blue.btn-clear,
+    button.blue.btn-clear,
+    input[type='button'].blue.btn-clear,
+    input[type='reset'].blue.btn-clear,
+    input[type='submit'].blue.btn-clear {
       background-color: transparent;
       border-color: transparent;
       color: #42afe3; }
-      .btn.btn-blue.btn-clear:hover, .btn.btn-blue.btn-clear:focus,
-      button.btn-blue.btn-clear:hover,
-      button.btn-blue.btn-clear:focus,
-      input[type='button'].btn-blue.btn-clear:hover,
-      input[type='button'].btn-blue.btn-clear:focus,
-      input[type='reset'].btn-blue.btn-clear:hover,
-      input[type='reset'].btn-blue.btn-clear:focus,
-      input[type='submit'].btn-blue.btn-clear:hover,
-      input[type='submit'].btn-blue.btn-clear:focus {
+      .btn.blue.btn-clear:hover, .btn.blue.btn-clear:focus,
+      button.blue.btn-clear:hover,
+      button.blue.btn-clear:focus,
+      input[type='button'].blue.btn-clear:hover,
+      input[type='button'].blue.btn-clear:focus,
+      input[type='reset'].blue.btn-clear:hover,
+      input[type='reset'].blue.btn-clear:focus,
+      input[type='submit'].blue.btn-clear:hover,
+      input[type='submit'].blue.btn-clear:focus {
         background-color: rgba(66, 175, 227, 0.1);
         border-color: transparent;
         color: #42afe3; }
-        .btn.btn-blue.btn-clear:hover:hover, .btn.btn-blue.btn-clear:hover:focus, .btn.btn-blue.btn-clear:focus:hover, .btn.btn-blue.btn-clear:focus:focus,
-        button.btn-blue.btn-clear:hover:hover,
-        button.btn-blue.btn-clear:hover:focus,
-        button.btn-blue.btn-clear:focus:hover,
-        button.btn-blue.btn-clear:focus:focus,
-        input[type='button'].btn-blue.btn-clear:hover:hover,
-        input[type='button'].btn-blue.btn-clear:hover:focus,
-        input[type='button'].btn-blue.btn-clear:focus:hover,
-        input[type='button'].btn-blue.btn-clear:focus:focus,
-        input[type='reset'].btn-blue.btn-clear:hover:hover,
-        input[type='reset'].btn-blue.btn-clear:hover:focus,
-        input[type='reset'].btn-blue.btn-clear:focus:hover,
-        input[type='reset'].btn-blue.btn-clear:focus:focus,
-        input[type='submit'].btn-blue.btn-clear:hover:hover,
-        input[type='submit'].btn-blue.btn-clear:hover:focus,
-        input[type='submit'].btn-blue.btn-clear:focus:hover,
-        input[type='submit'].btn-blue.btn-clear:focus:focus {
+        .btn.blue.btn-clear:hover:hover, .btn.blue.btn-clear:hover:focus, .btn.blue.btn-clear:focus:hover, .btn.blue.btn-clear:focus:focus,
+        button.blue.btn-clear:hover:hover,
+        button.blue.btn-clear:hover:focus,
+        button.blue.btn-clear:focus:hover,
+        button.blue.btn-clear:focus:focus,
+        input[type='button'].blue.btn-clear:hover:hover,
+        input[type='button'].blue.btn-clear:hover:focus,
+        input[type='button'].blue.btn-clear:focus:hover,
+        input[type='button'].blue.btn-clear:focus:focus,
+        input[type='reset'].blue.btn-clear:hover:hover,
+        input[type='reset'].blue.btn-clear:hover:focus,
+        input[type='reset'].blue.btn-clear:focus:hover,
+        input[type='reset'].blue.btn-clear:focus:focus,
+        input[type='submit'].blue.btn-clear:hover:hover,
+        input[type='submit'].blue.btn-clear:hover:focus,
+        input[type='submit'].blue.btn-clear:focus:hover,
+        input[type='submit'].blue.btn-clear:focus:focus {
           background-color: rgba(66, 175, 227, 0.1);
           border-color: transparent;
           color: #42afe3; }
-    .btn.btn-blue.btn-inverted,
-    button.btn-blue.btn-inverted,
-    input[type='button'].btn-blue.btn-inverted,
-    input[type='reset'].btn-blue.btn-inverted,
-    input[type='submit'].btn-blue.btn-inverted {
+    .btn.blue.btn-inverted,
+    button.blue.btn-inverted,
+    input[type='button'].blue.btn-inverted,
+    input[type='reset'].blue.btn-inverted,
+    input[type='submit'].blue.btn-inverted {
       background: #fff;
       color: #42afe3; }
-      .btn.btn-blue.btn-inverted:hover,
-      button.btn-blue.btn-inverted:hover,
-      input[type='button'].btn-blue.btn-inverted:hover,
-      input[type='reset'].btn-blue.btn-inverted:hover,
-      input[type='submit'].btn-blue.btn-inverted:hover {
+      .btn.blue.btn-inverted:hover,
+      button.blue.btn-inverted:hover,
+      input[type='button'].blue.btn-inverted:hover,
+      input[type='reset'].blue.btn-inverted:hover,
+      input[type='submit'].blue.btn-inverted:hover {
         background: #fff; }
-      .btn.btn-blue.btn-inverted.outline,
-      button.btn-blue.btn-inverted.outline,
-      input[type='button'].btn-blue.btn-inverted.outline,
-      input[type='reset'].btn-blue.btn-inverted.outline,
-      input[type='submit'].btn-blue.btn-inverted.outline {
+      .btn.blue.btn-inverted.outline,
+      button.blue.btn-inverted.outline,
+      input[type='button'].blue.btn-inverted.outline,
+      input[type='reset'].blue.btn-inverted.outline,
+      input[type='submit'].blue.btn-inverted.outline {
         background-color: transparent;
         border-color: #fff;
         color: #fff; }
-        .btn.btn-blue.btn-inverted.outline:hover,
-        button.btn-blue.btn-inverted.outline:hover,
-        input[type='button'].btn-blue.btn-inverted.outline:hover,
-        input[type='reset'].btn-blue.btn-inverted.outline:hover,
-        input[type='submit'].btn-blue.btn-inverted.outline:hover {
+        .btn.blue.btn-inverted.outline:hover,
+        button.blue.btn-inverted.outline:hover,
+        input[type='button'].blue.btn-inverted.outline:hover,
+        input[type='reset'].blue.btn-inverted.outline:hover,
+        input[type='submit'].blue.btn-inverted.outline:hover {
           background: rgba(10, 10, 10, 0.5); }
-  .btn.btn-green,
-  button.btn-green,
-  input[type='button'].btn-green,
-  input[type='reset'].btn-green,
-  input[type='submit'].btn-green {
+  .btn.green,
+  button.green,
+  input[type='button'].green,
+  input[type='reset'].green,
+  input[type='submit'].green {
     background: #97cd76;
     border-color: transparent;
     color: #fff; }
-    .btn.btn-green:hover, .btn.btn-green:focus,
-    button.btn-green:hover,
-    button.btn-green:focus,
-    input[type='button'].btn-green:hover,
-    input[type='button'].btn-green:focus,
-    input[type='reset'].btn-green:hover,
-    input[type='reset'].btn-green:focus,
-    input[type='submit'].btn-green:hover,
-    input[type='submit'].btn-green:focus {
+    .btn.green:hover, .btn.green:focus,
+    button.green:hover,
+    button.green:focus,
+    input[type='button'].green:hover,
+    input[type='button'].green:focus,
+    input[type='reset'].green:hover,
+    input[type='reset'].green:focus,
+    input[type='submit'].green:hover,
+    input[type='submit'].green:focus {
       background: #89cd76;
       border-color: transparent;
       color: #fff; }
-    .btn.btn-green:active,
-    button.btn-green:active,
-    input[type='button'].btn-green:active,
-    input[type='reset'].btn-green:active,
-    input[type='submit'].btn-green:active {
+    .btn.green:active,
+    button.green:active,
+    input[type='button'].green:active,
+    input[type='reset'].green:active,
+    input[type='submit'].green:active {
       border-color: transparent; }
-    .btn.btn-green.btn-outline,
-    button.btn-green.btn-outline,
-    input[type='button'].btn-green.btn-outline,
-    input[type='reset'].btn-green.btn-outline,
-    input[type='submit'].btn-green.btn-outline {
+    .btn.green.btn-outline,
+    button.green.btn-outline,
+    input[type='button'].green.btn-outline,
+    input[type='reset'].green.btn-outline,
+    input[type='submit'].green.btn-outline {
       background: transparent;
       border-color: #97cd76;
       color: #97cd76; }
-      .btn.btn-green.btn-outline:hover, .btn.btn-green.btn-outline:focus,
-      button.btn-green.btn-outline:hover,
-      button.btn-green.btn-outline:focus,
-      input[type='button'].btn-green.btn-outline:hover,
-      input[type='button'].btn-green.btn-outline:focus,
-      input[type='reset'].btn-green.btn-outline:hover,
-      input[type='reset'].btn-green.btn-outline:focus,
-      input[type='submit'].btn-green.btn-outline:hover,
-      input[type='submit'].btn-green.btn-outline:focus {
+      .btn.green.btn-outline:hover, .btn.green.btn-outline:focus,
+      button.green.btn-outline:hover,
+      button.green.btn-outline:focus,
+      input[type='button'].green.btn-outline:hover,
+      input[type='button'].green.btn-outline:focus,
+      input[type='reset'].green.btn-outline:hover,
+      input[type='reset'].green.btn-outline:focus,
+      input[type='submit'].green.btn-outline:hover,
+      input[type='submit'].green.btn-outline:focus {
         background-color: rgba(151, 205, 118, 0.1);
         border-color: rgba(151, 205, 118, 0.5);
         color: #7bbf51; }
-    .btn.btn-green.btn-clear,
-    button.btn-green.btn-clear,
-    input[type='button'].btn-green.btn-clear,
-    input[type='reset'].btn-green.btn-clear,
-    input[type='submit'].btn-green.btn-clear {
+    .btn.green.btn-clear,
+    button.green.btn-clear,
+    input[type='button'].green.btn-clear,
+    input[type='reset'].green.btn-clear,
+    input[type='submit'].green.btn-clear {
       background-color: transparent;
       border-color: transparent;
       color: #97cd76; }
-      .btn.btn-green.btn-clear:hover, .btn.btn-green.btn-clear:focus,
-      button.btn-green.btn-clear:hover,
-      button.btn-green.btn-clear:focus,
-      input[type='button'].btn-green.btn-clear:hover,
-      input[type='button'].btn-green.btn-clear:focus,
-      input[type='reset'].btn-green.btn-clear:hover,
-      input[type='reset'].btn-green.btn-clear:focus,
-      input[type='submit'].btn-green.btn-clear:hover,
-      input[type='submit'].btn-green.btn-clear:focus {
+      .btn.green.btn-clear:hover, .btn.green.btn-clear:focus,
+      button.green.btn-clear:hover,
+      button.green.btn-clear:focus,
+      input[type='button'].green.btn-clear:hover,
+      input[type='button'].green.btn-clear:focus,
+      input[type='reset'].green.btn-clear:hover,
+      input[type='reset'].green.btn-clear:focus,
+      input[type='submit'].green.btn-clear:hover,
+      input[type='submit'].green.btn-clear:focus {
         background-color: rgba(151, 205, 118, 0.1);
         border-color: transparent;
         color: #97cd76; }
-        .btn.btn-green.btn-clear:hover:hover, .btn.btn-green.btn-clear:hover:focus, .btn.btn-green.btn-clear:focus:hover, .btn.btn-green.btn-clear:focus:focus,
-        button.btn-green.btn-clear:hover:hover,
-        button.btn-green.btn-clear:hover:focus,
-        button.btn-green.btn-clear:focus:hover,
-        button.btn-green.btn-clear:focus:focus,
-        input[type='button'].btn-green.btn-clear:hover:hover,
-        input[type='button'].btn-green.btn-clear:hover:focus,
-        input[type='button'].btn-green.btn-clear:focus:hover,
-        input[type='button'].btn-green.btn-clear:focus:focus,
-        input[type='reset'].btn-green.btn-clear:hover:hover,
-        input[type='reset'].btn-green.btn-clear:hover:focus,
-        input[type='reset'].btn-green.btn-clear:focus:hover,
-        input[type='reset'].btn-green.btn-clear:focus:focus,
-        input[type='submit'].btn-green.btn-clear:hover:hover,
-        input[type='submit'].btn-green.btn-clear:hover:focus,
-        input[type='submit'].btn-green.btn-clear:focus:hover,
-        input[type='submit'].btn-green.btn-clear:focus:focus {
+        .btn.green.btn-clear:hover:hover, .btn.green.btn-clear:hover:focus, .btn.green.btn-clear:focus:hover, .btn.green.btn-clear:focus:focus,
+        button.green.btn-clear:hover:hover,
+        button.green.btn-clear:hover:focus,
+        button.green.btn-clear:focus:hover,
+        button.green.btn-clear:focus:focus,
+        input[type='button'].green.btn-clear:hover:hover,
+        input[type='button'].green.btn-clear:hover:focus,
+        input[type='button'].green.btn-clear:focus:hover,
+        input[type='button'].green.btn-clear:focus:focus,
+        input[type='reset'].green.btn-clear:hover:hover,
+        input[type='reset'].green.btn-clear:hover:focus,
+        input[type='reset'].green.btn-clear:focus:hover,
+        input[type='reset'].green.btn-clear:focus:focus,
+        input[type='submit'].green.btn-clear:hover:hover,
+        input[type='submit'].green.btn-clear:hover:focus,
+        input[type='submit'].green.btn-clear:focus:hover,
+        input[type='submit'].green.btn-clear:focus:focus {
           background-color: rgba(151, 205, 118, 0.1);
           border-color: transparent;
           color: #97cd76; }
-    .btn.btn-green.btn-inverted,
-    button.btn-green.btn-inverted,
-    input[type='button'].btn-green.btn-inverted,
-    input[type='reset'].btn-green.btn-inverted,
-    input[type='submit'].btn-green.btn-inverted {
+    .btn.green.btn-inverted,
+    button.green.btn-inverted,
+    input[type='button'].green.btn-inverted,
+    input[type='reset'].green.btn-inverted,
+    input[type='submit'].green.btn-inverted {
       background: #fff;
       color: #97cd76; }
-      .btn.btn-green.btn-inverted:hover,
-      button.btn-green.btn-inverted:hover,
-      input[type='button'].btn-green.btn-inverted:hover,
-      input[type='reset'].btn-green.btn-inverted:hover,
-      input[type='submit'].btn-green.btn-inverted:hover {
+      .btn.green.btn-inverted:hover,
+      button.green.btn-inverted:hover,
+      input[type='button'].green.btn-inverted:hover,
+      input[type='reset'].green.btn-inverted:hover,
+      input[type='submit'].green.btn-inverted:hover {
         background: #fff; }
-      .btn.btn-green.btn-inverted.outline,
-      button.btn-green.btn-inverted.outline,
-      input[type='button'].btn-green.btn-inverted.outline,
-      input[type='reset'].btn-green.btn-inverted.outline,
-      input[type='submit'].btn-green.btn-inverted.outline {
+      .btn.green.btn-inverted.outline,
+      button.green.btn-inverted.outline,
+      input[type='button'].green.btn-inverted.outline,
+      input[type='reset'].green.btn-inverted.outline,
+      input[type='submit'].green.btn-inverted.outline {
         background-color: transparent;
         border-color: #fff;
         color: #fff; }
-        .btn.btn-green.btn-inverted.outline:hover,
-        button.btn-green.btn-inverted.outline:hover,
-        input[type='button'].btn-green.btn-inverted.outline:hover,
-        input[type='reset'].btn-green.btn-inverted.outline:hover,
-        input[type='submit'].btn-green.btn-inverted.outline:hover {
+        .btn.green.btn-inverted.outline:hover,
+        button.green.btn-inverted.outline:hover,
+        input[type='button'].green.btn-inverted.outline:hover,
+        input[type='reset'].green.btn-inverted.outline:hover,
+        input[type='submit'].green.btn-inverted.outline:hover {
           background: rgba(10, 10, 10, 0.5); }
-  .btn.btn-yellow,
-  button.btn-yellow,
-  input[type='button'].btn-yellow,
-  input[type='reset'].btn-yellow,
-  input[type='submit'].btn-yellow {
+  .btn.yellow,
+  button.yellow,
+  input[type='button'].yellow,
+  input[type='reset'].yellow,
+  input[type='submit'].yellow {
     background: #fce473;
     border-color: transparent;
     color: rgba(10, 10, 10, 0.5); }
-    .btn.btn-yellow:hover, .btn.btn-yellow:focus,
-    button.btn-yellow:hover,
-    button.btn-yellow:focus,
-    input[type='button'].btn-yellow:hover,
-    input[type='button'].btn-yellow:focus,
-    input[type='reset'].btn-yellow:hover,
-    input[type='reset'].btn-yellow:focus,
-    input[type='submit'].btn-yellow:hover,
-    input[type='submit'].btn-yellow:focus {
+    .btn.yellow:hover, .btn.yellow:focus,
+    button.yellow:hover,
+    button.yellow:focus,
+    input[type='button'].yellow:hover,
+    input[type='button'].yellow:focus,
+    input[type='reset'].yellow:hover,
+    input[type='reset'].yellow:focus,
+    input[type='submit'].yellow:hover,
+    input[type='submit'].yellow:focus {
       background: #fcfb73;
       border-color: transparent;
       color: rgba(10, 10, 10, 0.5); }
-    .btn.btn-yellow:active,
-    button.btn-yellow:active,
-    input[type='button'].btn-yellow:active,
-    input[type='reset'].btn-yellow:active,
-    input[type='submit'].btn-yellow:active {
+    .btn.yellow:active,
+    button.yellow:active,
+    input[type='button'].yellow:active,
+    input[type='reset'].yellow:active,
+    input[type='submit'].yellow:active {
       border-color: transparent; }
-    .btn.btn-yellow.btn-outline,
-    button.btn-yellow.btn-outline,
-    input[type='button'].btn-yellow.btn-outline,
-    input[type='reset'].btn-yellow.btn-outline,
-    input[type='submit'].btn-yellow.btn-outline {
+    .btn.yellow.btn-outline,
+    button.yellow.btn-outline,
+    input[type='button'].yellow.btn-outline,
+    input[type='reset'].yellow.btn-outline,
+    input[type='submit'].yellow.btn-outline {
       background: transparent;
       border-color: #fce473;
       color: #fce473; }
-      .btn.btn-yellow.btn-outline:hover, .btn.btn-yellow.btn-outline:focus,
-      button.btn-yellow.btn-outline:hover,
-      button.btn-yellow.btn-outline:focus,
-      input[type='button'].btn-yellow.btn-outline:hover,
-      input[type='button'].btn-yellow.btn-outline:focus,
-      input[type='reset'].btn-yellow.btn-outline:hover,
-      input[type='reset'].btn-yellow.btn-outline:focus,
-      input[type='submit'].btn-yellow.btn-outline:hover,
-      input[type='submit'].btn-yellow.btn-outline:focus {
+      .btn.yellow.btn-outline:hover, .btn.yellow.btn-outline:focus,
+      button.yellow.btn-outline:hover,
+      button.yellow.btn-outline:focus,
+      input[type='button'].yellow.btn-outline:hover,
+      input[type='button'].yellow.btn-outline:focus,
+      input[type='reset'].yellow.btn-outline:hover,
+      input[type='reset'].yellow.btn-outline:focus,
+      input[type='submit'].yellow.btn-outline:hover,
+      input[type='submit'].yellow.btn-outline:focus {
         background-color: rgba(252, 228, 115, 0.1);
         border-color: rgba(252, 228, 115, 0.5);
         color: #fbda41; }
-    .btn.btn-yellow.btn-clear,
-    button.btn-yellow.btn-clear,
-    input[type='button'].btn-yellow.btn-clear,
-    input[type='reset'].btn-yellow.btn-clear,
-    input[type='submit'].btn-yellow.btn-clear {
+    .btn.yellow.btn-clear,
+    button.yellow.btn-clear,
+    input[type='button'].yellow.btn-clear,
+    input[type='reset'].yellow.btn-clear,
+    input[type='submit'].yellow.btn-clear {
       background-color: transparent;
       border-color: transparent;
       color: #fce473; }
-      .btn.btn-yellow.btn-clear:hover, .btn.btn-yellow.btn-clear:focus,
-      button.btn-yellow.btn-clear:hover,
-      button.btn-yellow.btn-clear:focus,
-      input[type='button'].btn-yellow.btn-clear:hover,
-      input[type='button'].btn-yellow.btn-clear:focus,
-      input[type='reset'].btn-yellow.btn-clear:hover,
-      input[type='reset'].btn-yellow.btn-clear:focus,
-      input[type='submit'].btn-yellow.btn-clear:hover,
-      input[type='submit'].btn-yellow.btn-clear:focus {
+      .btn.yellow.btn-clear:hover, .btn.yellow.btn-clear:focus,
+      button.yellow.btn-clear:hover,
+      button.yellow.btn-clear:focus,
+      input[type='button'].yellow.btn-clear:hover,
+      input[type='button'].yellow.btn-clear:focus,
+      input[type='reset'].yellow.btn-clear:hover,
+      input[type='reset'].yellow.btn-clear:focus,
+      input[type='submit'].yellow.btn-clear:hover,
+      input[type='submit'].yellow.btn-clear:focus {
         background-color: rgba(252, 228, 115, 0.1);
         border-color: transparent;
         color: #fce473; }
-        .btn.btn-yellow.btn-clear:hover:hover, .btn.btn-yellow.btn-clear:hover:focus, .btn.btn-yellow.btn-clear:focus:hover, .btn.btn-yellow.btn-clear:focus:focus,
-        button.btn-yellow.btn-clear:hover:hover,
-        button.btn-yellow.btn-clear:hover:focus,
-        button.btn-yellow.btn-clear:focus:hover,
-        button.btn-yellow.btn-clear:focus:focus,
-        input[type='button'].btn-yellow.btn-clear:hover:hover,
-        input[type='button'].btn-yellow.btn-clear:hover:focus,
-        input[type='button'].btn-yellow.btn-clear:focus:hover,
-        input[type='button'].btn-yellow.btn-clear:focus:focus,
-        input[type='reset'].btn-yellow.btn-clear:hover:hover,
-        input[type='reset'].btn-yellow.btn-clear:hover:focus,
-        input[type='reset'].btn-yellow.btn-clear:focus:hover,
-        input[type='reset'].btn-yellow.btn-clear:focus:focus,
-        input[type='submit'].btn-yellow.btn-clear:hover:hover,
-        input[type='submit'].btn-yellow.btn-clear:hover:focus,
-        input[type='submit'].btn-yellow.btn-clear:focus:hover,
-        input[type='submit'].btn-yellow.btn-clear:focus:focus {
+        .btn.yellow.btn-clear:hover:hover, .btn.yellow.btn-clear:hover:focus, .btn.yellow.btn-clear:focus:hover, .btn.yellow.btn-clear:focus:focus,
+        button.yellow.btn-clear:hover:hover,
+        button.yellow.btn-clear:hover:focus,
+        button.yellow.btn-clear:focus:hover,
+        button.yellow.btn-clear:focus:focus,
+        input[type='button'].yellow.btn-clear:hover:hover,
+        input[type='button'].yellow.btn-clear:hover:focus,
+        input[type='button'].yellow.btn-clear:focus:hover,
+        input[type='button'].yellow.btn-clear:focus:focus,
+        input[type='reset'].yellow.btn-clear:hover:hover,
+        input[type='reset'].yellow.btn-clear:hover:focus,
+        input[type='reset'].yellow.btn-clear:focus:hover,
+        input[type='reset'].yellow.btn-clear:focus:focus,
+        input[type='submit'].yellow.btn-clear:hover:hover,
+        input[type='submit'].yellow.btn-clear:hover:focus,
+        input[type='submit'].yellow.btn-clear:focus:hover,
+        input[type='submit'].yellow.btn-clear:focus:focus {
           background-color: rgba(252, 228, 115, 0.1);
           border-color: transparent;
           color: #fce473; }
-    .btn.btn-yellow.btn-inverted,
-    button.btn-yellow.btn-inverted,
-    input[type='button'].btn-yellow.btn-inverted,
-    input[type='reset'].btn-yellow.btn-inverted,
-    input[type='submit'].btn-yellow.btn-inverted {
+    .btn.yellow.btn-inverted,
+    button.yellow.btn-inverted,
+    input[type='button'].yellow.btn-inverted,
+    input[type='reset'].yellow.btn-inverted,
+    input[type='submit'].yellow.btn-inverted {
       background: rgba(10, 10, 10, 0.5);
       color: #fce473; }
-      .btn.btn-yellow.btn-inverted:hover,
-      button.btn-yellow.btn-inverted:hover,
-      input[type='button'].btn-yellow.btn-inverted:hover,
-      input[type='reset'].btn-yellow.btn-inverted:hover,
-      input[type='submit'].btn-yellow.btn-inverted:hover {
+      .btn.yellow.btn-inverted:hover,
+      button.yellow.btn-inverted:hover,
+      input[type='button'].yellow.btn-inverted:hover,
+      input[type='reset'].yellow.btn-inverted:hover,
+      input[type='submit'].yellow.btn-inverted:hover {
         background: rgba(10, 10, 10, 0.5); }
-      .btn.btn-yellow.btn-inverted.outline,
-      button.btn-yellow.btn-inverted.outline,
-      input[type='button'].btn-yellow.btn-inverted.outline,
-      input[type='reset'].btn-yellow.btn-inverted.outline,
-      input[type='submit'].btn-yellow.btn-inverted.outline {
+      .btn.yellow.btn-inverted.outline,
+      button.yellow.btn-inverted.outline,
+      input[type='button'].yellow.btn-inverted.outline,
+      input[type='reset'].yellow.btn-inverted.outline,
+      input[type='submit'].yellow.btn-inverted.outline {
         background-color: transparent;
         border-color: rgba(10, 10, 10, 0.5);
         color: rgba(10, 10, 10, 0.5); }
-        .btn.btn-yellow.btn-inverted.outline:hover,
-        button.btn-yellow.btn-inverted.outline:hover,
-        input[type='button'].btn-yellow.btn-inverted.outline:hover,
-        input[type='reset'].btn-yellow.btn-inverted.outline:hover,
-        input[type='submit'].btn-yellow.btn-inverted.outline:hover {
+        .btn.yellow.btn-inverted.outline:hover,
+        button.yellow.btn-inverted.outline:hover,
+        input[type='button'].yellow.btn-inverted.outline:hover,
+        input[type='reset'].yellow.btn-inverted.outline:hover,
+        input[type='submit'].yellow.btn-inverted.outline:hover {
           background: rgba(10, 10, 10, 0.5); }
-  .btn.btn-red,
-  button.btn-red,
-  input[type='button'].btn-red,
-  input[type='reset'].btn-red,
-  input[type='submit'].btn-red {
+  .btn.red,
+  button.red,
+  input[type='button'].red,
+  input[type='reset'].red,
+  input[type='submit'].red {
     background: #ed6c63;
     border-color: transparent;
     color: #fff; }
-    .btn.btn-red:hover, .btn.btn-red:focus,
-    button.btn-red:hover,
-    button.btn-red:focus,
-    input[type='button'].btn-red:hover,
-    input[type='button'].btn-red:focus,
-    input[type='reset'].btn-red:hover,
-    input[type='reset'].btn-red:focus,
-    input[type='submit'].btn-red:hover,
-    input[type='submit'].btn-red:focus {
+    .btn.red:hover, .btn.red:focus,
+    button.red:hover,
+    button.red:focus,
+    input[type='button'].red:hover,
+    input[type='button'].red:focus,
+    input[type='reset'].red:hover,
+    input[type='reset'].red:focus,
+    input[type='submit'].red:hover,
+    input[type='submit'].red:focus {
       background: #ed8363;
       border-color: transparent;
       color: #fff; }
-    .btn.btn-red:active,
-    button.btn-red:active,
-    input[type='button'].btn-red:active,
-    input[type='reset'].btn-red:active,
-    input[type='submit'].btn-red:active {
+    .btn.red:active,
+    button.red:active,
+    input[type='button'].red:active,
+    input[type='reset'].red:active,
+    input[type='submit'].red:active {
       border-color: transparent; }
-    .btn.btn-red.btn-outline,
-    button.btn-red.btn-outline,
-    input[type='button'].btn-red.btn-outline,
-    input[type='reset'].btn-red.btn-outline,
-    input[type='submit'].btn-red.btn-outline {
+    .btn.red.btn-outline,
+    button.red.btn-outline,
+    input[type='button'].red.btn-outline,
+    input[type='reset'].red.btn-outline,
+    input[type='submit'].red.btn-outline {
       background: transparent;
       border-color: #ed6c63;
       color: #ed6c63; }
-      .btn.btn-red.btn-outline:hover, .btn.btn-red.btn-outline:focus,
-      button.btn-red.btn-outline:hover,
-      button.btn-red.btn-outline:focus,
-      input[type='button'].btn-red.btn-outline:hover,
-      input[type='button'].btn-red.btn-outline:focus,
-      input[type='reset'].btn-red.btn-outline:hover,
-      input[type='reset'].btn-red.btn-outline:focus,
-      input[type='submit'].btn-red.btn-outline:hover,
-      input[type='submit'].btn-red.btn-outline:focus {
+      .btn.red.btn-outline:hover, .btn.red.btn-outline:focus,
+      button.red.btn-outline:hover,
+      button.red.btn-outline:focus,
+      input[type='button'].red.btn-outline:hover,
+      input[type='button'].red.btn-outline:focus,
+      input[type='reset'].red.btn-outline:hover,
+      input[type='reset'].red.btn-outline:focus,
+      input[type='submit'].red.btn-outline:hover,
+      input[type='submit'].red.btn-outline:focus {
         background-color: rgba(237, 108, 99, 0.1);
         border-color: rgba(237, 108, 99, 0.5);
         color: #e84135; }
-    .btn.btn-red.btn-clear,
-    button.btn-red.btn-clear,
-    input[type='button'].btn-red.btn-clear,
-    input[type='reset'].btn-red.btn-clear,
-    input[type='submit'].btn-red.btn-clear {
+    .btn.red.btn-clear,
+    button.red.btn-clear,
+    input[type='button'].red.btn-clear,
+    input[type='reset'].red.btn-clear,
+    input[type='submit'].red.btn-clear {
       background-color: transparent;
       border-color: transparent;
       color: #ed6c63; }
-      .btn.btn-red.btn-clear:hover, .btn.btn-red.btn-clear:focus,
-      button.btn-red.btn-clear:hover,
-      button.btn-red.btn-clear:focus,
-      input[type='button'].btn-red.btn-clear:hover,
-      input[type='button'].btn-red.btn-clear:focus,
-      input[type='reset'].btn-red.btn-clear:hover,
-      input[type='reset'].btn-red.btn-clear:focus,
-      input[type='submit'].btn-red.btn-clear:hover,
-      input[type='submit'].btn-red.btn-clear:focus {
+      .btn.red.btn-clear:hover, .btn.red.btn-clear:focus,
+      button.red.btn-clear:hover,
+      button.red.btn-clear:focus,
+      input[type='button'].red.btn-clear:hover,
+      input[type='button'].red.btn-clear:focus,
+      input[type='reset'].red.btn-clear:hover,
+      input[type='reset'].red.btn-clear:focus,
+      input[type='submit'].red.btn-clear:hover,
+      input[type='submit'].red.btn-clear:focus {
         background-color: rgba(237, 108, 99, 0.1);
         border-color: transparent;
         color: #ed6c63; }
-        .btn.btn-red.btn-clear:hover:hover, .btn.btn-red.btn-clear:hover:focus, .btn.btn-red.btn-clear:focus:hover, .btn.btn-red.btn-clear:focus:focus,
-        button.btn-red.btn-clear:hover:hover,
-        button.btn-red.btn-clear:hover:focus,
-        button.btn-red.btn-clear:focus:hover,
-        button.btn-red.btn-clear:focus:focus,
-        input[type='button'].btn-red.btn-clear:hover:hover,
-        input[type='button'].btn-red.btn-clear:hover:focus,
-        input[type='button'].btn-red.btn-clear:focus:hover,
-        input[type='button'].btn-red.btn-clear:focus:focus,
-        input[type='reset'].btn-red.btn-clear:hover:hover,
-        input[type='reset'].btn-red.btn-clear:hover:focus,
-        input[type='reset'].btn-red.btn-clear:focus:hover,
-        input[type='reset'].btn-red.btn-clear:focus:focus,
-        input[type='submit'].btn-red.btn-clear:hover:hover,
-        input[type='submit'].btn-red.btn-clear:hover:focus,
-        input[type='submit'].btn-red.btn-clear:focus:hover,
-        input[type='submit'].btn-red.btn-clear:focus:focus {
+        .btn.red.btn-clear:hover:hover, .btn.red.btn-clear:hover:focus, .btn.red.btn-clear:focus:hover, .btn.red.btn-clear:focus:focus,
+        button.red.btn-clear:hover:hover,
+        button.red.btn-clear:hover:focus,
+        button.red.btn-clear:focus:hover,
+        button.red.btn-clear:focus:focus,
+        input[type='button'].red.btn-clear:hover:hover,
+        input[type='button'].red.btn-clear:hover:focus,
+        input[type='button'].red.btn-clear:focus:hover,
+        input[type='button'].red.btn-clear:focus:focus,
+        input[type='reset'].red.btn-clear:hover:hover,
+        input[type='reset'].red.btn-clear:hover:focus,
+        input[type='reset'].red.btn-clear:focus:hover,
+        input[type='reset'].red.btn-clear:focus:focus,
+        input[type='submit'].red.btn-clear:hover:hover,
+        input[type='submit'].red.btn-clear:hover:focus,
+        input[type='submit'].red.btn-clear:focus:hover,
+        input[type='submit'].red.btn-clear:focus:focus {
           background-color: rgba(237, 108, 99, 0.1);
           border-color: transparent;
           color: #ed6c63; }
-    .btn.btn-red.btn-inverted,
-    button.btn-red.btn-inverted,
-    input[type='button'].btn-red.btn-inverted,
-    input[type='reset'].btn-red.btn-inverted,
-    input[type='submit'].btn-red.btn-inverted {
+    .btn.red.btn-inverted,
+    button.red.btn-inverted,
+    input[type='button'].red.btn-inverted,
+    input[type='reset'].red.btn-inverted,
+    input[type='submit'].red.btn-inverted {
       background: #fff;
       color: #ed6c63; }
-      .btn.btn-red.btn-inverted:hover,
-      button.btn-red.btn-inverted:hover,
-      input[type='button'].btn-red.btn-inverted:hover,
-      input[type='reset'].btn-red.btn-inverted:hover,
-      input[type='submit'].btn-red.btn-inverted:hover {
+      .btn.red.btn-inverted:hover,
+      button.red.btn-inverted:hover,
+      input[type='button'].red.btn-inverted:hover,
+      input[type='reset'].red.btn-inverted:hover,
+      input[type='submit'].red.btn-inverted:hover {
         background: #fff; }
-      .btn.btn-red.btn-inverted.outline,
-      button.btn-red.btn-inverted.outline,
-      input[type='button'].btn-red.btn-inverted.outline,
-      input[type='reset'].btn-red.btn-inverted.outline,
-      input[type='submit'].btn-red.btn-inverted.outline {
+      .btn.red.btn-inverted.outline,
+      button.red.btn-inverted.outline,
+      input[type='button'].red.btn-inverted.outline,
+      input[type='reset'].red.btn-inverted.outline,
+      input[type='submit'].red.btn-inverted.outline {
         background-color: transparent;
         border-color: #fff;
         color: #fff; }
-        .btn.btn-red.btn-inverted.outline:hover,
-        button.btn-red.btn-inverted.outline:hover,
-        input[type='button'].btn-red.btn-inverted.outline:hover,
-        input[type='reset'].btn-red.btn-inverted.outline:hover,
-        input[type='submit'].btn-red.btn-inverted.outline:hover {
+        .btn.red.btn-inverted.outline:hover,
+        button.red.btn-inverted.outline:hover,
+        input[type='button'].red.btn-inverted.outline:hover,
+        input[type='reset'].red.btn-inverted.outline:hover,
+        input[type='submit'].red.btn-inverted.outline:hover {
           background: rgba(10, 10, 10, 0.5); }
 
 .btn-group {
@@ -1465,7 +1467,6 @@ input[type='text'],
 input[type='url'],
 textarea,
 select {
-  margin-bottom: 1.5rem;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1722,6 +1723,7 @@ input[type='radio'] {
 .header-tab {
   -webkit-box-align: center;
       -ms-flex-align: center;
+              -ms-grid-row-align: center;
           align-items: center;
   border-bottom: 1px solid transparent;
   color: #444;
@@ -1762,6 +1764,7 @@ input[type='radio'] {
 .header-right {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
+              -ms-grid-row-align: stretch;
           align-items: stretch; }
   @media screen and (min-width: 80rem) {
     .header-right {
@@ -2424,7 +2427,7 @@ li {
     color: #536dfe; }
   .menu-list a.active {
     background-color: #536dfe;
-    color: #5653fe; }
+    color: #2042fe; }
 
 .menu-list li ul {
   border-left: 0.1rem solid 0.3rem;
@@ -2486,19 +2489,28 @@ li {
       box-shadow: 0 0.1rem 0.3rem rgba(10, 10, 10, 0.5); }
 
 table {
-  width: 100%; }
-
-th,
-td {
-  border-bottom: 0.1rem solid #e0e0e0;
-  padding: 1.2rem 1.5rem;
-  text-align: left; }
-  th:first-child,
-  td:first-child {
+  width: 100%;
+  border-collapse: collapse; }
+  table tr th,
+  table tr td {
+    border: 0.1rem solid #e0e0e0;
+    border-width: 0 0 .1rem;
+    padding: 1.2rem 1.5rem;
+    text-align: left; }
+  table thead tr th {
+    font-weight: 700; }
+  table tbody tr th:first-child,
+  table tbody tr td:first-child {
     padding-left: 0; }
-  th:last-child,
-  td:last-child {
+  table tbody tr th:last-child,
+  table tbody tr td:last-child {
     padding-right: 0; }
+  table.bordered thead tr th {
+    border-width: .1rem; }
+  table.bordered tbody tr th,
+  table.bordered tbody tr td {
+    padding: 1.2rem 1.5rem;
+    border-width: .1rem; }
 
 .tabs {
   line-height: 2.4rem;
