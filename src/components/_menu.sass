@@ -6,18 +6,18 @@
 .menu-list
   a
     border-radius: $global-radius
-    color: $text-color
+    color: $core-text-color
     display: block
     padding: .5rem 1rem
 
     &:hover
       background-color: $gray-lightest
-      color: $link-color
+      color: $core-link-color
 
     // Modifiers
     &.active
-      background-color: $link-color
-      color: $link-color-hover
+      background-color: $core-link-color
+      color: adjust-hue($core-link-color, 10%)
 
   li
     ul
@@ -31,6 +31,6 @@
   letter-spacing: .1rem
   margin-bottom: .5rem
   text-transform: uppercase
-  
+
   &:not(:first-child)
     margin-top: 2rem

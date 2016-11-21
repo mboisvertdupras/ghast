@@ -6,6 +6,7 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit']
+  margin-bottom: 1rem
   background-color: $gray-lightest
   border: .1rem solid
   border-color: $gray-lightest
@@ -84,7 +85,7 @@ input[type='submit']
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
 
-    &.#{$name}
+    &.btn-#{$name}
       background: $color
       border-color: transparent
       color: $color-invert
