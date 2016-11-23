@@ -9,7 +9,7 @@
   +media(mobile)
     padding: 0 2rem
   margin: 0 auto
-  max-width: $global-width
+  max-width: $core-width
   padding: 0
   position: relative
   width: 100%
@@ -31,7 +31,7 @@
   .row-no-padding
     padding: 0
 
-    &> .col
+    & > .col
       padding: 0
 
   & + .row
@@ -160,12 +160,12 @@
         width: 100%
 
 // Larger than mobile screen
-@media (min-width: 40rem)
++media(tablet)
   .row
     flex-direction: row
     margin-left: -1rem
     width: calc(100% + 2rem)
-    
+
     .col
       margin-bottom: inherit
       padding: 0 1rem

@@ -2,18 +2,19 @@
 
 // Global
 // ---------
-
+// Global variables are namespaced with the g- prefix
 // The base font-size is set at 62.5% for having the convenience
 // of sizing rems in a way that is similar to using px. 1.6rem=16px
 
-$global-font-size: 62.5%
-$global-width: 65rem
-$global-lineheight: 1.65
-$global-radius: .3rem
+// Global namespace for Ghast objects
+$core-ns: 'gs'
 
-$body-background-color: $white
-$body-font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif
-$monospace-font-family: 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', 'Monaco', monospace
+$core-font-size: 62.5%
+$core-width: 94.5rem
+$core-lineheight: 1.65
+$core-bg-color: $faded
+$core-header-height: 5rem
+$core-radius: .3rem
 
 $z-index-1:   100
 $z-index-2:   200
@@ -29,7 +30,8 @@ $z-index-10: 1000
 // Color
 // -------------
 
-$colors: (dark: ($gray-dark, $dark-invert), primary: ($primary, $primary-invert), blue: ($blue, $blue-invert), green: ($green, $green-invert), yellow: ($yellow, $yellow-invert), red: ($red, $red-invert))
+$colors: (dark: ($gray-dark, $dark-invert), primary: ($primary, $primary-invert), blue: ($blue, $blue-invert), green: ($green, $green-invert), yellow: ($yellow, $yellow-invert), red: ($red, $red-invert), orange: ($orange, $orange-invert))
+
 $core-text-color: $gray
 $core-meta-color: $gray-lighter
 $core-link-color: $primary
@@ -37,6 +39,9 @@ $core-blank-bg: #f8f8f8
 
 // Typography
 // -------------
+
+$sans-font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif
+$monospace-font-family: 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', 'Monaco', monospace
 
 $size-1: 4.8rem
 $size-2: 4rem
@@ -55,8 +60,3 @@ $size-large: $size-3
 $size-huge: $size-1
 
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8
-
-// Header
-// ---------
-
-$header-height: 5rem

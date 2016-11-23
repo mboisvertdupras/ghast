@@ -7,7 +7,7 @@
   padding: 0 2rem
   box-shadow: 0 .1rem .2rem rgba($black, .1)
   display: flex
-  height: $header-height
+  height: $core-header-height
   font-size: 1.4rem
   line-height: 1.6rem
   position: relative
@@ -76,7 +76,7 @@
   border-bottom: 1px solid transparent
   color: $gray
   display: block
-  height: $header-height
+  height: $core-header-height
   line-height: 24px
   padding: 13px 15px
 
@@ -108,6 +108,8 @@
   transform: translateX(-50%)
 
 .header-right
+  .dropdown-content
+      transform: translateX(-5rem)
   +media(mobile)
     overflow-x: scroll
   +media(tablet)
