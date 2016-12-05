@@ -47,7 +47,7 @@
       padding: .8rem 1rem
 
       &:hover,
-      &.is-active
+      &.active
         border-bottom-width: .2rem
 
 // Elements
@@ -68,7 +68,7 @@
     &:hover
       color: $primary
 
-    &.is-active
+    &.active
       color: darken($primary, .3)
 
 .header-tab
@@ -89,7 +89,7 @@
 
 // Containers
 
-.header-left
+%header-x
   +media(mobile)
     overflow-x: scroll
   +media(desktop)
@@ -98,28 +98,24 @@
   flex: 1
   white-space: nowrap
 
+.header-left
+  @extend %header-x
+
 .header-center
-  +media(mobile)
-    overflow-x: scroll
-  align-items: stretch
-  display: flex
+  @extend %header-x
   left: 50%
   position: absolute
   transform: translateX(-50%)
 
 .header-right
+  @extend %header-x
+  justify-content: flex-end
+  
   .dropdown-content
       transform: translateX(-5rem)
-  +media(mobile)
-    overflow-x: scroll
-  +media(tablet)
-    display: flex
-  +media(desktop)
-    align-items: stretch
 
 .header-full
-  align-items: stretch
-  display: flex
+  @extend %header-x
   justify-content: center
   text-align: center
   width: 100%

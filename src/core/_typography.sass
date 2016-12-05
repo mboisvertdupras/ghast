@@ -1,21 +1,14 @@
 // Typography
 
-p
-  margin-top: 0
-
-b,
-strong
-  font-weight: 700
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6
-  font-weight: 700
   margin-bottom: 2rem
   margin-top: 0
+  font-weight: 700
 
 h1
   font-size: 4rem
@@ -61,3 +54,68 @@ h6
 
   h6
     font-size: 1.5rem
+
+p
+  margin-top: 0
+
+b,
+strong
+  font-weight: 700
+
+dl,
+ol,
+ul
+  margin-top: 0
+  padding-left: 0
+
+  dl,
+  ul,
+  ol
+    font-size: 90%
+    margin: 1.5rem 0 1.5rem 3rem
+
+dl
+  list-style: none
+
+ul
+  list-style: circle inside
+
+ol
+  list-style: decimal inside
+
+dt,
+dd,
+li
+  margin-bottom: 1rem
+
+blockquote
+  margin: 0
+  padding: 1rem 0 .5rem 1.75rem
+  color: $gray-light
+  font-style: italic
+  border-left: .5rem solid $gray-lightest
+
+  cite
+    color: $gray-lighter
+
+code
+  background: $gray-lightest
+  border-radius: $core-radius
+  font-size: 86%
+  margin: 0 .2rem
+  padding: .2rem .5rem
+  white-space: nowrap
+
+pre
+  background: $gray-lightest
+  border-left: .3rem solid $primary
+  border-radius: $core-radius
+  font-family: $monospace-font-family
+  box-shadow: 0 .1rem .2rem transparentize($black, .8)
+
+  & > code
+    background: transparent
+    border-radius: 0
+    display: block
+    padding: 1rem 1.5rem
+    white-space: pre

@@ -11,12 +11,19 @@ html
   font: $core-font-size $sans-font-family
   line-height: $core-lineheight
 
-// Default body styles
 body
   margin: 0
   background: $core-bg-color
   color: $core-text-color
   font-size: 1.6rem
+
+a
+  color: $primary
+  text-decoration: none
+
+  &:hover
+    color: lighten($primary, 10%)
+
 
 article,
 aside,
