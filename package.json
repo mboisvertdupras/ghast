@@ -1,6 +1,6 @@
 {
   "name": "ghast",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A terrifyingly simple CSS framework.",
   "homepage": "https://impria.github.io",
   "repository": {
@@ -56,7 +56,7 @@
     "gulp-watch": "^4.3.9"
   },
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=4.0.0"
   },
   "scripts": {
     "start": "gulp",
