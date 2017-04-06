@@ -1,5 +1,20 @@
+// Name:            Table
+// Description:     Styles for HTML table
+//
+// Component:       `table`
+//
+// Modifiers:       `table-bordered`
+//                  `table-striped`
+//                  `table-hover`
+//                  `table-small`
+//
+// States:          void
+//
+// ========================================================================
 
-// Table
+
+// Variables
+// ========================================================================
 
 table
   width: 100%
@@ -8,7 +23,7 @@ table
   tr
     th,
     td
-      border: .1rem solid $gray-lightest
+      border: .1rem solid $grey-lightest
       border-width: 0 0 .1rem
       padding: 1.2rem 1.5rem
       text-align: left
@@ -16,28 +31,27 @@ table
   thead
     tr
       th
+        font-size: 1.1rem
         font-weight: 700
-
-  tbody
-    tr
-      th,
-      td
-        &:first-child
-          padding-left: 0
-
-        &:last-child
-          padding-right: 0
+        text-transform: uppercase
 
   &.bordered
 
-    thead
-      tr
-        th
-          border-width: .1rem
+    // thead
+    //   tr
+    //     th
+    //       border-width: .1rem
 
     tbody
       tr
         th,
         td
-          padding: 1.2rem 1.5rem
           border-width: .1rem
+
+  &.highlight
+
+    tbody
+      tr
+        transition: background-color .2s ease-in-out
+      tr:hover
+        background-color: $grey-lighter

@@ -1,4 +1,37 @@
-// Typography
+// Name:            Typography
+// Description:     Typographic styles
+//
+// Namespace:       `type`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+$type-font-sans: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif
+$type-font-mono: 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', 'Monaco', monospace
+
+$type-size-1: 4.8rem
+$type-size-2: 4rem
+$type-size-3: 2.8rem
+$type-size-4: 2.4rem
+$type-size-5: 1.8rem
+$type-size-6: 1.6rem
+$type-size-7: 1.4rem
+$type-size-8: 1.1rem
+
+$type-size-tiny: $type-size-8
+$type-size-small: $type-size-7
+$type-size-normal: $type-size-6
+$type-size-medium: $type-size-5
+$type-size-large: $type-size-3
+$type-size-huge: $type-size-1
+
+$sizes: $type-size-1 $type-size-2 $type-size-3 $type-size-4 $type-size-5 $type-size-6 $type-size-7 $type-size-8
+
+// Component: Typography
+// ========================================================================
 
 h1,
 h2,
@@ -91,15 +124,15 @@ li
 blockquote
   margin: 0
   padding: 1rem 0 .5rem 1.75rem
-  color: $gray-light
+  color: $grey-light
   font-style: italic
-  border-left: .5rem solid $gray-lightest
+  border-left: .5rem solid $grey-lightest
 
   cite
-    color: $gray-lighter
+    color: $grey-lighter
 
 code
-  background: $gray-lightest
+  background: $grey-lightest
   border-radius: $core-radius
   font-size: 86%
   margin: 0 .2rem
@@ -107,10 +140,10 @@ code
   white-space: nowrap
 
 pre
-  background: $gray-lightest
+  background: $grey-lightest
   border-left: .3rem solid $primary
   border-radius: $core-radius
-  font-family: $monospace-font-family
+  font-family: $type-font-mono
   box-shadow: 0 .1rem .2rem transparentize($black, .8)
 
   & > code

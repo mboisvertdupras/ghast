@@ -30,3 +30,16 @@ $desktop: 120rem
   @if ($media-size == desktop)
     @media screen and (min-width: $desktop)
       @content
+
+=border-pulse($name)
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+
+    @keyframes pulse-#{$name}
+      0%
+        border-color: $color
+      50%
+        border-color: lighten($color, 15%)
+      100%
+        border-color: $color

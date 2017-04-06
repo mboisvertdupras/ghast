@@ -6,11 +6,11 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit']
-  background-color: $gray-lightest
+  background-color: $grey-lightest
   border: .1rem solid
-  border-color: $gray-lightest
+  border-color: $grey-lightest
   border-radius: $core-radius-inner
-  color: $gray
+  color: $grey
   cursor: pointer
   display: inline-block
   font-size: 1.1rem
@@ -28,23 +28,23 @@ input[type='submit']
 
   &:hover,
   &:focus
-    background-color: darken($gray-lightest, 10%)
+    background-color: darken($grey-lightest, 10%)
     border-color: transparent
-    color: $gray
+    color: $grey
     outline: 0
 
   &.disabled,
   &[disabled]
     cursor: default
-    background-color: $gray-light
-    border-color: $gray-light
-    color: $gray
+    background-color: $grey-light
+    border-color: $grey-light
+    color: $grey
     opacity: .5
 
     &:hover,
     &:focus
-      background-color: $gray-light
-      border-color: $gray-light
+      background-color: $grey-light
+      border-color: $grey-light
 
   &.btn-outline
     background-color: transparent
@@ -52,8 +52,8 @@ input[type='submit']
 
     &:hover,
     &:focus
-      background-color: transparentize($gray, .9)
-      border-color: transparentize($gray, .7)
+      background-color: transparentize($grey, .9)
+      border-color: transparentize($grey, .7)
       color: inherit
 
   &.btn-clear
@@ -63,11 +63,12 @@ input[type='submit']
 
     &:hover,
     &:focus
-      background-color: transparentize($gray, .9)
+      background-color: transparentize($grey, .9)
       border-color: transparent
       color: inherit
 
   &.btn-raised
+    border-color: $grey-light
     box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08)
 
     &:hover

@@ -1,6 +1,18 @@
 
 // Form
 
+@each $name, $pair in $colors
+  $color: nth($pair, 1)
+  $color-invert: nth($pair, 2)
+
+  @keyframes pulse-#{$name}
+    0%
+      border-color: $color
+    50%
+      border-color: lighten($color, 15%)
+    100%
+      border-color: $color
+
 input[type='email'],
 input[type='number'],
 input[type='password'],
@@ -12,8 +24,8 @@ textarea,
 select
   margin-bottom: 1.5rem
   appearance: none
-  background-color: transparent
-  border: .1rem solid $gray-lightest
+  background-color: darken($grey-1000, 2%)
+  border: .1rem solid $grey-lighter
   border-radius: $core-radius
   box-shadow: none
   height: 3.8rem
@@ -33,8 +45,13 @@ select
     $color-invert: nth($pair, 2)
 
     &.#{$name}
-      border: .1rem solid $color
+      background-color: transparentize($color, .9)
+      border: .2rem solid $color
       outline: 0
+      animation-name: pulse-#{$name}
+      animation-duration: 2s
+      animation-timing-function: ease-in-out
+      animation-iteration-count: infinite
 
 select
   padding: .6rem 3rem .6rem 1rem
