@@ -1,84 +1,428 @@
+// Name:            Forms
+// Description:     Form styles
+//
+// Namespace:       `form`
+//
+// Modifiers:       `component-modifier`
+//
+// States:          `component-state`
+//
+// ========================================================================
 
-// Form
 
-@each $name, $pair in $colors
-  $color: nth($pair, 1)
-  $color-invert: nth($pair, 2)
+// Variables
+// ========================================================================
 
-  @keyframes pulse-#{$name}
-    0%
-      border-color: $color
-    50%
-      border-color: lighten($color, 15%)
-    100%
-      border-color: $color
+$form-font-size: 1.4rem
+$form-font-size-sm: $type-size-small
+$form-font-size-lg: $type-size-large
 
-input[type='email'],
-input[type='number'],
-input[type='password'],
-input[type='search'],
-input[type='tel'],
-input[type='text'],
-input[type='url'],
-textarea,
-select
-  margin-bottom: 1.5rem
-  appearance: none
-  background-color: darken($grey-1000, 2%)
-  border: .1rem solid $grey-lighter
-  border-radius: $core-radius
-  box-shadow: none
-  height: 3.8rem
-  padding: .6rem 1rem
-  width: 100%
 
-  &:focus
-    border: .1rem solid $primary
-    outline: 0
+// Component: Forms
+// ========================================================================
 
-  &:invalid
-    border: .1rem solid $red
-    outline: 0
+.form__group
+  &:not(:last-child)
+    margin-bottom: 1.6rem
 
-  @each $name, $pair in $colors
-    $color: nth($pair, 1)
-    $color-invert: nth($pair, 2)
 
-    &.#{$name}
-      background-color: transparentize($color, .9)
-      border: .2rem solid $color
-      outline: 0
-      animation-name: pulse-#{$name}
-      animation-duration: 2s
-      animation-timing-function: ease-in-out
-      animation-iteration-count: infinite
 
-select
-  padding: .6rem 3rem .6rem 1rem
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiICAgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjkgMTQiICAgaGVpZ2h0PSIxNHB4IiAgIGlkPSJMYXllcl8xIiAgIHZlcnNpb249IjEuMSIgICB2aWV3Qm94PSIwIDAgMjkgMTQiICAgd2lkdGg9IjI5cHgiICAgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjQ4LjQgcjk5MzkiICAgc29kaXBvZGk6ZG9jbmFtZT0iY2FyZXQtZ3JheS5zdmciPjxtZXRhZGF0YSAgICAgaWQ9Im1ldGFkYXRhMzAzOSI+PHJkZjpSREY+PGNjOldvcmsgICAgICAgICByZGY6YWJvdXQ9IiI+PGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+PGRjOnR5cGUgICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+PC9jYzpXb3JrPjwvcmRmOlJERj48L21ldGFkYXRhPjxkZWZzICAgICBpZD0iZGVmczMwMzciIC8+PHNvZGlwb2RpOm5hbWVkdmlldyAgICAgcGFnZWNvbG9yPSIjZmZmZmZmIiAgICAgYm9yZGVyY29sb3I9IiM2NjY2NjYiICAgICBib3JkZXJvcGFjaXR5PSIxIiAgICAgb2JqZWN0dG9sZXJhbmNlPSIxMCIgICAgIGdyaWR0b2xlcmFuY2U9IjEwIiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwIiAgICAgaW5rc2NhcGU6cGFnZW9wYWNpdHk9IjAiICAgICBpbmtzY2FwZTpwYWdlc2hhZG93PSIyIiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSI5MDMiICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSI1OTQiICAgICBpZD0ibmFtZWR2aWV3MzAzNSIgICAgIHNob3dncmlkPSJ0cnVlIiAgICAgaW5rc2NhcGU6em9vbT0iMTIuMTM3OTMxIiAgICAgaW5rc2NhcGU6Y3g9Ii00LjExOTMxODJlLTA4IiAgICAgaW5rc2NhcGU6Y3k9IjciICAgICBpbmtzY2FwZTp3aW5kb3cteD0iNTAyIiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjMwMiIgICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjAiICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJMYXllcl8xIj48aW5rc2NhcGU6Z3JpZCAgICAgICB0eXBlPSJ4eWdyaWQiICAgICAgIGlkPSJncmlkMzA0MSIgLz48L3NvZGlwb2RpOm5hbWVkdmlldz48cG9seWdvbiAgICAgcG9pbnRzPSIwLjE1LDAgMTQuNSwxNC4zNSAyOC44NSwwICIgICAgIGlkPSJwb2x5Z29uMzAzMyIgICAgIHRyYW5zZm9ybT0ibWF0cml4KDAuMzU0MTEzODcsMCwwLDAuNDgzMjkxMSw5LjMyNDE1NDUsMy42MjQ5OTkyKSIgICAgIHN0eWxlPSJmaWxsOiNkMWQxZDE7ZmlsbC1vcGFjaXR5OjEiIC8+PC9zdmc+') center right no-repeat
-
-  &:focus
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiICAgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjkgMTQiICAgaGVpZ2h0PSIxNHB4IiAgIGlkPSJMYXllcl8xIiAgIHZlcnNpb249IjEuMSIgICB2aWV3Qm94PSIwIDAgMjkgMTQiICAgd2lkdGg9IjI5cHgiICAgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjQ4LjQgcjk5MzkiICAgc29kaXBvZGk6ZG9jbmFtZT0iY2FyZXQuc3ZnIj48bWV0YWRhdGEgICAgIGlkPSJtZXRhZGF0YTMwMzkiPjxyZGY6UkRGPjxjYzpXb3JrICAgICAgICAgcmRmOmFib3V0PSIiPjxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PjxkYzp0eXBlICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPjwvY2M6V29yaz48L3JkZjpSREY+PC9tZXRhZGF0YT48ZGVmcyAgICAgaWQ9ImRlZnMzMDM3IiAvPjxzb2RpcG9kaTpuYW1lZHZpZXcgICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIgICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IiAgICAgYm9yZGVyb3BhY2l0eT0iMSIgICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiICAgICBncmlkdG9sZXJhbmNlPSIxMCIgICAgIGd1aWRldG9sZXJhbmNlPSIxMCIgICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIgICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iOTAzIiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iNTk0IiAgICAgaWQ9Im5hbWVkdmlldzMwMzUiICAgICBzaG93Z3JpZD0idHJ1ZSIgICAgIGlua3NjYXBlOnpvb209IjEyLjEzNzkzMSIgICAgIGlua3NjYXBlOmN4PSItNC4xMTkzMTgyZS0wOCIgICAgIGlua3NjYXBlOmN5PSI3IiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjUwMiIgICAgIGlua3NjYXBlOndpbmRvdy15PSIzMDIiICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIwIiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0iTGF5ZXJfMSI+PGlua3NjYXBlOmdyaWQgICAgICAgdHlwZT0ieHlncmlkIiAgICAgICBpZD0iZ3JpZDMwNDEiIC8+PC9zb2RpcG9kaTpuYW1lZHZpZXc+PHBvbHlnb24gICAgIHBvaW50cz0iMjguODUsMCAwLjE1LDAgMTQuNSwxNC4zNSAiICAgICBpZD0icG9seWdvbjMwMzMiICAgICB0cmFuc2Zvcm09Im1hdHJpeCgwLjM1NDExMzg3LDAsMCwwLjQ4MzI5MTEsOS4zMjQxNTUzLDMuNjI1KSIgICAgIHN0eWxlPSJmaWxsOiM5YjRkY2Y7ZmlsbC1vcGFjaXR5OjEiIC8+PC9zdmc+')
-
-textarea
-  padding-bottom: .6rem
-  padding-top: .6rem
-  min-height: 6.5rem
-
-label,
-legend
+// Form element: Label
+.form__label
   display: block
-  margin-bottom: .5rem
+  padding: .6rem 0
 
-fieldset
-  border-width: 0
-  padding: 0
+  &.form__label--sm
+    padding: .4rem 0
+    font-size: $type-size-tiny
+    font-weight: 700
+    text-transform: uppercase
 
-input[type='checkbox'],
-input[type='radio']
-  display: inline
 
-.label-inline
-  font-weight: normal
+  &.form__label--lg
+    padding: 1rem 0
+
+
+
+// Form element: Input
+.form__input
+  appearance: none
+  background: $core-bg-color
+  background-image: none
+  border: $core-border-width solid $core-border-color
+  border-radius: $core-radius
+  color: $core-text-color
+  display: block
+  font-size: $form-font-size
+  height: 3.2rem
+  line-height: 2rem
+  max-width: 100%
+  outline: none
+  padding: .5rem .8rem
+  position: relative
+  width: 100%
+  transition: all .2s ease-in
+  &:focus
+    border-color: $primary
+    transition: all .2s ease-out
+    +control-shadow($primary)
+
+  &::placeholder
+    color: $grey-light
+
+
+  // Input sizes
+  &.input-sm
+    font-size: $type-size-small
+    height: 2.4rem
+    padding: .1rem .8rem
+
+
+  &.input-lg
+    font-size: $type-size-large
+    height: 4rem
+    padding: .9rem .8rem
+
+
+  &.input-inline
+    display: inline-block
+    vertical-align: middle
+    width: auto
+
+
+  // Textarea
+  textarea
+    height: auto
+
+
+  // Input types
+  &[type="file"]
+    height: auto
+
+
+
+// Form element: Input hint
+.form__input--hint
+  margin-top: .4rem
+  color: $grey-400
+  font-size: $type-size-small
+
+
+
+// Form element: Select
+.form__select
+  appearance: none
+  border: $core-border-width solid $core-border-color
+  border-radius: $core-radius
+  color: inherit
+  font-size: $form-font-size
+  line-height: 2rem
+  outline: none
+  padding: .5rem .8rem
+  vertical-align: middle
+
+  &[multiple]
+    width: 100%
+
+    option
+      padding: .2rem .4rem
+
+
+  &:not([multiple])
+    background: $core-bg-color url("data:image/svg+xmlcharset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23667189' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right .75rem center / .8rem 1rem
+    height: 3.2rem
+    padding-right: 2.4rem
+
+  &:focus
+    border-color: $primary
+    // .control-shadow()
+
+  &::-ms-expand
+    display: none
+
+
+  // Select sizes
+  &.select-sm
+    font-size: $form-font-size-sm
+    height: 2.4rem
+    padding: .1rem 2rem .1rem .6rem
+
+
+  &.select-lg
+    font-size: $form-font-size-lg
+    height: 4rem
+    padding: .9rem 2.4rem .9rem .8rem
+
+
+
+// Form validation states
+.form__group
+  // .has-success &,
+  // &.is-success
+  //   border-color: @control-color-success
+  //   &:focus
+  //     // .control-shadow(@control-color-success)
+  //
+  //
+  //
+  &.form__input--error
+    .form__input
+      border-color: $red
+      &:focus
+        +control-shadow($red)
+    .form__input--hint
+      color: $red
+
+
+
+
+// Form element: Checkbox and Radio
+.form-checkbox,
+.form-radio,
+.form-switch
   display: inline-block
-  margin-left: .5rem
+  line-height: 2rem
+  position: relative
+
+  input
+    clip: rect(0, 0, 0, 0)
+    height: .1rem
+    margin: -.1rem
+    overflow: hidden
+    position: absolute
+    width: .1rem
+    &:focus + .form-icon
+      border-color: $primary
+      // .control-shadow()
+
+    &:checked + .form-icon
+      background: $primary
+      border-color: $primary
+
+
+
+  .form-icon
+    border: $core-border-width solid $core-border-color
+    // .control-transition()
+    cursor: pointer
+    display: inline-block
+    position: absolute
+
+
+
+.form-checkbox,
+.form-radio
+  padding: .2rem 2rem
+
+  .form-icon
+    height: 1.4rem
+    left: 0
+    top: .5rem
+    width: 1.4rem
+
+
+  input
+    &:active + .form-icon
+      background: $core-border-color
+
+
+
+.form-checkbox
+  .form-icon
+    border-radius: $core-radius
+
+
+  input
+    &:checked + .form-icon
+      &::before
+        background-clip: padding-box
+        border: .2rem solid $core-border-color
+        border-left-width: 0
+        border-top-width: 0
+        content: ""
+        height: 1rem
+        left: 50%
+        margin-left: -.3rem
+        margin-top: -.6rem
+        position: absolute
+        top: 50%
+        transform: rotate(45deg)
+        width: .6rem
+
+
+    &:indeterminate + .form-icon
+      background: $primary
+      border-color: $primary
+      &::before
+        background: $core-bg-color
+        content: ""
+        height: .2rem
+        left: 50%
+        margin-left: -.5rem
+        margin-top: -.1rem
+        position: absolute
+        top: 50%
+        width: 1rem
+
+
+
+
+.form-radio
+  .form-icon
+    border-radius: .7rem
+
+
+  input
+    &:checked + .form-icon
+      &::before
+        background: $core-bg-color
+        border-radius: $core-radius
+        content: ""
+        height: .4rem
+        left: 50%
+        margin-left: -.2rem
+        margin-top: -.2rem
+        position: absolute
+        top: 50%
+        width: .4rem
+
+
+
+
+
+// Form element: Switch
+.form-switch
+  padding: .2rem 2rem .2rem 3.6rem
+
+  .form-icon
+    background: $grey-light
+    background-clip: padding-box
+    border-radius: .9rem
+    height: 1.8rem
+    left: 0
+    top: .3rem
+    width: 3rem
+    &::before
+      background: $core-bg-color
+      border-radius: .8rem
+      content: ""
+      display: block
+      height: 1.6rem
+      left: 0
+      position: absolute
+      top: 0
+      // .control-transition()
+      width: 1.6rem
+
+
+
+  input
+    &:checked + .form-icon
+      &::before
+        left: 1.2rem
+
+
+    &:active + .form-icon
+      &::before
+        background: $core-bg-color
+
+
+
+
+
+// Form element: Input groups
+.input-group
+  display: flex
+
+  .input-group-addon
+    background: $core-bg-color
+    border: $core-border-width solid $core-border-color
+    border-radius: $core-radius
+    line-height: 2rem
+    padding: .5rem .8rem
+
+    &.addon-sm
+      font-size: $form-font-size-sm
+      padding: .1rem .8rem
+
+    &.addon-lg
+      font-size: $form-font-size-lg
+      padding: .9rem .8rem
+
+
+  .input-group-addon,
+  .input-group-btn
+    flex: 1 0 auto
+
+
+  .form__input,
+  .input-group-addon,
+  .input-group-btn
+    &:first-child:not(:last-child)
+      border-bottom-right-radius: 0
+      border-top-right-radius: 0
+
+    &:not(:first-child):not(:last-child)
+      border-radius: 0
+      margin-left: -.1rem
+
+    &:last-child:not(:first-child)
+      border-bottom-left-radius: 0
+      border-top-left-radius: 0
+      margin-left: -.1rem
+
+    &:focus
+      z-index: $z-index-0
+
+
+
+  &.input-inline
+    display: inline-flex
+
+
+
+// Form disabled
+.form__input,
+.form__select
+  &:disabled,
+  &.disabled
+    background-color: $core-border-color
+    cursor: not-allowed
+    opacity: .5
+
+
+
+input
+  &:disabled,
+  &.disabled
+    & + .form-icon
+      background: $core-border-color
+      cursor: not-allowed
+      opacity: .5
+
+
+
+
+.form-switch
+  input
+    &:disabled,
+    &.disabled
+      & + .form-icon::before
+        background: $core-bg-color
+
+
+
+
+
+// Form Horizontal
+.form-horizontal
+  padding: 1.6rem
+
+  .form-group
+    display: flex
+
+
+  .form-checkbox,
+  .form-radio,
+  .form-switch
+    margin: .4rem 0

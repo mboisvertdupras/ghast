@@ -46,7 +46,7 @@ input[type='submit']
       background-color: $grey-light
       border-color: $grey-light
 
-  &.btn-outline
+  &.btn--outline
     background-color: transparent
     color: inherit
 
@@ -56,7 +56,7 @@ input[type='submit']
       border-color: transparentize($grey, .7)
       color: inherit
 
-  &.btn-clear
+  &.btn--clear
     background-color: transparent
     border-color: transparent
     color: inherit
@@ -67,7 +67,7 @@ input[type='submit']
       border-color: transparent
       color: inherit
 
-  &.btn-raised
+  &.btn--raised
     border-color: $grey-light
     box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08)
 
@@ -75,23 +75,23 @@ input[type='submit']
       transform: translateY(-1px)
       box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08)
 
-  &.btn-sm
+  &.btn--sm
     font-size: .8rem
     height: 2.8rem
     line-height: 2.8rem
     padding: 0 1.5rem
 
-  &.btn-lg
+  &.btn--lg
     font-size: 1.4rem
     height: 4.5rem
     line-height: 4.5rem
     padding: 0 2rem
 
-  &.btn-block
+  &.btn--block
     display: block
     width: 100%
 
-  &.btn-narrow
+  &.btn--narrow
     padding: 0 1.5rem
 
   // Set styles for each colors defined in _Variables.sass
@@ -99,7 +99,7 @@ input[type='submit']
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
 
-    &.btn-#{$name}
+    &.btn--#{$name}
       background: $color
       border-color: transparent
       color: $color-invert
@@ -113,7 +113,7 @@ input[type='submit']
       &:active
         border-color: transparent
 
-      &.btn-outline
+      &.btn--outline
         background: transparent
         border-color: $color
         color: $color
@@ -124,7 +124,7 @@ input[type='submit']
           border-color: transparentize($color, .5)
           color: darken($color, 10%)
 
-      &.btn-clear
+      &.btn--clear
         background-color: transparent
         border-color: transparent
         color: $color
@@ -141,7 +141,7 @@ input[type='submit']
             border-color: transparent
             color: $color
 
-      &.btn-inverted
+      &.btn--inverted
         background: $color-invert
         color: $color
 
@@ -157,7 +157,7 @@ input[type='submit']
             background: transparentize($black, .5)
 
 // Button Groups
-.btn-group
+.btn__group
   display: inline-flex
   flex-wrap: wrap
 
@@ -181,5 +181,5 @@ input[type='submit']
     &:focus
       z-index: 99
 
-  &.btn-group-block
+  &.btn__group--block
     display: flex

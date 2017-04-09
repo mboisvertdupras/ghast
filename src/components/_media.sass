@@ -1,21 +1,7 @@
-.media-number
-  background: $white
-  border-radius: $core-radius
-  display: inline-block
-  font-size: 1.6rem
-  height: 3.2rem
-  line-height: 2.4rem
-  min-width: 3.2rem
-  padding: .4rem .8rem
-  text-align: center
-  vertical-align: top
-  +media(mobile)
-    margin-bottom: 1rem
-  +media(tablet)
-    margin-right: 1rem
-
 .media-left
   margin-right: 1rem
+  img
+    border-radius: $core-radius
 
 .media-right
   margin-left: 1rem
@@ -29,17 +15,10 @@
   display: flex
   text-align: left
 
-  .content:not(:last-child)
-    margin-bottom: 1rem
-
   .media
-    border-top: .1rem solid rgba($grey-lightest, .5)
+    border-top: $core-border-width solid $core-border-color
     display: flex
     padding-top: 1rem
-
-    .content:not(:last-child),
-    .control:not(:last-child)
-      margin-bottom: .5rem
 
     .media
       font-size: 1.2rem
@@ -49,7 +28,7 @@
         margin-top: .5rem
 
   & + .media
-    border-top: .1rem solid rgba($grey-lightest, .5)
+    border-top: $core-border-width solid $core-border-color
     margin-top: 1rem
     padding-top: 1rem
 
@@ -57,7 +36,3 @@
     & + .media
       margin-top: 2rem
       padding-top: 2rem
-  +media(tablet)
-    &.is-large
-      .media-number
-        margin-right: 2rem

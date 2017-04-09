@@ -1,0 +1,31 @@
+// Name:            Tile
+// Description:     Styles for tiles
+//
+// Namespace:       `tile`
+//
+// Modifiers:       `tile--depth`
+//
+// States:          `component-state`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+$tile-depth-1: .2rem
+$tile-depth-2: .4rem
+$tile-depth-3: .6rem
+
+
+// Component: Tile
+// ========================================================================
+
+.tile
+  background: $core-menu-bg
+  margin: 0
+  padding: 2rem
+  border: $core-border-width solid $core-border-color
+  border-radius: $core-radius
+  +shadow(.2rem)
+  &.tile--depth

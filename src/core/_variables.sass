@@ -4,25 +4,27 @@
 // The base font-size is set at 62.5% for having the convenience
 // of sizing rems in a way that is similar to using px. 1.6rem=16px
 
-$core-font-size: 62.5%
-$core-width: 106rem
-$core-lineheight: 1.65
+$core-font-size    : 62.5%
+$core-width        : 106rem
+$core-lineheight   : 1.65
 $core-header-height: 5rem
-$core-radius: .3rem
-$core-radius-inner: .2rem
+$core-radius       : .3rem
+$core-radius-inner : .2rem
+$core-border-width : .1rem
 
 // Z-Index Scale
 // ========================================================================
 
-$z-index-1:   100
-$z-index-2:   200
-$z-index-3:   300
-$z-index-4:   400
-$z-index-5:   500
-$z-index-6:   600
-$z-index-7:   700
-$z-index-8:   800
-$z-index-9:   900
+$z-index-0 : 0
+$z-index-1 : 100
+$z-index-2 : 200
+$z-index-3 : 300
+$z-index-4 : 400
+$z-index-5 : 500
+$z-index-6 : 600
+$z-index-7 : 700
+$z-index-8 : 800
+$z-index-9 : 900
 $z-index-10: 1000
 
 // Core Colour
@@ -30,51 +32,54 @@ $z-index-10: 1000
 
 /* Greys
    Scale is similar to z-index. Lower number is darker */
-$black: #0a0a0a
-$grey-100: #222831
-$grey-200: #303841
-$grey-300: #444
-$grey-400: #666
-$grey-500: #999
-$grey-600: #BBB
-$grey-700: #DDD
-$grey-800: #E0E0E0
-$grey-900: #EEE
+$black    : #0a0a0a
+$grey-100 : #222831
+$grey-200 : #303841
+$grey-300 : #444
+$grey-400 : #666
+$grey-500 : #999
+$grey-600 : #BBB
+$grey-700 : #DDD
+$grey-800 : #E0E0E0
+$grey-900 : #EEE
 $grey-1000: #F9F9F9
-$white: #FFF
+$white    : #FFF
 
-$grey-darker: $grey-100
-$grey-dark: $grey-200
-$grey: $grey-300
-$grey-light: $grey-600
-$grey-lighter: $grey-700
+$grey-darker  : $grey-100
+$grey-dark    : $grey-200
+$grey         : $grey-300
+$grey-light   : $grey-600
+$grey-lighter : $grey-700
 $grey-lightest: $grey-800
 
 
 /* Accent Colours */
-$blue: #09c
-$green: #3FC380
-$purple: #96c
-$red: #f66
-$yellow: #fc3
-$orange: #f93
-$primary: #5357A6
+$blue   : #09c
+$green  : #3FC380
+$purple : #96c
+$red    : #f66
+$yellow : #fce473
+$orange : scale-color(#f93, $saturation: -10%)
+$teal   : #09c09c
+$primary: #50c878
 
 $initial: $white
 
-$dark-invert: find-color-invert($grey-dark)
+$dark-invert   : find-color-invert($grey-dark)
 $primary-invert: find-color-invert($primary)
-$blue-invert: find-color-invert($blue)
-$green-invert: find-color-invert($green)
-$yellow-invert: find-color-invert($yellow)
-$red-invert: find-color-invert($red)
-$orange-invert: find-color-invert($orange)
+$blue-invert   : find-color-invert($blue)
+$green-invert  : find-color-invert($green)
+$yellow-invert : find-color-invert($yellow)
+$red-invert    : find-color-invert($red)
+$orange-invert : find-color-invert($orange)
+$teal-invert : find-color-invert($teal)
 
-$colors: ( dark: ($grey-dark, $dark-invert), primary: ($primary, $primary-invert), blue: ($blue, $blue-invert), green: ($green, $green-invert), yellow: ($yellow, $yellow-invert), red: ($red, $red-invert), orange: ($orange, $orange-invert))
+$colors: ( dark: ($grey-dark, $dark-invert), primary: ($primary, $primary-invert), blue: ($blue, $blue-invert), green: ($green, $green-invert), yellow: ($yellow, $yellow-invert), red: ($red, $red-invert), orange: ($orange, $orange-invert), teal: ($teal, $teal-invert))
 
-$core-bg-color: $grey-1000
-$core-text-color: $grey
-$core-meta-color: $grey-lighter
-$core-link-color: $primary
+$core-bg-color    : $white
+$core-text-color  : $grey
+$core-meta-color  : $grey-lighter
+$core-link-color  : $primary
 $core-border-color: $grey-lightest
-$core-blank-bg: $grey-900
+$core-blank-bg    : $grey-900
+$core-menu-bg     : $white

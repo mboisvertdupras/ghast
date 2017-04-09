@@ -1,8 +1,38 @@
+// Name:            Divider
+// Description:     Utilites for displaying dividers
+//
+// Namespace:       `divider`
+//
+// Modifiers:       void
+//
+// States:          void
+//
+// ========================================================================
 
-// Misc
+
+// Component: Divider
+// ========================================================================
 
 hr
   border: 0
-  border-top: .1rem solid $grey-lightest
-  margin-bottom: 3.5rem
-  margin-top: 3rem
+  border-top: $core-border-width solid $core-border-color
+  margin: 3.2rem 0
+
+
+.divider
+  border-top: $core-border-width solid $core-border-color
+  display: block
+  height: .1rem
+  margin: 1rem 0
+  position: relative
+
+  &[data-content]::before
+    background: $core-menu-bg
+    color: $grey-300
+    content: attr(data-content)
+    display: inline-block
+    font-size: $type-size-tiny
+    font-weight: 700
+    text-transform: uppercase
+    padding: 0 .8rem
+    transform: translateY(-1.4rem)

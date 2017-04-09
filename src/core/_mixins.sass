@@ -43,3 +43,9 @@ $desktop: 120rem
         border-color: lighten($color, 15%)
       100%
         border-color: $color
+
+=shadow($offset)
+  box-shadow: 0 $offset ($offset + .1rem)*4 transparentize($black, .9)
+
+=control-shadow($colour)
+  box-shadow: 0 0 0 .3rem transparentize($colour, .75)

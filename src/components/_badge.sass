@@ -7,22 +7,21 @@
 
 .badge
   display: inline-block
-  height: 2.2rem
-  padding: 0 .5rem
+  padding: .1rem .5rem
   background-color: $grey-lightest
-  border: .1rem solid
-  border-color: $grey-lightest
+  border: $core-border-width solid $core-border-color
   border-radius: $core-radius
   color: $grey
-  font-size: 1.2rem
+  font-size: $type-size-tiny
   font-weight: 700
-  line-height: 2.2rem
+  line-height: 2.1rem
   text-align: center
   text-decoration: none
   text-transform: uppercase
+  vertical-align: middle
   white-space: nowrap
 
-  &.badge--outline
+  &.badge__outline
     @extend %outline
 
   @each $name, $pair in $colors
@@ -34,6 +33,6 @@
       border-color: $color
       color: $color-invert
 
-      &.badge--outline
+      &.badge__outline
         @extend %outline
         color: $color

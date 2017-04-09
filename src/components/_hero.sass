@@ -27,6 +27,9 @@
   +media(desktop)
     padding: 6rem 0
 
+  .subtitle
+    margin-bottom: 1rem
+
 .hero-buttons
   margin-top: 2rem
 
@@ -51,8 +54,11 @@
   text-align: center
 
   .header
-    background: rgba($black, .1)
-    box-shadow: 0 .1rem 0 rgba($black, .2)
+    background: none
+    box-shadow: none
+    .container
+      padding: 0
+      box-shadow: 0 .1rem 0 transparentize($grey, .8)
 
     img
       height: 2rem
@@ -65,12 +71,6 @@
         .header-item:last-child
           padding-right: 0
 
-    .container
-      +media(mobile)
-        box-shadow: none
-      padding: 0
-      box-shadow: 0 .1rem 0 transparentize($grey, .8)
-
   .tabs
     a
       border: 0
@@ -79,12 +79,10 @@
       margin-bottom: 0
       border-bottom: 0
 
-  .subtitle
-    letter-spacing: normal
-
   &.alt
     background: $grey-1000
     color: $grey
+
   @each $name, $pair in $colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
@@ -105,15 +103,21 @@
 
       .header
         .container
-          //box-shadow: 0 1px 0 transparentize($color-invert, .8)
+          @if lightness($color-invert) < 4%
+            box-shadow: 0 1px 0 transparentize($black, .9)
+          @else
+            box-shadow: 0 1px 0 transparentize($color-invert, 0.7)
+
+      .header-item
+        &.active
+          border-bottom: .2rem solid transparentize($color-invert, .3)
 
       .header-icon,
       .header-item > a:not(.button),
       .header-item > .dropdown > a
-        color: transparentize($color-invert, .2)
+        color: transparentize($color-invert, .1)
 
         &:hover,
-        &.is-active
           color: $color-invert
 
       .tabs
